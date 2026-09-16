@@ -1,9 +1,11 @@
 import { runMigrations } from "../src/server/persistence/migrate";
+import { resetConfigCache } from "../src/server/config";
 
 // Load local environment variables
 try {
   if (typeof process.loadEnvFile === "function") {
     process.loadEnvFile();
+    resetConfigCache();
   }
 } catch {
   // Optional

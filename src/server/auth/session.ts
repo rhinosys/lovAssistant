@@ -102,7 +102,22 @@ export class TokenAuthService implements IAuthService {
       }
     }
 
-    // 3. PoC Dev fallback: x-user-id / x-username for easy lab testing
+    // 3. YunoHost SSO (SSOwat) headers — takes priority over the legacy dev fallback
+    // SECURITY: these headers are only trustworthy behind a reverse proxy (e.g. YunoHost's
+    // SSOwat) that strips any client-supplied Remote-User/Auth-User before proxying. Never
+    // expose this app directly to untrusted clients without such a proxy in front of it.
+    const remoteUser = getHeader("remote-user") || getHeader("auth-user");
+    if (remoteUser) {
+      const userRepo = getUserRepository();
+      const user = await userRepo.createOrFind(remoteUser);
+      return {
+        id: user.id,
+        username: user.username,
+        roles: ["member"],
+      };
+    }
+
+    // 4. PoC Dev fallback: x-user-id / x-username for easy lab testing
     const explicitUserId = getHeader("x-user-id");
     const explicitUsername = getHeader("x-username");
     if (explicitUsername || explicitUserId) {

@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start -p 3005",
     "lint": "next lint",
+    "db:migrate": "tsx scripts/migrate.ts",
     "test": "vitest run",
     "mcp:yeswiki": "tsx src/server/mcp/cli.ts",
     "rag:crawl": "tsx scripts/crawl-old-wiki.ts",

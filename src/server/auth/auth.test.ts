@@ -76,4 +76,43 @@ describe("Authentication & User Isolation", () => {
       ).rejects.toThrow(ThreadNotFoundError);
     });
   });
+
+  describe("YunoHost SSO headers", () => {
+    it("authenticates from the Remote-User header when present", async () => {
+      const user = await authService.authenticateRequest({
+        "remote-user": "alice.ynh",
+      });
+      expect(user.username).toBe("alice.ynh");
+    });
+
+    it("falls back to Auth-User when Remote-User is absent", async () => {
+      const user = await authService.authenticateRequest({
+        "auth-user": "bob.ynh",
+      });
+      expect(user.username).toBe("bob.ynh");
+    });
+
+    it("prefers Remote-User over Auth-User when both are present", async () => {
+      const user = await authService.authenticateRequest({
+        "remote-user": "alice.ynh",
+        "auth-user": "bob.ynh",
+      });
+      expect(user.username).toBe("alice.ynh");
+    });
+
+    it("prefers Remote-User over the legacy x-username fallback", async () => {
+      const user = await authService.authenticateRequest({
+        "remote-user": "alice.ynh",
+        "x-username": "legacy-user",
+      });
+      expect(user.username).toBe("alice.ynh");
+    });
+
+    it("still supports the legacy x-username header when no SSO header is present", async () => {
+      const user = await authService.authenticateRequest({
+        "x-username": "legacy-user",
+      });
+      expect(user.username).toBe("legacy-user");
+    });
+  });
 });

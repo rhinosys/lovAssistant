@@ -20,6 +20,7 @@ import {
   Zap,
 } from "lucide-react";
 import { MarkdownContent } from "./MarkdownContent";
+import { apiUrl } from "@/lib/api-url";
 
 interface ThreadSummary {
   id: string;
@@ -82,7 +83,7 @@ export default function ChatPage() {
   // Load threads list on mount
   const fetchThreads = useCallback(async () => {
     try {
-      const res = await fetch("/api/threads");
+      const res = await fetch(apiUrl("/api/threads"));
       if (res.ok) {
         const data = await res.json();
         setThreads(data.threads || []);
@@ -100,7 +101,7 @@ export default function ChatPage() {
   useEffect(() => {
     async function loadProviderModels() {
       try {
-        const res = await fetch("/api/health/ready");
+        const res = await fetch(apiUrl("/api/health/ready"));
         if (res.ok) {
           const data = await res.json();
           const installedOllama = data.dependencies?.ollama?.models;
@@ -158,7 +159,7 @@ export default function ChatPage() {
     setActiveThreadId(threadId);
     setErrorMessage(null);
     try {
-      const res = await fetch(`/api/threads/${threadId}`);
+      const res = await fetch(apiUrl(`/api/threads/${threadId}`));
       if (res.ok) {
         const data = await res.json();
         setMessages(data.messages || []);
@@ -184,7 +185,7 @@ export default function ChatPage() {
     if (!confirm("Supprimer cette conversation ?")) return;
 
     try {
-      const res = await fetch(`/api/threads/${threadId}`, { method: "DELETE" });
+      const res = await fetch(apiUrl(`/api/threads/${threadId}`), { method: "DELETE" });
       if (res.ok) {
         setThreads((prev) => prev.filter((t) => t.id !== threadId));
         if (activeThreadId === threadId) {
@@ -216,7 +217,7 @@ export default function ChatPage() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch(apiUrl("/api/chat"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

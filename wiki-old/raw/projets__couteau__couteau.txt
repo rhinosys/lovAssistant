@@ -1,0 +1,68 @@
+======Fabrication d'un couteau pliant from scratch======
+=====Dessin et conception=====
+
+Le principe est de dessiner le manche + ressort et la lame sur deux papiers différents. ça permet de placer les clous et de vérifier qu'une fois fermé la lame ne tape pas dans le ressort
+=====La base du manche=====
+
+pour créer les deux plaques de fer, j'ai récupéré une lame de scie circulaire jetée dans la rue. Sur ces plaques, je vais fixer le bois du manche, le ressort, et l'axe de la lame.  la première étape consiste à passer la lame rouillée à la brosse métallique montée sur une meuleuse pour retirer toute la rouille.
+Ensuite on dessine les pièces à découper puis on découpe à la meuleuse en laissant un millimètre pour les finitions. 
+vu que la surface n'était pas lisse, j'ai utilisé la ponceuse a ruban pour aplanir les deux cotés des deux plaques. 
+  
+=====La lame et le ressort=====
+
+Je suis partis de la même lame de scie circulaire et j'ai découpé grossièrement la lame et le ressort en laissant toujours un peu de marge pour l'ajustement et les finition. 
+l'assemblage de référence est la liaison lame/ressort. c'est cette partie que j'ai ajusté en premier.
+Quand les deux parties du cran d’arrêt peuvent se superposer sur une table j'ajoute les deux plaques sur les cotés et je perce la lame et les deux plaques au diamètre de l'axe de la lame
+Ensuite les points d'accroche du ressort et les deux plaques a se moment, on peux placer temporairement les clous pour vérifier que le système d'ouverture et de blocage fonctionne bien.
+Si tout va bien à ce niveau la on peux commencer a poncer l'assemblage plaques + lame + ressort pour supprimer les aspérités et donner sa forme définitive à la partie métallique du couteau. 
+
+on détache l'assemblage et on peux commencer le ponçage de la lame pour créer l'émouture (la partie en V avant le fil du couteau). une astuce consiste a mettre deux plaques parallèles vers l'axe de rotation pour que la ponceuse ne puisse pas toucher la partie tournante située entre les deux plaques.  
+
+J'ai tenté de faire la rainure qui permet d'ouvrir le couteau avec un disque de ponçage sur une drémel mais faute de support pour les outils le disque a dérapé et laissé des traces que je n'ai pas réussit à rattraper. 
+
+Enfin on peux créer le fil sans nécessairement aiguiser au quart de poil. 
+ 
+
+=====Les renforts en laiton et l'usinage des plaques de bois pour le manche=====
+
+====Usinage des plaques de bois====
+
+Après un surfaçage j'ai commencé par fraiser les poches sur lesquelles vont se fixer les renforts en laiton en utilisant le plateau comme référence. soit une hauteur de 2mm. Ensuite je fraise les poches qui correspondent à la surface visible du bois soit 5mm de hauteur et enfin je découpe la pièce en laissant cochée l'option "accroches" qui laisse quelques morceau de matière pour qu'a la fin du détourage la pièce fraisée reste solidaire du brut. 
+
+
+====Étape fonderie====
+{{projets:couteau:img_20211119_125449_658.jpg?200|}}{{projets:couteau:img_20211210_125810_796.jpg?200|}}{{projets:couteau:img_20211119_131406_074.jpg?200|}}{{projets:couteau:img_20211210_132559_013.jpg?200|}}
+
+étape 1 : on récupère des vieux morceaux de laiton (ici des cosses de tableau électrique des échecs de fonderie avec un post a arc (ca marche pas...))
+
+étape 2 on se fait un petit moule avec des plaques de brique thermo découpées a la disqueuse 
+
+étape 3 on met tout ça (pas les briques hein juste le laiton...) dans le creuset de la fonderie (je ferais un article dessus)
+
+étape 3 on coule tout ca et on obtient un joli lingot. 
+
+!!!! warning !!! j'ai essayé sans les briques mais avec de la terre tassée. la première fois pas de problème avec un rendu plus moche que les briques. la seconde fois la terre devais être trop humide. résultat explosion et projection de laiton (vive les fringues de sécu)
+
+====Étape usinage====
+
+
+{{projets:couteau:img_20211203_113808_909.jpg?200|}}{{projets:couteau:img_20211203_120606_929.jpg?200|}}{{projets:couteau:img_20211209_134329_384.jpg?356|}}{{projets:couteau:img_20211209_140648_169.jpg?200|}}
+
+étape 1 les morceaux brut de fonderie
+
+étape 2 ponçage des grosses aspéritées
+
+étape 3 usinage CNC 
+   -d'abord un surfaçage
+   -fraisage des poches 
+   -retournement de la pièce sur l’étau (on laisse assez de matière pour que l'étau puisse choper la pièce)
+   -surfaçage de la seconde face
+
+étape 4 un comparatif entre brut de fraisage et passé au stand de ponçage.
+
+====Assemblage et perçage des plaques de bois et de renforts en laiton====
+
+une fois les plaques et les renforts usinés, je les assemble avec de la colle époxy. On prends une des parties du manche qu'on présente face à une des plaques de métal et on recopie les percages de la plaques sur le coté du manche. il faudra faire la même étape sur le  second assemblage du manche. pour garantir que les deux coté du manche seront bien en face on peux reconstituer l'assemblage manche + plaques + lame + ressort en les maintenant en tension avec des clous temporaires et un scotch. ensuite 
+=====Changement du design=====
+
+suite à la confection des deux autres renforts en laiton j'ai commencé a poncer les assemblages de bois + renforts et le tout s'est pris dans le sabot de la ponceuse fracassant joyeusement le tout. 

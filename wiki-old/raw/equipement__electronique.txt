@@ -1,0 +1,5 @@
+===== Électronique et robotique ===
+
+  * [[equipement:electronique:arduino|Arduino]]
+  * [[equipement:electronique:kit_robots|Kit pour fabriquer son robot qui roule tout seul]]
+  * [[equipement:electronique:raspberry_pi|Raspberry Pi]]

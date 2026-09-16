@@ -1,0 +1,241 @@
+====Assemblée générale du Laboratoire Ouvert ====
+Villeurbannais, compte rendu
+AG tenue le 10 Juillet 2019 à 19h, au 21 place des maisons neuves, Villeurbanne.
+
+bilan moral
+
+bilan financier
+
+questions diverses
+
+élection du nouveau conseil d'administration
+
+===Bilan moral===
+
+Augmentation des adhésions
+
+Augmentation de la fréquentation avec nouveaux horaires
+
+Matériel :
+ - une imprimante 3D plus costaud et séurisée
+
+ - un filtre a charbon pour la découpe laser
+
+ - machines à coudre, nouveau public, beaucoup utilisée
+
+ - une grosse fraiseuse en cours de commande
+
+ (une demi journée de formation au moment de la livraison)
+
+organisation :
+ - cahier d'utilisation des machines
+
+ - smartphone en libre service pour poster des photos sur le blog ou sur le forum
+
+ - un agenda public qui annonce les ouvertures
+
+ - nouveaux horaires : lundi, mardi et certains mercredis fixes, + ouvertures supplémentaires 
+ponctuelles
+
+ - 12 jeux de clés distribués pour mieux garantir et augmenter les permanences
+ on souhaite aller plus loin avec un planning publié à l'avance et augmenter encore les créneaux 
+d'ouverture.
+
+événements organisés par le Lov ou contributions :
+ - JDLL
+
+ - Expénum
+
+ - Expérience ordinaire au CCO
+
+ - Fête du Crapeau avec le Village Vertical
+
+ - Jump'in Tech
+
+ - tuppervim (local)
+
+ - atelier démontage imprimante laser
+
+ - atelier magnet
+
+ - 2 ateliers robot
+
+ - atelier initiation découpe laser
+
+ - biennale des associations
+
+Vote par les membres
+contre: 0
+s'abstient: 0
+
+===Bilan financier===
+
+Adhésions:
+45 membres actifs (adhésion > mai 2018)
+pour adhérer : (octobre - octobre)
+
+renouvellement, chèque avec pseudo framateam au dos
+
+nouvelle adhésion: bulletin (inscription framateam + pseudo framateam sur le bulletin 
+obligatoire)
+
+Bilan financier:
+
+https://labovilleurbanne.fr/nextcloud/index.php/s/Wa3H3RPBjKeE57o
+crédits:
+
+adhésions: 1 300 euros
+
+subvention de fonctionnement: 6 500 (3 250 x2 mais parce que AG décalée)
+
+subvention travaux: 15 000
+
+dotation en nature du local: 5 895
+dépenses exceptionnelles: 16 200
+
+machine CNC: 6 800
+
+machine à coudre + surjetteuse 1 950
+
+ventilation ASAIR: 3 200
+
+imprimante 3d lulzbot: 3 050
+
+dépenses de fonctionnement: 9 400
+
+internet: 500
+
+électricité: 1 000
+
+fournitures, consommables, petit matériel: 1 500
+
+goûters, pots etc: 50
+
+communication: 130
+
+banque: 60
+
+assurance: 215
+
+loyer: 5 895
+
+Total général: +3 148 euros (mais 2 sub de fonctionnement, donc en réalité -102)
+
+trésorerie au 10/12/2019: 5 412
+
+Conclusion: les adhésions couvrent une partie des frais de fonctionnement, mais l'association existe 
+dans sa forme actuelle (une seule cotisation annuelle, puis utilisation des machines gratuite) 
+principalement grâce à la dotation du local par la mairie et la subvention de fonctionnement.
+
+Vote par les membres
+contre : 0
+s'abstient : 1
+voté
+
+===Questions diverses===
+
+- On vise plus d'un atelier par mois pour pérenniser le fonctionnement du LOV
+
+- Atelier de réaménagement de la façade
+
+ => Ofe juin
+- trouver une façon d'enlever le vieux film des vitrines
+
+- décisions de transformations de local, machines, etc: demander au bureau sur framateam, demander sur Town Square pour demander les avis
+
+- dépenses: demander obligatoirement une autorisation au président, éventuellement une avance, 
+obtenir un justificatif de dépense à transmettre au trésorier
+
+- écrire dans le RE qu'une personne qui participe à un atelier est membre le temps de l'atelier
+
+- faire s'inscrire systématiquement les nouveaux membres sur framateam, obligatoire pour prendre 
+leur bulletin d'adhésion
+
+- on peut payer son adhésion avec un virement SEPA, demander le IBAN au trésorier, ne pas 
+diffuser publiquement le IBAN
+
+- présenter le LOV aux étudiants de GE2I: on peut envisager une ouverture spéciale pour leur présenter l'asso, parler du projet sur le canal événements du framateam
+
+- relations avec le voisinage: RAS, attention à l'arrivée de la CNC (définir des plages d'utilisation)
+
+- projets futurs :réaménagement des bureaux / établis => Alex en janvier
+
+- installation de la grosse CNC - position et aménagement à déterminer
+
+- liste des achats à prévoir: https://labovilleurbanne.fr/dokuwiki/doku.php?id=achats
+
+- faire une liste du même genre pour un planning à long terme des ateliers avec date et responsable
+
+- déployer nouveau site web: Romain aidé par Alex: https://labovilleurbanne.fr/dev_site/
+
+- rappel: documenter au maximum ses projets sur le wiki du lov, demander les accès sur le canal SI si vous ne les avez pas
+
+- documents internes à l'asso https://labovilleurbanne.fr/nextcloud éventuellement mettre un lien dans le wiki
+
+===Élection au conseil d'administration :===
+ Candidats :
+ - Alexis Bezverkhyy
+
+ - Sylvain Hermelin
+
+ - Antoine Capiaux
+
+ - Romain Deville
+
+ - Frédéric Gallais
+
+ - Jean-François Mourgues
+
+Candidats :
+
+Alexis Bezverkhyy
+
+contre : 0
+
+abstient : 0
+
+Sylvain Hermelin
+
+contre : 0
+
+abstient : 0
+
+Antoine Capiaux
+
+contre : 0
+
+abstient : 0
+
+Romain Deville
+
+contre : 0
+
+abstient : 0
+
+Frédéric Gallais
+
+contre : 0
+
+abstient : 0
+
+Jean-François Mourgues
+
+contre : 0
+
+abstient : 0
+===Composition du nouveau CA :===
+
+ - Alexis Bezverkhyy
+
+ - Sylvain Hermelin
+
+ - Antoine Capiaux
+
+ - Romain Deville
+
+ - Frédéric Gallais
+
+ - Jean-François Mourgues
+
+Le président déclare la présente assemblée générale close.
+fin à 20h50

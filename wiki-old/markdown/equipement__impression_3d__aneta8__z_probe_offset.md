@@ -1,0 +1,33 @@
+## Réglage de l'offset de la sonde en z
+Scandaleusement tiré de Chaos99 :
+https://github.com/MarlinFirmware/Marlin/issues/7913
+
+### What I do (tm):
+(Assuming a cold nozzle and bed, with a z probe that triggers somewhat below the nozzle.)
+
+  1. M502 to revert to defaults (and deactivate bed leveling)
+  1. M500 save defaults
+  1. M503 to print out settings. Notice the M851 Z probe offset line. Whatever you can read here is what is set as probe offset in the configuration.h of the Marlin firmware.
+  1. M851 Z0 will reset this to 0 for the following calibration
+  1. G28 to let it home in all axis. The nozzle will be above the bed by the distance of the probe trigger point to the nozzle, plus the safety margin configured in the firmware to move down after homing
+  1. M211 S0 deactivate software endstops, so we can go past Z0.0
+  1. G0 Z0 to go to the probe trigger point (in case there was a safety margin)
+  1. M119 reports the endstops/probe status. Ensure that it reads TRIGGERED for the z-probe. Move up and down with G0 Z0.05 or G0 Z-0.05 to check that you are in deed right at the trigger point where it switches back and forth between TRIGGERED and open
+  1. M114 note down the exact z height
+  1. Use G0 Z-x.xx to slowly approach the perfect nozzle height with the paper method. See notes to temperature below.
+  1. M114 Note down the final height, subtract the initial height of the trigger point.
+  1. M851 Z-x.yz Set the calculated z offset (negative, if nozzle is above trigger point)
+  1. M500 Save the value
+  1. G29 start bed leveling (details may vary depending on your bed level algorithm)
+  1. M500 save bed level data
+  1. M211 S1 re-enable software endstops
+
+Remember to re-do (G29) or re-use (M420 S1) bed leveling after each new G29. (Probably inside your startup gcode.)
+
+You could also put the value as probe offset into the configuration.h to have it as your default value.
+
+You are done. You have to repeat this whenever you change the distance of your nozzle in relation to the sensor (e.g. mount a different heat break or nozzle).
+
+A note to temperatures: When your nozzle or your bed is hot, it changes dimensions and therefore the z offset. The thickness of the paper is meant to compensate for that. But of course this is not 100% precise. But beware of doing the above with hot nozzle and/or bed: The hot nozzle will heat the bed locally and deform it. Also, more severe, inductive probes (and probably others too) have a temperature drift. The probe will heat up when near the nozzle or near the heated bed and the trigger point will shift, rendering this method useless. If you absolutely MUST do, then be very quick.
+
+If anyone has an easier way to do this, I'm happy to hear it. Also any corrections to the above.

@@ -1,0 +1,673 @@
+{
+  "scrapedAt": "2026-09-16T19:47:36.514Z",
+  "totalDocuments": 74,
+  "documents": {
+    "start": {
+      "id": "start",
+      "title": "LE WIKI DU LOV",
+      "namespace": "root",
+      "rawPath": "raw/start.txt",
+      "markdownPath": "markdown/start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/start",
+      "byteSize": 2957
+    },
+    "asso:start": {
+      "id": "asso:start",
+      "title": "VIE ASSOCIATIVE DU LOV",
+      "namespace": "asso",
+      "rawPath": "raw/asso__start.txt",
+      "markdownPath": "markdown/asso__start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Astart",
+      "byteSize": 2860
+    },
+    "asso:docs_admin": {
+      "id": "asso:docs_admin",
+      "title": "Documents administratifs publics du LOV",
+      "namespace": "asso",
+      "rawPath": "raw/asso__docs_admin.txt",
+      "markdownPath": "markdown/asso__docs_admin.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Adocs_admin",
+      "byteSize": 390
+    },
+    "asso:cr:start": {
+      "id": "asso:cr:start",
+      "title": "Compte-rendus",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__start.txt",
+      "markdownPath": "markdown/asso__cr__start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3Astart",
+      "byteSize": 3081
+    },
+    "asso:local": {
+      "id": "asso:local",
+      "title": "Gestion du local du LOV",
+      "namespace": "asso",
+      "rawPath": "raw/asso__local.txt",
+      "markdownPath": "markdown/asso__local.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Alocal",
+      "byteSize": 3893
+    },
+    "asso:si:start": {
+      "id": "asso:si:start",
+      "title": "SI du LOV",
+      "namespace": "asso:si",
+      "rawPath": "raw/asso__si__start.txt",
+      "markdownPath": "markdown/asso__si__start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Asi%3Astart",
+      "byteSize": 13428
+    },
+    "asso:achats": {
+      "id": "asso:achats",
+      "title": "Achats",
+      "namespace": "asso",
+      "rawPath": "raw/asso__achats.txt",
+      "markdownPath": "markdown/asso__achats.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Aachats",
+      "byteSize": 1250
+    },
+    "ateliers:start": {
+      "id": "ateliers:start",
+      "title": "ATELIERS ANIMES PAR LE LOV",
+      "namespace": "ateliers",
+      "rawPath": "raw/ateliers__start.txt",
+      "markdownPath": "markdown/ateliers__start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/ateliers%3Astart",
+      "byteSize": 734
+    },
+    "ateliers:radiateur_connecte": {
+      "id": "ateliers:radiateur_connecte",
+      "title": "Radiateur connecté",
+      "namespace": "ateliers",
+      "rawPath": "raw/ateliers__radiateur_connecte.txt",
+      "markdownPath": "markdown/ateliers__radiateur_connecte.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/ateliers%3Aradiateur_connecte",
+      "byteSize": 4291
+    },
+    "ateliers:robot_arduino": {
+      "id": "ateliers:robot_arduino",
+      "title": "Robot Arduino",
+      "namespace": "ateliers",
+      "rawPath": "raw/ateliers__robot_arduino.txt",
+      "markdownPath": "markdown/ateliers__robot_arduino.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/ateliers%3Arobot_arduino",
+      "byteSize": 9695
+    },
+    "ateliers:initiation_decoupe_laser_inkscape": {
+      "id": "ateliers:initiation_decoupe_laser_inkscape",
+      "title": "Initiation découpe laser et Inkscape",
+      "namespace": "ateliers",
+      "rawPath": "raw/ateliers__initiation_decoupe_laser_inkscape.txt",
+      "markdownPath": "markdown/ateliers__initiation_decoupe_laser_inkscape.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/ateliers%3Ainitiation_decoupe_laser_inkscape",
+      "byteSize": 1971
+    },
+    "ateliers:atelier_cookies": {
+      "id": "ateliers:atelier_cookies",
+      "title": "Atelier cookies de Noël",
+      "namespace": "ateliers",
+      "rawPath": "raw/ateliers__atelier_cookies.txt",
+      "markdownPath": "markdown/ateliers__atelier_cookies.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/ateliers%3Aatelier_cookies",
+      "byteSize": 2228
+    },
+    "equipement:start": {
+      "id": "equipement:start",
+      "title": "EQUIPEMENTS : OUTILS, MATERIEL",
+      "namespace": "equipement",
+      "rawPath": "raw/equipement__start.txt",
+      "markdownPath": "markdown/equipement__start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Astart",
+      "byteSize": 1114
+    },
+    "equipement:cnc:start": {
+      "id": "equipement:cnc:start",
+      "title": "Commande numérique par ordinateur (CNC)",
+      "namespace": "equipement:cnc",
+      "rawPath": "raw/equipement__cnc__start.txt",
+      "markdownPath": "markdown/equipement__cnc__start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Acnc%3Astart",
+      "byteSize": 1648
+    },
+    "equipement:couture:start": {
+      "id": "equipement:couture:start",
+      "title": "Couture",
+      "namespace": "equipement:couture",
+      "rawPath": "raw/equipement__couture__start.txt",
+      "markdownPath": "markdown/equipement__couture__start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Acouture%3Astart",
+      "byteSize": 628
+    },
+    "equipement:decoupe_laser:start": {
+      "id": "equipement:decoupe_laser:start",
+      "title": "Découpe laser",
+      "namespace": "equipement:decoupe_laser",
+      "rawPath": "raw/equipement__decoupe_laser__start.txt",
+      "markdownPath": "markdown/equipement__decoupe_laser__start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Adecoupe_laser%3Astart",
+      "byteSize": 1285
+    },
+    "equipement:impression_3d:impression_3d": {
+      "id": "equipement:impression_3d:impression_3d",
+      "title": "Impression 3D",
+      "namespace": "equipement:impression_3d",
+      "rawPath": "raw/equipement__impression_3d__impression_3d.txt",
+      "markdownPath": "markdown/equipement__impression_3d__impression_3d.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Aimpression_3d%3Aimpression_3d",
+      "byteSize": 1504
+    },
+    "equipement:inventaire_menuiserie": {
+      "id": "equipement:inventaire_menuiserie",
+      "title": "Inventaire menuiserie",
+      "namespace": "equipement",
+      "rawPath": "raw/equipement__inventaire_menuiserie.txt",
+      "markdownPath": "markdown/equipement__inventaire_menuiserie.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Ainventaire_menuiserie",
+      "byteSize": 904
+    },
+    "projets:start": {
+      "id": "projets:start",
+      "title": "EXPERIMENTATIONS ET PROJETS COLLECTIFS EN COURS",
+      "namespace": "projets",
+      "rawPath": "raw/projets__start.txt",
+      "markdownPath": "markdown/projets__start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Astart",
+      "byteSize": 934
+    },
+    "asso:cr:2015-07-17-assemblee_generale": {
+      "id": "asso:cr:2015-07-17-assemblee_generale",
+      "title": "Compte-rendu d’assemblée générale constitutive du LOV",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2015-07-17-assemblee_generale.txt",
+      "markdownPath": "markdown/asso__cr__2015-07-17-assemblee_generale.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2015-07-17-assemblee_generale",
+      "byteSize": 1731
+    },
+    "asso:cr:2016-06-14-assemblee_generale": {
+      "id": "asso:cr:2016-06-14-assemblee_generale",
+      "title": "Compte-rendu d’assemblée générale ordinaire du LOV",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2016-06-14-assemblee_generale.txt",
+      "markdownPath": "markdown/asso__cr__2016-06-14-assemblee_generale.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2016-06-14-assemblee_generale",
+      "byteSize": 3529
+    },
+    "asso:cr:2017-07-25-assemblee_generale": {
+      "id": "asso:cr:2017-07-25-assemblee_generale",
+      "title": "Compte-rendu d’assemblée générale ordinaire du LOV",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2017-07-25-assemblee_generale.txt",
+      "markdownPath": "markdown/asso__cr__2017-07-25-assemblee_generale.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2017-07-25-assemblee_generale",
+      "byteSize": 7228
+    },
+    "asso:cr:2018-07-12-assemblee_generale": {
+      "id": "asso:cr:2018-07-12-assemblee_generale",
+      "title": "Compte-rendu d’assemblée générale ordinaire du LOV",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2018-07-12-assemblee_generale.txt",
+      "markdownPath": "markdown/asso__cr__2018-07-12-assemblee_generale.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2018-07-12-assemblee_generale",
+      "byteSize": 6786
+    },
+    "asso:cr:2019-07-10-assemblee_generale": {
+      "id": "asso:cr:2019-07-10-assemblee_generale",
+      "title": "2019 07 10 Assemblee Generale",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2019-07-10-assemblee_generale.txt",
+      "markdownPath": "markdown/asso__cr__2019-07-10-assemblee_generale.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2019-07-10-assemblee_generale",
+      "byteSize": 5462
+    },
+    "asso:cr:2019-10-19-preparation_de_l_ag_du_lov": {
+      "id": "asso:cr:2019-10-19-preparation_de_l_ag_du_lov",
+      "title": "Préparation de l'AG du LOV",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2019-10-19-preparation_de_l_ag_du_lov.txt",
+      "markdownPath": "markdown/asso__cr__2019-10-19-preparation_de_l_ag_du_lov.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2019-10-19-preparation_de_l_ag_du_lov",
+      "byteSize": 9100
+    },
+    "asso:cr:2020-01-13-reunion_ca": {
+      "id": "asso:cr:2020-01-13-reunion_ca",
+      "title": "2020-01-13 Réunion CA, procès verbal",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2020-01-13-reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2020-01-13-reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2020-01-13-reunion_ca",
+      "byteSize": 9311
+    },
+    "asso:cr:2020-02-11-reunion_ca": {
+      "id": "asso:cr:2020-02-11-reunion_ca",
+      "title": "2020-02-11 Réunion CA, procès verbal",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2020-02-11-reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2020-02-11-reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2020-02-11-reunion_ca",
+      "byteSize": 10233
+    },
+    "asso:cr:2020-03-16-reunion_ca": {
+      "id": "asso:cr:2020-03-16-reunion_ca",
+      "title": "2020-03-16 Réunion CA, procès verbal",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2020-03-16-reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2020-03-16-reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2020-03-16-reunion_ca",
+      "byteSize": 2191
+    },
+    "asso:cr:2020-05-11-reunion_ca": {
+      "id": "asso:cr:2020-05-11-reunion_ca",
+      "title": "2020 05 11 Reunion Ca",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2020-05-11-reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2020-05-11-reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2020-05-11-reunion_ca",
+      "byteSize": 855
+    },
+    "asso:cr:2020-09-xx-reunion_ca-pre_ag": {
+      "id": "asso:cr:2020-09-xx-reunion_ca-pre_ag",
+      "title": "2020-09-29 Réunion CA - Pré-AG",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2020-09-xx-reunion_ca-pre_ag.txt",
+      "markdownPath": "markdown/asso__cr__2020-09-xx-reunion_ca-pre_ag.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2020-09-xx-reunion_ca-pre_ag",
+      "byteSize": 3983
+    },
+    "asso:cr:2020-10-19-assemblee_generale": {
+      "id": "asso:cr:2020-10-19-assemblee_generale",
+      "title": "Autre points",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2020-10-19-assemblee_generale.txt",
+      "markdownPath": "markdown/asso__cr__2020-10-19-assemblee_generale.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2020-10-19-assemblee_generale",
+      "byteSize": 5448
+    },
+    "asso:cr:2021-06-01-assemblee_generale": {
+      "id": "asso:cr:2021-06-01-assemblee_generale",
+      "title": "2021 06 01 Assemblee Generale",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2021-06-01-assemblee_generale.txt",
+      "markdownPath": "markdown/asso__cr__2021-06-01-assemblee_generale.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2021-06-01-assemblee_generale",
+      "byteSize": 2913
+    },
+    "asso:cr:2022-06-13-reunion_ca": {
+      "id": "asso:cr:2022-06-13-reunion_ca",
+      "title": "2022 06 13 Reunion Ca",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2022-06-13-reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2022-06-13-reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2022-06-13-reunion_ca",
+      "byteSize": 789
+    },
+    "asso:cr:2022-10-24-todo-petiteschosesafaire": {
+      "id": "asso:cr:2022-10-24-todo-petiteschosesafaire",
+      "title": "2022 10 24 Todo Petiteschosesafaire",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2022-10-24-todo-petiteschosesafaire.txt",
+      "markdownPath": "markdown/asso__cr__2022-10-24-todo-petiteschosesafaire.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2022-10-24-todo-petiteschosesafaire",
+      "byteSize": 1409
+    },
+    "asso:cr:2023-05-08-reunion_ca-pre_ag": {
+      "id": "asso:cr:2023-05-08-reunion_ca-pre_ag",
+      "title": "Réunion CA LOV - 2023 - mai",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2023-05-08-reunion_ca-pre_ag.txt",
+      "markdownPath": "markdown/asso__cr__2023-05-08-reunion_ca-pre_ag.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2023-05-08-reunion_ca-pre_ag",
+      "byteSize": 3075
+    },
+    "asso:cr:2023-06-12-assemblee_generale": {
+      "id": "asso:cr:2023-06-12-assemblee_generale",
+      "title": "Compte-rendu d’assemblée générale ordinaire du Laboratoire Ouvert Villeurbannais (LOV)",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2023-06-12-assemblee_generale.txt",
+      "markdownPath": "markdown/asso__cr__2023-06-12-assemblee_generale.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2023-06-12-assemblee_generale",
+      "byteSize": 7270
+    },
+    "asso:cr:2023-06-12-CR-CA-bureau": {
+      "id": "asso:cr:2023-06-12-CR-CA-bureau",
+      "title": "Réunion Conseil d’Administration du Laboratoire Ouvert VIlleurbannais (L.O.V.)",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2023-06-12-CR-CA-bureau.txt",
+      "markdownPath": "markdown/asso__cr__2023-06-12-CR-CA-bureau.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2023-06-12-CR-CA-bureau",
+      "byteSize": 607
+    },
+    "asso:cr:2023-07-03-reunion_ca": {
+      "id": "asso:cr:2023-07-03-reunion_ca",
+      "title": "2023 07 03 Reunion Ca",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2023-07-03-reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2023-07-03-reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2023-07-03-reunion_ca",
+      "byteSize": 1080
+    },
+    "asso:cr:2023-09-04_cr_reunion_ca": {
+      "id": "asso:cr:2023-09-04_cr_reunion_ca",
+      "title": "Compte-rendu du conseil d’administration du Laboratoire Ouvert Villeurbannais (LOV)",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2023-09-04_cr_reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2023-09-04_cr_reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2023-09-04_cr_reunion_ca",
+      "byteSize": 4371
+    },
+    "asso:cr:2023-10-03_cr_reunion_ca": {
+      "id": "asso:cr:2023-10-03_cr_reunion_ca",
+      "title": "2023 10 03 Cr Reunion Ca",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2023-10-03_cr_reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2023-10-03_cr_reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2023-10-03_cr_reunion_ca",
+      "byteSize": 2869
+    },
+    "asso:cr:2023-11-06_cr_reunion_ca": {
+      "id": "asso:cr:2023-11-06_cr_reunion_ca",
+      "title": "2023 11 06 Cr Reunion Ca",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2023-11-06_cr_reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2023-11-06_cr_reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2023-11-06_cr_reunion_ca",
+      "byteSize": 2148
+    },
+    "asso:cr:2024-03-05_cr_reunion_ca": {
+      "id": "asso:cr:2024-03-05_cr_reunion_ca",
+      "title": "2024 03 05 Cr Reunion Ca",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2024-03-05_cr_reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2024-03-05_cr_reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2024-03-05_cr_reunion_ca",
+      "byteSize": 2697
+    },
+    "asso:cr:2024-04-09_cr_reunion_ca": {
+      "id": "asso:cr:2024-04-09_cr_reunion_ca",
+      "title": "2024 04 09 Cr Reunion Ca",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2024-04-09_cr_reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2024-04-09_cr_reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2024-04-09_cr_reunion_ca",
+      "byteSize": 1314
+    },
+    "asso:cr:2024-06-04_cr_reunion_ca": {
+      "id": "asso:cr:2024-06-04_cr_reunion_ca",
+      "title": "2024 06 04 Cr Reunion Ca",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2024-06-04_cr_reunion_ca.txt",
+      "markdownPath": "markdown/asso__cr__2024-06-04_cr_reunion_ca.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2024-06-04_cr_reunion_ca",
+      "byteSize": 3682
+    },
+    "asso:cr:2024-06-10-assemblee_generale": {
+      "id": "asso:cr:2024-06-10-assemblee_generale",
+      "title": "2024 06 10 Assemblee Generale",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2024-06-10-assemblee_generale.txt",
+      "markdownPath": "markdown/asso__cr__2024-06-10-assemblee_generale.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2024-06-10-assemblee_generale",
+      "byteSize": 7615
+    },
+    "asso:cr:2025-06-03-assemblee_generale": {
+      "id": "asso:cr:2025-06-03-assemblee_generale",
+      "title": "2025 06 03 Assemblee Generale",
+      "namespace": "asso:cr",
+      "rawPath": "raw/asso__cr__2025-06-03-assemblee_generale.txt",
+      "markdownPath": "markdown/asso__cr__2025-06-03-assemblee_generale.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Acr%3A2025-06-03-assemblee_generale",
+      "byteSize": 9877
+    },
+    "asso:si:keepass": {
+      "id": "asso:si:keepass",
+      "title": "Utiliser les mots de passe du bureau",
+      "namespace": "asso:si",
+      "rawPath": "raw/asso__si__keepass.txt",
+      "markdownPath": "markdown/asso__si__keepass.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Asi%3Akeepass",
+      "byteSize": 215
+    },
+    "equipement:electronique": {
+      "id": "equipement:electronique",
+      "title": "Electronique",
+      "namespace": "equipement",
+      "rawPath": "raw/equipement__electronique.txt",
+      "markdownPath": "markdown/equipement__electronique.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Aelectronique",
+      "byteSize": 340
+    },
+    "equipement:electronique:kit_robots": {
+      "id": "equipement:electronique:kit_robots",
+      "title": "KIT pour atelier Robots",
+      "namespace": "equipement:electronique",
+      "rawPath": "raw/equipement__electronique__kit_robots.txt",
+      "markdownPath": "markdown/equipement__electronique__kit_robots.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Aelectronique%3Akit_robots",
+      "byteSize": 704
+    },
+    "equipement:cnc:idcncpro": {
+      "id": "equipement:cnc:idcncpro",
+      "title": "ID CNC PRO",
+      "namespace": "equipement:cnc",
+      "rawPath": "raw/equipement__cnc__idcncpro.txt",
+      "markdownPath": "markdown/equipement__cnc__idcncpro.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Acnc%3Aidcncpro",
+      "byteSize": 1342
+    },
+    "equipement:couture:surjeteuse_brother-3034dwt": {
+      "id": "equipement:couture:surjeteuse_brother-3034dwt",
+      "title": "Surjeteuse Brother 3034DWT",
+      "namespace": "equipement:couture",
+      "rawPath": "raw/equipement__couture__surjeteuse_brother-3034dwt.txt",
+      "markdownPath": "markdown/equipement__couture__surjeteuse_brother-3034dwt.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Acouture%3Asurjeteuse_brother-3034dwt",
+      "byteSize": 1342
+    },
+    "equipement:couture:machine_a_coudre_brother-innovis-n1800q": {
+      "id": "equipement:couture:machine_a_coudre_brother-innovis-n1800q",
+      "title": "Machine à coudre Brother Innov-is NV1800Q",
+      "namespace": "equipement:couture",
+      "rawPath": "raw/equipement__couture__machine_a_coudre_brother-innovis-n1800q.txt",
+      "markdownPath": "markdown/equipement__couture__machine_a_coudre_brother-innovis-n1800q.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Acouture%3Amachine_a_coudre_brother-innovis-n1800q",
+      "byteSize": 3684
+    },
+    "equipement:decoupe_laser:Découpeuse laser k40": {
+      "id": "equipement:decoupe_laser:Découpeuse laser k40",
+      "title": "Découpeuse laser K40",
+      "namespace": "equipement:decoupe_laser",
+      "rawPath": "raw/equipement__decoupe_laser__Découpeuse laser k40.txt",
+      "markdownPath": "markdown/equipement__decoupe_laser__Découpeuse laser k40.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Adecoupe_laser%3AD%C3%A9coupeuse%20laser%20k40",
+      "byteSize": 5613
+    },
+    "equipement:decoupe_laser:Suivi machine": {
+      "id": "equipement:decoupe_laser:Suivi machine",
+      "title": "Suivi Machine",
+      "namespace": "equipement:decoupe_laser",
+      "rawPath": "raw/equipement__decoupe_laser__Suivi machine.txt",
+      "markdownPath": "markdown/equipement__decoupe_laser__Suivi machine.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Adecoupe_laser%3ASuivi%20machine",
+      "byteSize": 2231
+    },
+    "equipement:impression_3d:bambu_lab_p1s": {
+      "id": "equipement:impression_3d:bambu_lab_p1s",
+      "title": "Bambu Lab P1S",
+      "namespace": "equipement:impression_3d",
+      "rawPath": "raw/equipement__impression_3d__bambu_lab_p1s.txt",
+      "markdownPath": "markdown/equipement__impression_3d__bambu_lab_p1s.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Aimpression_3d%3Abambu_lab_p1s",
+      "byteSize": 3302
+    },
+    "equipement:impression_3d:bambu_lab_a1_mini": {
+      "id": "equipement:impression_3d:bambu_lab_a1_mini",
+      "title": "Bambu Lab A1 mini",
+      "namespace": "equipement:impression_3d",
+      "rawPath": "raw/equipement__impression_3d__bambu_lab_a1_mini.txt",
+      "markdownPath": "markdown/equipement__impression_3d__bambu_lab_a1_mini.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Aimpression_3d%3Abambu_lab_a1_mini",
+      "byteSize": 3164
+    },
+    "equipement:impression_3d:lulzbot-taz-workhorse": {
+      "id": "equipement:impression_3d:lulzbot-taz-workhorse",
+      "title": "Lulzbot TAZ Workhorse",
+      "namespace": "equipement:impression_3d",
+      "rawPath": "raw/equipement__impression_3d__lulzbot-taz-workhorse.txt",
+      "markdownPath": "markdown/equipement__impression_3d__lulzbot-taz-workhorse.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Aimpression_3d%3Alulzbot-taz-workhorse",
+      "byteSize": 3341
+    },
+    "equipement:impression_3d:inventaire": {
+      "id": "equipement:impression_3d:inventaire",
+      "title": "Inventaire",
+      "namespace": "equipement:impression_3d",
+      "rawPath": "raw/equipement__impression_3d__inventaire.txt",
+      "markdownPath": "markdown/equipement__impression_3d__inventaire.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Aimpression_3d%3Ainventaire",
+      "byteSize": 1152
+    },
+    "equipement:impression_3d:bambu_studio": {
+      "id": "equipement:impression_3d:bambu_studio",
+      "title": "Bambu Studio",
+      "namespace": "equipement:impression_3d",
+      "rawPath": "raw/equipement__impression_3d__bambu_studio.txt",
+      "markdownPath": "markdown/equipement__impression_3d__bambu_studio.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Aimpression_3d%3Abambu_studio",
+      "byteSize": 3903
+    },
+    "projets:bac_pour_bio-sceau": {
+      "id": "projets:bac_pour_bio-sceau",
+      "title": "Bac anti-fuite pour seau à compost du Grand Lyon",
+      "namespace": "projets",
+      "rawPath": "raw/projets__bac_pour_bio-sceau.txt",
+      "markdownPath": "markdown/projets__bac_pour_bio-sceau.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Abac_pour_bio-sceau",
+      "byteSize": 1573
+    },
+    "equipement:inventaire_menuiserie:scie_a_ruban": {
+      "id": "equipement:inventaire_menuiserie:scie_a_ruban",
+      "title": "Scie à ruban",
+      "namespace": "equipement:inventaire_menuiserie",
+      "rawPath": "raw/equipement__inventaire_menuiserie__scie_a_ruban.txt",
+      "markdownPath": "markdown/equipement__inventaire_menuiserie__scie_a_ruban.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Ainventaire_menuiserie%3Ascie_a_ruban",
+      "byteSize": 313
+    },
+    "equipement:inventaire_menuiserie:scie_radiale": {
+      "id": "equipement:inventaire_menuiserie:scie_radiale",
+      "title": "Scie radiale",
+      "namespace": "equipement:inventaire_menuiserie",
+      "rawPath": "raw/equipement__inventaire_menuiserie__scie_radiale.txt",
+      "markdownPath": "markdown/equipement__inventaire_menuiserie__scie_radiale.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Ainventaire_menuiserie%3Ascie_radiale",
+      "byteSize": 1240
+    },
+    "projets:gravure_circuits": {
+      "id": "projets:gravure_circuits",
+      "title": "Gravure du circuit (en chantier)",
+      "namespace": "projets",
+      "rawPath": "raw/projets__gravure_circuits.txt",
+      "markdownPath": "markdown/projets__gravure_circuits.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Agravure_circuits",
+      "byteSize": 4792
+    },
+    "projets:couteau:couteau": {
+      "id": "projets:couteau:couteau",
+      "title": "Fabrication d'un couteau pliant from scratch",
+      "namespace": "projets:couteau",
+      "rawPath": "raw/projets__couteau__couteau.txt",
+      "markdownPath": "markdown/projets__couteau__couteau.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Acouteau%3Acouteau",
+      "byteSize": 5317
+    },
+    "projets:etagere_pour_le_local:start": {
+      "id": "projets:etagere_pour_le_local:start",
+      "title": "Conception chiffrage",
+      "namespace": "projets:etagere_pour_le_local",
+      "rawPath": "raw/projets__etagere_pour_le_local__start.txt",
+      "markdownPath": "markdown/projets__etagere_pour_le_local__start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Aetagere_pour_le_local%3Astart",
+      "byteSize": 414
+    },
+    "projets:etabli_bois": {
+      "id": "projets:etabli_bois",
+      "title": "= Établi bois pour le LOV, saison 1",
+      "namespace": "projets",
+      "rawPath": "raw/projets__etabli_bois.txt",
+      "markdownPath": "markdown/projets__etabli_bois.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Aetabli_bois",
+      "byteSize": 4749
+    },
+    "projets:polargraph:start": {
+      "id": "projets:polargraph:start",
+      "title": "Polargraph en chantier !",
+      "namespace": "projets:polargraph",
+      "rawPath": "raw/projets__polargraph__start.txt",
+      "markdownPath": "markdown/projets__polargraph__start.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Apolargraph%3Astart",
+      "byteSize": 4822
+    },
+    "projets:polargraph:polargraph_utilisation": {
+      "id": "projets:polargraph:polargraph_utilisation",
+      "title": "= Comment utiliser le polargraph du LOV ?",
+      "namespace": "projets:polargraph",
+      "rawPath": "raw/projets__polargraph__polargraph_utilisation.txt",
+      "markdownPath": "markdown/projets__polargraph__polargraph_utilisation.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Apolargraph%3Apolargraph_utilisation",
+      "byteSize": 3320
+    },
+    "..:achats": {
+      "id": "..:achats",
+      "title": "Achats",
+      "namespace": "..",
+      "rawPath": "raw/..__achats.txt",
+      "markdownPath": "markdown/..__achats.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/..%3Aachats",
+      "byteSize": 28691
+    },
+    "equipement:electronique:arduino": {
+      "id": "equipement:electronique:arduino",
+      "title": "Arduino",
+      "namespace": "equipement:electronique",
+      "rawPath": "raw/equipement__electronique__arduino.txt",
+      "markdownPath": "markdown/equipement__electronique__arduino.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Aelectronique%3Aarduino",
+      "byteSize": 1017
+    },
+    "equipement:electronique:raspberry_pi": {
+      "id": "equipement:electronique:raspberry_pi",
+      "title": "Raspberry Pi",
+      "namespace": "equipement:electronique",
+      "rawPath": "raw/equipement__electronique__raspberry_pi.txt",
+      "markdownPath": "markdown/equipement__electronique__raspberry_pi.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Aelectronique%3Araspberry_pi",
+      "byteSize": 196
+    },
+    "equipement:decoupe_laser:decoupeuse_laser_k40": {
+      "id": "equipement:decoupe_laser:decoupeuse_laser_k40",
+      "title": "Découpeuse laser K40",
+      "namespace": "equipement:decoupe_laser",
+      "rawPath": "raw/equipement__decoupe_laser__decoupeuse_laser_k40.txt",
+      "markdownPath": "markdown/equipement__decoupe_laser__decoupeuse_laser_k40.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Adecoupe_laser%3Adecoupeuse_laser_k40",
+      "byteSize": 5613
+    },
+    "equipement:cnc:kiri-moto": {
+      "id": "equipement:cnc:kiri-moto",
+      "title": "Configuration de Kiri:Moto",
+      "namespace": "equipement:cnc",
+      "rawPath": "raw/equipement__cnc__kiri-moto.txt",
+      "markdownPath": "markdown/equipement__cnc__kiri-moto.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Acnc%3Akiri-moto",
+      "byteSize": 2272
+    },
+    "user:elementw": {
+      "id": "user:elementw",
+      "title": "Elementw",
+      "namespace": "user",
+      "rawPath": "raw/user__elementw.txt",
+      "markdownPath": "markdown/user__elementw.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/user%3Aelementw",
+      "byteSize": 28802
+    }
+  },
+  "totalChunks": 383
+}

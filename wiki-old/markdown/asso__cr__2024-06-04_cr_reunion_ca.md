@@ -1,0 +1,90 @@
+## Compte-rendu du conseil d'administration du Laboratoire Ouvert Villeurbannais (LOV) 
+ Date : 2024-06-04 à 20H00 
+ rappel membres du CA : @grapsus (president), @nrineau (trésorier), @obiyan (secretaire), @citrouilleorange, @dawad, @ddp, @fredervish
+ rappel lien vers le compte rendu précédent : [https://labovilleurbanne.fr/dokuwiki/asso:cr:start](https://labovilleurbanne.fr/dokuwiki/asso:cr:start)
+
+### Ordre du jour 
+retour sur les actions précédentes
+préparation AG
+
+### Participant.e.s 
+présents: @grapsus @nrinea @obiyan @dawad
+
+### Sujets abordés
+
+Actions passées
+
+tout a été fait :)
+créneau silencieux pas encore assez de volontaires => rappel lors de l'AG
+
+AG
+
+Bilan moral
+
+Alexis: Évolution très positive cette année: plein d'initiatives et de membres impliqués dans la vie de l'asso, merci pour toutes les contributions
+
+projets marquants:
+    imprimante résine opérationnelle, financée par une cagnotte
+    fiabilisation et mise en service de la 2e découpe laser
+    support pour la CNC
+    réagencement du local: présentatoir, canapés, tableaux blancs, évacuation des trucs inutiles
+    impresssion 3D: 2 imprimantes en service (mise en service Créality), boîte thermique, étagère à filament
+    refonte de la vitrine lancée (merci Shaga pour le projet), attente du retour subvention
+    vente des boules de Noel
+    
+partenariats:
+    attente forte de la mairie (BIJ) en début de saison
+    visite du maire et adjointe à l'industrie
+    carte 3D du quartier
+    JDLL
+    Illyse
+    quelques membres de l'Astek
+    
+plans pour l'avenir:
+    utilisation des caves (stockage + compresseur ?)
+    prévoir de participer au forum des assos Villeurbanne (autour du 10 septembre 2024)
+    vente de boissons soft en libre service ?
+    indiquer sur le site lov ouvert ou fermé (API home assistant)
+    accès carte RFID pour tous les adhérents (période d'essai ou condition d'être adhérent actif)
+    plus généralement avoir l'asso ouverture plus souvent (voir ce qu'on met en place pour les règles de vie en commun)
+    avoir des projets communs où tout le monde peut s'impliquer (système de vote ?)
+    acheter une meilleure découpeuse laser ? (plus grand format + fiable)
+    nouvelle vente de boules de Noel
+    formations planfiées pour les machines, 2-3 sessions par an
+    cycles de formation (électronique, couture etc.)
+
+Bilan financier
+
+50 adhérents, pensez à renouveler votre adhésion la saison 2024-2025 (lien helloasso à mettre)
+
+Le LOV est le fablab le moins cher de la ville et souhaite le rester. Le prix de l'adhésion ne change pas et reste très bas. Cependant il faut payer nos frais de fonctionnement: on encourage donc les dons (par exemple 10 euros par mois) pour ceux qui paient des impôts (ce qui revient 3.3 € après réduction fiscale).
+
+Il y a déjà plusieurs membres qui ont souscrit aux dons, lien helloasso: lien à mettre
+
+plus gros poste de dépense: EDF (facture élec x3)
+cagnotte résine: 400
+dons libres: 300
+
+nouveautés:
+    paiement par carte avec HelloAsso
+    cagnottes
+    dons mensuels ou libres
+    LOV reconnu asso d'intérêt général: les dons (libres et sans contrepartie uniquement) sont défiscalistés (-66% du montant sur les impots), dons possibles de la part des entreprises, reçu fiscal automatique sur HelloAsso
+    paypal en cours
+
+plans:
+  aménagement en partenariat avec la mairie
+  projets communs matériaux financés par la mairie
+  cagnottes pour des machines: poste à souder MIG, d'autres idées ?
+
+Questions diverses
+
+d'autres plans pour la saison suivante, besoins ? parole aux adhérents
+
+Élections du CA
+
+-- fin AG
+
+Réunion CA
+
+élections bureau

@@ -1,0 +1,92 @@
+===== Compte-rendu d’assemblée générale ordinaire du LOV =====
+  * Date : 2017-07-25
+  * Lieu : local du LOV, 21 place des Maisons Neuves, Villeurbanne
+  * Participants : 9 personnes; la Mairie de Villeurbanne est représentée
+
+==== Ordre du jour ====
+  - le bilan des activités de l'association ;
+  - le bilan moral de l'association ;
+  - le bilan financier de l'association ;
+  - l’avancement des travaux :
+  - les prochaines actions qui seront menées ;
+  - les votes : 
+    - adoption de la modification du RI (montant adhésion)
+    - élection CA
+    - élection bureau
+
+==== Remarques préliminaires ====
+Évocation des problèmes et manques d’organisation de l’assemblée générale :
+  * pas de réunion préparatoire explicite
+  * pas d’ajustement effectif du règlement suite à la prise de décision de la précédente assemblée générale.
+Il est convenu d’être plus correct sur les tâches administratives importantes. Les raisons avancée pour expliquer le relâchement sont la lassitude et l’absence de personnes tierces à l’association.
+
+==== Rapport d’activité du LOV ====
+  * 26 novembre 2016 : Semaine de l’engagement. Atelier Radiateur connecté. Présents : Jérémy, Jean-François, Sylvain, Alexis, Françoise
+  * 1e et 2 avril 2017 : JDLL 2017 avec Découpeuse laser + stand associatif du LOV. Seront présents : Jérémy, Jean-François, Sylvain, Alexis, Alex.
+  * Préparation et câblage électrique et informatique pour la MJC de la Maison des Rancy.
+
+==== Rapport moral du président ====
+  * La précédente AG remonte au 14 juin 2016, nous sommes dans les temps.
+  * Le LOV a eu les clé du local en octobre 2016. Depuis Octobre le LOV se bat pour résoudre les problèmes d'ouverture et d'utilisation du local (électricité, dégâts des eaux…).
+  * Le LOV a un logo (qui est même utilisé !).
+  * Le site web se remplit des événements et actions de l’association.
+  * Oublie d’actualisation du règlement intérieur suite à une décision prise le 31 mai 2016 de fixer la cotisation à 40€; c’est corrigé depuis, et mis en ligne.
+  * Nous avons reçu des dons de mobilier de la MJC de Bron et d’Enedis.
+  * Le LOV a investi dans une découpeuse laser, qui a beaucoup plus lors des JDLL surtout auprès des enfants.
+Discussions :
+  * Il est fait par les participants de l’AG plusieurs précisions sur le bilan moral, avec notamment la difficulté d’attirer les gens via une communication régulière et proactive.
+  * De nombreuses interrogations et réflexions sur les actions d’accueil ou de refus d’adhésion des nouveaux adhérents, les réalisations individuelles, et l’implication générale des personnes face à des délais plus longs que ceux attendus.
+  * Discussion sur le style, méthode, et dynamique de la gouvernance du LOV.
+  * Discussions sur l’organisation et le cadrage général pour la conduite des actions. Il est décidé de former explicitement des groupes de travail avec un responsable associé.
+
+==== Rapport financier du trésorier ====
+Nous avons reçu 5750€ de subvention de la mairie pour fonctionnement et réalisation des projets.
+  * Comme recette : subvention + adhésions
+  * Comme dépenses : achat de matériel (Découpeuse: 425€)
+  * Bilan: 5376,11€ de liquidités, avec des remboursements restant dues (~ 160€).
+
+==== Avancement des travaux ====
+  - Électricité : raccordement fait, on attend le rdv pour le consuel. Peu de nouvelles, même après relance. Pas de date de prévue. Nous avons déjà eu un prélèvement d’Enedis malgré l’absence de courant. Le compteur a été déplacé. Le tableau électrique est loin du compteur, d'où des questions sur la conformité de l’installation.
+  - Connexion internet : facile à réaliser, mais nécessite d’avoir l’électricité.
+  - Infiltration d’eau dans le mur du fond : Pas d’info particulière, c’est la Mairie qui (doit) gére(r) en liaison avec le syndic, le service patrimoine, l’entreprise de rénovation, l’assurance, etc. Nous avons le nom de l’entreprise qui doit intervenir, mais pas de dates en vue
+  - Extraction d’air pour la hotte : vote négatif des copropriétaire; on fait quoi du coup ? Nous avons le soutien des propriétaire du dernier étage. Il faut reprendre le dossier et rassurer les gens pour leur présenter une solution plus détaillée
+  - Ventilation : rien pour le moment; ventilation et hotte sont liées
+  - Rideaux métalliques : ils ont été décapés, redressés, et graissés; ça fonctionne mieux mais une réfection complète est à faire. Demander un devis pour réparation/remplacement
+  - Plomberie générale : plus de problème de fuites ou de robinets difficile à actionner; reste à faire celle de la salle d’eau
+  - Salle d’eau (toilettes) : toilettes fonctionnelles à minima (la chasse fuit donc il faut couper l’eau); à refaire entièrement (murs, électricité, eau, etc). Peut-être réparer la chasse d'eau vite fait en attendant un truc définitif ? Nous avons eu plusieurs devis à des prix très différents. Une réfection complète est à faire
+  - Isolation phonique : rien de nouveau; on a le faux-plafond avec les fines dalles de mousse; l’entresol est naze. À voir avec l’aménagement du local
+  - Extérieur : la dalle de la cour a été refaite, il n’y a donc plus d’entrée d’eau en cas de pluie ni d’invasion de vers de terre. Nous sommes ravis.
+ 
+Des questions sur qui va réaliser les travaux d’aménagement (peinture, électricité, etc) : artisans, les membres, etc ? Il a été décidé de faire des réunions pour préparer ça.
+Des questions sur le rassemblement des membres de l’association et d’une ouverture large de l’association aux personnes extérieures.
+
+==== Prochaines actions qui seront menées ====
+  * Participation aux Expériences numériques, le 14 octobre 2017, avec la découpeuse laser
+  * Participation aux JDLL : Jérémy, Jean-François
+  * Événements avec la Mairie en octobre et janvier-février
+  * Biennales des associations en septembre : Jean-François
+
+Mise en place des équipes de travail; une équipe est nécessairement portée par un responsable, avec des objectifs précis :
+  * Codesign du local : Jérémy
+  * Travail sur les statuts pour gérer l’adhésion d’association; seuls les membres physiques peuvent être au CA : Jean-François
+  * Communication et recrutement : Françoise.
+
+Demande de Nelly pour une réunion au BIJ le mardi 19 septembre 2017 pour discuter du LOV; il faut lui répondre.
+==== Votes ====
+Vote du quitus financier de l’association : 8 approbations, 0 rejet, 1 abstention
+
+Vote du bilan moral de l’association : 4 approbations, 4 abstentions, 1 rejet
+
+Vote de l’amendement du règlement intérieur : 8 approbations, 1 abstention, 0 rejet
+
+Élection du nouveau CA : Françoise Prouvoyeur, Damien Clauzel, Jean-François Mourgues, Jérémy Barascut, Alexis Bezverkhyy, Sylvain Hermelin
+
+Composition du nouveau bureau :
+  * Président : Sylvain Hermelin
+  * Trésorier : Alexis Bezverkhyy
+  * Secrétaire : Damien Clauzel
+  * Vice-président : Jérémy Barascut
+  * Vice-trésorier : Jean-François Mourgues
+Pas de demande de points complémentaires. 
+
+Fin d’AG à 21h59.

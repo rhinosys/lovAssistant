@@ -1,0 +1,58 @@
+Ressources pour apprendre à utiliser kiri:moto :
+  * (en) https://www.youtube.com/watch?v=nQUvXOjDib4
+
+===== Configuration de Kiri:Moto =====
+
+URL: https://grid.space/kiri/
+
+Si vous utilisez l'ordinateur de la CNC, la configuration de l'[[equipement:cnc:idcncpro|ID CNC PRO]] est déjà stocké dans le cache du navigateur.
+
+Si vous utilisez votre ordinateur, //importez// les fichiers de l'archive suivante : {{ :equipement:cnc:id-cnc-pro_kiri-moro.zip |}}
+  * id_cnc_pro.km : configuration de la machine
+  * tools.km : configuration des têtes de fraisage
+
+===== Préparation du GCode avec Kiri:Moto =====
+
+  - Avant tout, vérifier que le bon //device// est sélectionné (en haut à droite)
+  - //Importer// vos fichiers STL
+
+
+  - Configurer le //Stock// (matériau qui sera travaillé) et l'origine (qui correspondra au 0,0,0 sur la machine) selon votre projet (voir ci-dessous)
+    - Activer le mode //Offset//
+    - Configurer //Width// et //Depth// à une valeur supérieur au diamètre de l'outil
+
+
+  - Configurer l'origine 
+    - //Limits/Z Anchor//: Bottom
+
+
+  - Créer les opérations nécessaires (//Operation List// à droite), **en sélectionnant l'outil monté**  (https://docs.grid.space/kiri-moto/CAM/ops)
+    - Pour creuser les formes internes:
+      - pour les opérations qui vont jusqu'en bas du matériau: utiliser //outline// en mode //Inside Only// (besoin de décocher //Outside Only//)
+      - pour les autres: utiliser //pocket// et sélectionner les faces concernées
+    - Pour séparer l'objet du reste du matériau, utiliser //outline// en mode //Outside Only//
+    - Pour des formes complexes, utiliser //rough// (grossier) puis //contour//
+    - Pour des trous à la taille de l'outil monté, utiliser //drill//
+
+
+  - Adapter la vitesse des opérations
+    - //Plunge rate//: 10 (valeur conseillée)
+    - //Feed rate//: 500 (valeur conseillé pour du bois tendre)
+
+
+  - Cliquer sur Slice pour calculer le chemin de l'outil
+  - Vérifier le résultat avec //Prévisualiser// et //Animer//
+  - //Exporter// le GCode
+
+Objet à découper dans le matériau:
+*
+
+Objet déjà au format:
+* //Stock//
+  * //Offset// coché
+  * //Width//, //Depth// et //Height// à 0
+* //Limits//
+  * //Z Anchor//: bottom
+* //Outline//
+  * //Origin Top// coché
+  * //Offset// à zéro (les 3)

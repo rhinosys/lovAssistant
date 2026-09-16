@@ -1,0 +1,64 @@
+## Compte-rendu du conseil d'administration du Laboratoire Ouvert Villeurbannais (LOV) 
+ Date : 2024-03-05 à 20H00 
+ rappel membres du CA : @grapsus (president), @nrineau (trésorier), @obiyan (secretaire), @citrouilleorange, @dawad, @ddp, @fredervish
+ rappel lien vers le compte rendu précédent : [https://labovilleurbanne.fr/dokuwiki/asso:cr:start](https://labovilleurbanne.fr/dokuwiki/asso:cr:start)
+
+### Ordre du jour 
+Ateliers futur
+Adhesion / finance 
+rendez-vous avec la mairie (BIJ)
+astech
+Imprimante resine Status
+Carte de quartier
+réunions d'Illyse un mardi par mois au lov
+partenariat JDLL
+sub vitrine
+ouverture dons
+ouverture formations imprimante résine
+Appel au projet (subvention)???
+
+### Participant.e.s 
+présents: @grapsus @nrineau @fredervish @obiyan
+
+### Sujets abordés
+retour visite Maire (conseil de quartier, LOV)
+retour positif => aménagements intérieurs + machines avec budget participartif à envisager
+date pour le lancement des projets ?
+reportage en juin dans Viva => contact à prévoir Lois
+
+retour visite BIJ
+atelier organisé par une structure de la ville MJC avec activités au LOV => inscriptions + communication
+suggestion de demande de sub "vitrine" pour fin mars
+
+LOV projets internes
+1. ateliers pour les nouveaux adhérents: utilisation de machines, électronique, peut-être sondage sur framateam ?
+1. cartes du quartier pour le 14 mars => ébauche pour le conseil de quartier -> cahier des charges à affiner
+idée : carte comme outil de communication pour les aménagements du quartier avec openstreetmap
+1. bureau d'angle + étagères
+1. cave : box vide
+1. imprimante résine testée avec aspiration à côté de l'évier.pas encore accessible aux adhérent.e.s (Jérémy est partant pour les formations).
+
+Astech
+Ancien présiident à ouvert un Fablab dans l'ouest Lyonnais (OpenTehcnolab)
+Les anciens adhérents ont été informés de l'existence du LOV.
+
+Adhésion / Finance
+mode autofinancement
+dons récurents de certains adhérents
+rescrit fiscal => fin année 2024 => reçus fiscaux éditables avec obligation de déclarer les reçus au fisc
+hello asso  => imprimante résine
+hello asso => boules de noel => lancement du hello asso
+
+Illyse 
+VOTE OK pour une réunion un mardi par mois, même modèle que les JDLL, avec leur propre assurance
+Convention de partenariat
+
+Vitrine
+demande de subvention => rédigée par Obiyan
+
+Actions :
+    1. Alexis: recontacter Lois pour viva en juin
+    1. Alexis: relancer le BIJ pour avoir des contacts de MJC pour les ateliers
+    1. Alexis: relancer pour la cave
+    1. Lilian: Compte rendus à mattre à jour dans le wiki (manque le 11/06/24)
+    1. Alexis: envoyer la demande de sub vitrine par mail

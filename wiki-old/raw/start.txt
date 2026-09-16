@@ -1,0 +1,52 @@
+====== LE WIKI DU LOV ======
+{{https://labovilleurbanne.fr/blog/wp-content/uploads/2023/02/Banderolle03_MOD2-1200x566.jpg?1200x566}}
+
+Bienvenue sur le wiki du LOV. Ces pages servent à documenter le fonctionnement de l'association.
+
+
+===== Vie associative =====
+[[asso:start|{{https://labovilleurbanne.fr/blog/wp-content/uploads/2023/02/Banderolle_MOD-1200x565.png?600}}]]
+
+[[asso:start|Vie associative :]]
+  * [[asso:docs_admin|les documents administratifs publics du LOV]] ;
+  * [[asso:cr:start|les compte-rendus des réunions du CA et des assemblées générales]] ;
+  * [[asso:local|les règles d'utilisation du local du LOV]] ;
+  * [[asso:si:start|le fonctionnement du système d'information du LOV]] ;
+  * [[asso:achats| un suivi des achats de l'association (consommables)]].
+
+===== Ateliers proposés par le LOV =====
+[[ateliers:start|{{ateliers:3_modules.png?direct&600|}}]]
+
+[[ateliers:start|Ateliers proposés par le LOV :]]
+  * [[ateliers:radiateur_connecte|Radiateur connecté]] ;
+  * [[ateliers:robot_arduino|Construction d'un robot]] ;
+  * [[ateliers:initiation_decoupe_laser_inkscape|Initiation à la découpe laser et au dessin vectoriel]] ;
+  * [[ateliers:atelier_cookies|Hackes tes cookies de Noël]].
+
+===== Équipement, outils, matériel =====
+[[equipement:start|{{https://labovilleurbanne.fr/blog/wp-content/uploads/2023/05/Banderolle02_MOD-1200x566.jpg?600}}]]
+
+[[equipement:start|Matériel du LOV :]]
+  * [[equipement:cnc:start|Commande numérique par ordinateur (CNC)]] ;
+  * [[equipement:couture:start|Couture]] ;
+  * [[equipement:decoupe_laser:start|Découpe laser]] ;
+  * [[equipement:impression_3d:impression_3d|Impression 3D]] ;
+  * [[equipement:inventaire_menuiserie|Menuiserie]] ;
+  * Électronique (oscilloscopes, générateurs, station de soudure/rework, fer à souder, etc...) ;
+  * Robotique et Open hardware (Arduino, Raspery Pi, etc...) ;
+  * Poste de soudure à l'arc ;
+  * Bureautique (scanner, imprimante, etc...) ;
+  * Matériaux et consommables ;
+  * Kit pour atelier robots.
+
+===== Expérimentations et projets collectifs en cours =====
+[[projets:start|{{:projets:lov_com_logov3_gravure4.jpg?600}}]]
+
+[[projets:start|Expérimentations et projets collectifs en cours :]]
+  * Électronique et CNC ;
+  * Bois et métal ;
+  * Menuiserie pour l'aménagement du local ;
+  * Robotique et dessin vectoriel ; 
+  * Impression 3D. 
+
+

@@ -1,0 +1,54 @@
+ **2018-05-14**
+
+Mesure puissances à 12mA : - sortie tube : 29 W - lentille enlevée : 26 W
+
+**2022-07-22**
+
+Grapsus : je note les mesures de puissance tant que je m'en rappelle (puissances mesurées au courant max de 24 mA).
+  - k40 historique à l'achat, puissance tube: 26W
+  - k40 historique, puissance tube auj: 20W
+  - k40 historique, puissance après miroirs: 15W
+  - k40 historique, puissance après lentille: 10W
+  - k40 spare, puissance actuelle tube: 33W
+  - k40 space, puissance en sortie de lentille: 20W
+
+**2023-07-22**
+
+Fred et Jeremie :
+  * changement du lit de la graveuse en conservant finalement la plaque nid d'abeille en alu. Le test avec le grillage n'est pas satisfaisant car il marque le dos de la plaque à découper.
+  * test de la focale avec une la plaque en pente. Cette plaque est conservée à la dernière page du cahier rouge.
+{{:equipement:decoupe_laser:test_laser_wiki_.jpg?600|}}
+  * une cale définie pour la découpe de plaque de 3mm d'épaisseur est rangée au fond de la découpe Laser.
+  * positionner la cale à côté de la "poulie guide" peinte en blanc (à faire **hors tension**)
+{{:equipement:decoupe_laser:cale_blanche_wiki_.jpg?600|}}
+  * les parties blanches doivent être alignées en tout point de la découpeuse (à faire **hors tension**).
+
+**2022-09-01** entretien unité de filtration SFM410
+  * l'unité de filtration date de 2009
+  * manuel entretien : {{ :equipement:decoupe_laser:unite_de_filtration_sfm410_notice.pdf |}}
+
+Ci-dessous, voici la liste du matériel commandé en 2009 :
+
+FM400FM500 Filtre plisse cadre carton - Eff. M5 pour FM400
+ Qté 1,00
+
+FM400MF410 Rehausse module de filtration - FM400-MF410
+ Qté 1,00 275,00 euros
+
+FM400FF700 Filtre à poches eff. F7 - cadre galvanisé - Ht. 360 mm pour unité FM400 (dimensions : 305*457*355 mm)
+ Qté 1,00 58,50 euros
+
+FM400FM500 Filtre plisse cadre carton - Eff. M5 pour FM400
+ Qté 1,00 15,00 euros
+
+FM400FF700 Filtre à poches eff. F7 - cadre galvanisé - Ht. 360 mm pour unité FM400 (dimensions : 305*457*355 mm)
+ Qté 1,00 58,50 euros
+
+FM400FH13CA Filtre HEPA H13 - 305 x 457 x ht. 292 mm + charbon actif 2 kgs
+ Qté 1,00 255,00 euros
+
+FM400TM00 Filtre métallique pour FM400
+ Qté 1,00 32,00 euros
+
+
+

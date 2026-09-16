@@ -1,0 +1,4 @@
+### Raspberry Pi
+Le site officiel (en anglais) : https://www.raspberrypi.com/
+
+Des tutos en ligne (en français) sur Bidouille2Geek : https://www.bidouille2geek.fr/category/electronique/raspberry/

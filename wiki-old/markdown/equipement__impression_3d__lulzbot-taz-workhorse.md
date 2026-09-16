@@ -1,0 +1,42 @@
+## Lulzbot TAZ Workhorse
+### Utilisation
+Pour utiliser l'imprimante Lulzbot, il faut avoir un dessin 3D (typiquement STL) de ce qu'on veut imprimer. Il faudra bien sûr prendre en compte la technologie de l'impression dans la conception du modèle.
+
+On va ensuite passer le dessin au logiciel Cura (installé sur l'ordinateur attenant).
+
+![image](equipement:impression_3d:cura.png)
+
+On sélectionne l'imprimante en question (en haut à droite)
+
+Les paramètres enregistrés sont adaptés à la machine (on vérifiera tout de même que c'est bien la machine "TAZ Workhorse" qui est sélectionnée). Il faut aussi sélectionner le matériau utilisé (de base PLA, facile de mise en oeuvre).
+
+Cura nous montre alors le plateau de la machine, on peut y placer le(s) objet(s) à imprimer. On peut au besoin modifier les paramètres d'impression à droite : plusieurs profils, correspondants à différentes épaisseurs de couches sont enregistrés, soit différentes finesses de rendu. Si une boite de dialoge
+Pour une utilisation avancée, on peut modifier le détails des paramètres, mais on n'enregistrera JAMAIS sur les anciens (on peut exporter ses paramètres personnalisés pour les conserver au besoin).
+
+On clique ensuite sur "Préparer" en bas à droite, Cura va alors préparer le G-code pour la machine (= suite d'instructions précises et détaillées que suivra l'imprimante 3D). On peut vérifier le travail que fera l'imprimante ("solid view" => "layer view" par exemple) et sauvegarder le fichier (oin placera celui-ci dans un dossier à son nom, dans le dossier "Documents").
+
+#### Pour imprimer :
+  1. navigateur internet, on ouvre la page http://octopiw/ (marque page "octoprint (lulzbot)")
+  1. "Connection" en haut à gauche => "connect".
+  1. on peut ensuite charger le g-code en bas à gauche (on fera bien attention à placer celui-ci dans un dossier à son nom).
+  1. sélectionner le fichier g-code et l'ouvrir.
+  1. OctoPrint le charge alors en mémoire et permet de vérifier de nouveau le travail à faire (onglet "GCode viewer").
+  1. léger nettoyage du lit d'impression à l'IPA (alcool isopropylique)
+  1. dans octoprint, on appuit sur "Print".
+  1. on surveillera attentivement les premières étapes (prises de positions et premières couches) qui sont les plus sujettes à problèmes. On surveille ensuite bien entendu l'impression régulièrement.
+  1. vers la fin, l'impression est envoyée "derriére" => ne pas toucher ! on attend que ça refroidisse
+  1. à la fin, l'impression est envoyée "devant", vers l'utilisateur => on peut décoller (utiliser l'outil prévu à cet effet, en douceur pour ne pas rayer le lit).
+
+#### Spécifications
+  - filament 3mm (2.85mm)
+  - build volume ~ 280x280x285 mm
+
+Plus de détails [ici](https://www.lulzbot.com/store/printers/lulzbot-taz-workhorse/specifications)
+
+### Maintenance
+La machine demande normalement peu de maintenance. L'extrudeur est nettoyé et le lit auto-nivelé au début de chaque impression. Si l'auto-nivellement plante, c'est qu'il faut nettoyer à la main et à fond l'extrudeur.
+
+#### Historique de calibration Z offset
+^ Z offset ^ Quand      ^ Qui                             ^
+| -1.30    | ?          |                                 |
+| -1.66    | 2023-04-17 | [Céleste / ElementW](https://labovilleurbanne.fr/dokuwiki/user:elementw) |

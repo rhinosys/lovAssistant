@@ -1,0 +1,69 @@
+## Compte-rendu d’assemblée générale ordinaire du LOV
+  - Date : 2016-06-14
+
+### Ordre du jour
+  - Ordre du jour
+  - Rapport moral du président
+  - Rapport d’activité du LOV
+  - Rapport financier du trésorier
+  - Questions & remarques
+  - Élections du CA & du bureau
+  - Annexe
+ 
+### Participants
+  - Barascut, Jérémy
+  - Clauzel, Damien
+  - Mourges, Jean-François
+  - Hermelin, Sylvain
+  - Prouvoyeur, Françoise
+  - Marquet, Fabien
+  - Bocquet, Jonathan
+  - Bezverkhyy, Alexis
+  - plusieurs personnes de la Mairie de Villeurbanne
+
+### Rapport moral du président
+  - Dernière AG en juillet 2015, nous sommes dans les temps.
+  - Rappel des démarches administratives entreprises auprès de la mairie de Villeurbanne
+  - Mention aux personnes de la mairie que le LOV n’a pas reçu de réponse des services techniques suite à notre courrier des contraintes et besoins en matière de local 
+    - le rapport moral du président ne semble pas très équitable à toutes les personnes de la mairie, qui rappellent leurs multiples apports d’informations et leur grande présence sur ce projet
+    - rappel des personnes de la mairie sur l’importance de mettre Nelly en copie des courriers pour assurer un bon suivi
+  - Décision de la mairie le 5 juillet sur le financement du LOV.
+  - Le compte bancaire a été ouvert au Crédit Mutuel
+  - La convention a été signée avec le BIJ pour l’utilisation des locaux
+  - L’assurance pour l’utilisation du BIJ est en cours (devis en attente)
+
+### Rapport d’activité du LOV
+  - Le LOV s’est structuré; des outils de communication et de publication sont en place.
+  - La création des contenus est en cours par une équipe dynamique : « Ça va envoyer du poney ».
+  - Les projets sont bien en place, en attente du local pour les commencer.
+  - Le LOV a participé aux JDLL en avril 2016. Bonne communication et bons retours. Des sollicitations pour participer à des événements.
+
+### Rapport financier du trésorier
+  - Quasiment pas d’activité, donc peu de dépenses.
+  - Le compte bancaire est ouvert, à tarif et conditions avantageux.
+  - Il faut rentrer des cotisations pour équilibrer le budget
+  - La question du tarif préférentiel est à clarifier : tarif par famille, étudiant, etc ? Il est à établir en fonction du public ciblé.
+
+### Questions & remarques
+  - A-t-on une idée sur la date d’ouverture du local ? Beaucoup de gens posent la question. 
+    - Les travaux seront faits durant l’été, puis les finitions seront faites par le LOV dans une mesure à déterminer. Ouverture prévisible en septembre/octobre
+  - Importance de la visibilité des actions envisagées pour la mairie
+    - TODO : (rere)refaire un planning prévisionnel d’ouverture avec : horaires, responsable, activités
+  - Importance du lien avec les associations et acteurs locaux 
+    - TODO : fixer une réunion avec le conseil de quartier des Maisons Neuves
+  - Sollicitation du LOV pour participer à la Semaine de la jeunesse en novembre 2016
+
+### Élections du CA & du bureau
+  - Élus au CA : Françoise, Sylvain, Alexis, Jean-François, Jérémy, Damien
+  - Élus au bureau : 
+    - président : Jérémy (reconduction)
+    - vice-président : Jean-François
+    - trésorier : Sylvain (reconduction)
+    - trésorier adjoint : Alexis
+    - secrétaire : Damien (reconduction)
+    - secrétaire adjoint : Françoise (reconduction) 
+
+### Annexe
+Pièces associées à ce CR :
+  1. feuille d’émargement
+  1. composition du CA, avec signatures

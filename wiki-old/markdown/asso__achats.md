@@ -1,0 +1,25 @@
+IGNORER POUR LA MIGRATION YESWIKI ???
+
+## Achats
+*ben, pour avoir un beau tableau, respecter la syntaxe ...*
+
+^ date ^ avancement ^ produit ^qui ^ remarque ^
+|30-oct-19|OK|2x piles LR44|alexis|changées dans les pieds à coulisse|
+|30-oct-19|OK|savons|alexis|prevoir un doc utilisation des éponges|
+|30-oct-19|OK|éponges|alexis|-|
+|10-déc-19|OK|DIMO plastique autocollant|alexis|boîte à toner côté imprimante|
+|10-déc-19|OK|toner pour l'imprimante|alexis|boîte à toner côté imprimante|
+|10-déc-19|OK|alcool isopropylique|alexis|bouteille dans armoire bureau, rempli pissette|
+|10-déc-19|OK|PLA transparent 1.75mm|alexis|PLA alimentaire pour atelier biscuits|
+|10-déc-19|OK|PLA transparent 2.85mm|alexis|PLA alimentaire pour atelier biscuits|
+|10-déc-19|OK|2x caméras RPI|alexis|pour avoir le visuel dans octoprint|
+|30-oct-19|a faire|agraphes SP19 1/4|-|-|
+|30-oct-19|OK|feutres tableau|Romain|-|
+|30-oct-19|OK|criterium|Romain|-|
+|30-oct-19|OK|stylo noirs|Romain|-|
+|30-oct-19|OK|tresse à dessouder|alexis|don alex|
+|30-oct-19|annulé|clavier pour portable asus K75VJ|alexis|pc soudé à la superglue|
+|11-feb-20|OK|anneaux porte clés x100|alexis|armoire CA|
+
+^ date ^ avancement ^ produit ^qui ^ remarque ^
+|??-??-19|??|??|??|??|

@@ -1,0 +1,167 @@
+# 2020-09-29 Réunion CA - Pré-AG
+## Présent.e.s
+    Sylvain
+    Alexis
+    Fred
+    JF
+
+## Absent.e.s
+OdJ
+
+     Pré-Bilan Moral
+
+     Retour sur la période de confinement 
+
+     Évènement
+
+     Pré-Bilan Trésorier 
+
+     Pré-Bilan Technique
+
+     Nouveau matériel 
+
+     Organisation des permanences
+
+     Gestion avec regle de confinement
+
+     Date de permanence 
+
+     Ateliers
+
+    Achats
+
+    spot solder kit : https://www.keenlab.de/index.php/product/kweld-complete-kit/
+
+     Divers
+
+     Choix de la date de l'AG
+
+Pré-Bilan Moral
+
+Retour sur la période de confinement
+Qu'est-ce qui a été fait ? 
+
+ophélie → masques ?
+alexis → + 1200 visières pour :  hopitaux, rea, imagerie, kiné, CCO, BBalo, coiffeur, …  elles peuvent se nettoyer
+alexis → radio sonic (reportage futur possible) 
+
+Comment avons nous géré le fonctionnement, qu'est-ce qui s'est arrêté, qu'est-ce qui a continué, quels impacts ?  
+
+Tout le présentiel s'est arrêté (ateliers, permanences)
+Du matériel a fonctionné chez des membres (fabrication et don d'EPI).
+
+Les permanences ont repris dès que possible légalement, en limitant le nombre de présents et lavage des mains réguliers et masque. Les ateliers restent annulés jusqu'à ce que la situation sanitaire soit apaisée.
+
+Évènement
+
+     JDLL (Annulé)
+
+     Jump'In tech (Annulé au LOV, mais on été invité)
+
+    Ateliers (biscuit de Noël, démontage imprimante, fabrication de magnets d'Halloween...)
+
+    participation à la biennale des associations de villeurbanne
+
+Utilisation des machines (extrait) :
+
+Objectifs communication pour l'année à venir
+
+    reportage radio un soir avec Radio Sonic
+
+    Contacter VIVA ?
+
+    Affiches petits commerces autour
+
+    fête du crapaud
+
+    Tag du logo sur le rideau métallique ? 
+
+    on fait un pochoir CNC + bombe peinture
+
+    on achète un rouleau de vynil et on découpe un truc à mettre sur les vitres (autour de la porte et la porte et les vitrines)
+
+    COmmuniquer auprès d'assos sur le fait qu'on peut leur apprendre à faire ça.
+
+    wiki https://www.wikilleurbanne.fr/?AnnuAire#lettre_l
+
+Pré-Bilan Trésorier
+3.9k de trésorerie
+rapport détaillé à faire
+
+Pré-Bilan Technique
+
+Nouveau matériel
+
+    imprimante 3D (TAZ)
+
+    Machine à coudre, surjeteuse
+
+    fraiseuse numérique 
+
+    plastifieuse A3
+
+Organisation des permanences
+
+Gestion avec regle de confinement
+
+     Est-ce qu'on limite le nombre de membres ? Est-ce qu'on demande à prévenir
+
+    oui, on limite à 10 personnes, masque obligatoire, lavage des mains fréquents.
+
+     Port du masque en intérieur 
+
+    Ateliers suspendus (sauf cas particulier, type ateliers pour associations).
+
+Date de permanences
+
+     Maintien des :
+
+    lundi ? => OK 19h, mais besoin soutien
+
+    Mardi ? => OK 19h, on propose des clefs à Derek car besoin soutien
+
+    Mercredi ?=> OK, 2ème et 4ème mercredi du mois , 14h30-18h30, besoin soutien
+
+     Gestion des clés
+
+    Clef d'Anthony perdues
+
+    voir avec Duberval
+
+Ateliers
+
+     Cf règle confinement
+
+     Ca pourrait être cool d'avoir une list pour le premier semestre (i.e. janvier 2021)
+
+Achats
+
+    spot solder kit : https://www.keenlab.de/index.php/product/kweld-complete-kit/ => go, on voit pour prendre des batteries lithium qui vont bien.
+
+    on prend de la lamelle nickel pour aller avec et les supports.
+
+Divers
+
+     Emploi jeune ou aidé ? 
+
+     solliciter Anciela pour recruter des bénévoles
+
+     une personne pour aider l'administratif
+
+     des bénévoles pour les ateliers et les permanences
+
+     Atelier avec la fondation “Le Refuge”
+
+     Avancement update du réseau électrique du local
+
+    SI
+
+    préparer la migration vers notre propre instance de mattermost (fin annoncée de framateam)
+
+    etherpad et ethercalc à installer aussi (facile Docker + auth yunh)
+
+Choix de la date de l'AG
+
+On décide de faire les futures AG le premier mardi de Juin, à 20h.
+
+19 Octobre (2 Novembre en backup).

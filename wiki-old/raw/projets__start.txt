@@ -1,0 +1,19 @@
+====== EXPERIMENTATIONS ET PROJETS COLLECTIFS EN COURS ======
+{{:projets:lov_com_logov3_gravure4.jpg?direct}}
+
+**Électronique et CNC**
+  * [[projets:gravure_circuits|Gravure de circuits imprimés]]
+
+**Bois et métal**
+  * [[projets:couteau:couteau|Couteau]]
+
+**Aménagement du local : menuiserie**
+  * [[projets:etagere_pour_le_local:start|Étagère pour le local]]
+  * [[projets:etabli_bois|Établi pour le local, saison 1]]
+
+**Robotique et dessin vectoriel**
+  * [[projets:polargraph:start|Polargraph Construction]]
+  * [[projets:polargraph:polargraph_utilisation|Polargraph Utilisation]]
+
+**Impression 3D**
+  * [[projets:bac_pour_bio-sceau|Bac anti-fuite pour seau à compost du Grand Lyon]]

@@ -1,0 +1,59 @@
+====== Bambu Studio ======
+
+[[https://bambulab.com/en/download/studio|Bambu Studio]] est le logiciel utilisé pour préparer les modèles 3D et les envoyer aux imprimantes Bambu Lab du LOV. Il transforme un fichier 3D en instructions d'impression : cette étape s'appelle le **tranchage**.
+
+{{https://user-images.githubusercontent.com/110661856/207830904-6c5ed9f0-b237-445b-aae0-7b57751b4b90.PNG?800}}
+//Capture d'écran de Bambu Studio en anglais.//
+
+===== Avant de commencer =====
+
+  * Utiliser la session et la configuration mises à disposition au LOV.
+  * Vérifier le modèle, le filament disponible et l'imprimante à utiliser avant de préparer le fichier.
+  * Ne pas modifier les profils système ou les paramètres de maintenance sans l'accord d'un référent.
+
+===== Créer ou ouvrir un projet =====
+
+  - Ouvrir Bambu Studio.
+  - Choisir l'imprimante dans la liste : [[equipement:impression_3d:bambu_lab_p1s|Bambu Lab P1S]] ou [[equipement:impression_3d:bambu_lab_a1_mini|Bambu Lab A1 mini]].
+  - Vérifier le type de plateau installé et sélectionner le même dans le logiciel.
+  - Importer le modèle (formats courants : STL, 3MF ou OBJ) avec **Importer** ou par glisser-déposer.
+  - Vérifier que la pièce tient dans le volume d'impression. L'A1 mini est destinée aux pièces plus petites.
+
+===== Préparer le plateau =====
+
+  - Sélectionner le bon filament : matière, couleur et profil doivent correspondre à la bobine réellement chargée.
+  - Placer le modèle à plat sur le plateau. Utiliser les outils de déplacement, rotation et échelle seulement si nécessaire.
+  - Contrôler que les pièces ne se chevauchent pas et qu'elles restent entièrement dans la zone imprimable.
+  - Ajouter des supports uniquement si la géométrie le nécessite. Préférer les réglages simples et documenter les exceptions.
+
+===== Trancher et contrôler =====
+
+  - Cliquer sur **Trancher le plateau**.
+  - Lire le temps estimé et la quantité de filament.
+  - Ouvrir l'aperçu couche par couche : vérifier la première couche, les parois, les supports et les déplacements de la buse.
+  - Si le résultat est incohérent, revenir à la préparation du plateau plutôt que de lancer l'impression.
+
+===== Envoyer l'impression =====
+
+  - Vérifier une dernière fois le nom de l'imprimante destinataire, le plateau et le filament.
+  - Cliquer sur **Imprimer le plateau** pour envoyer le fichier à l'imprimante connectée, ou exporter le fichier pour l'utiliser par carte microSD.
+  - Se rendre devant l'imprimante et surveiller la première couche.
+  - Si l'impression échoue, l'arrêter depuis l'imprimante et noter le problème.
+
+===== Impression de démonstration : 3D Benchy =====
+
+Le **3D Benchy** est un petit bateau de référence qui permet de découvrir le flux complet et d'observer la qualité de l'impression.
+
+  - Ouvrir un modèle Benchy approuvé par le LOV dans Bambu Studio.
+  - Sélectionner la P1S ou l'A1 mini, le plateau réel et un profil PLA correspondant au filament chargé.
+  - Placer le modèle à plat, cliquer sur **Trancher le plateau** puis vérifier l'aperçu.
+  - Vérifier le temps, la quantité de filament et le nom de l'imprimante.
+  - Cliquer sur **Imprimer le plateau**, puis suivre la première couche devant la machine.
+  - À la fin, laisser refroidir le plateau, récupérer le Benchy et noter les éventuels défauts.
+
+===== Erreurs fréquentes =====
+
+  * **La pièce ne colle pas** : nettoyer le plateau, vérifier le profil choisi et relancer seulement après avoir retiré les résidus.
+  * **Le mauvais filament est sélectionné** : annuler avant l'envoi et aligner le profil avec la bobine chargée.
+  * **La pièce dépasse du plateau** : réduire, repositionner ou utiliser l'autre imprimante si le volume est insuffisant.
+  * **Le fichier part vers la mauvaise machine** : vérifier l'imprimante affichée juste avant l'envoi.

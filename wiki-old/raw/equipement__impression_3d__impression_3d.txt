@@ -1,0 +1,22 @@
+===== Impression 3D =====
+{{https://labovilleurbanne.fr/blog/wp-content/uploads/2023/06/Imprimante-3D-1200x734.jpg?900}}
+
+==== Le matériel ====
+  * Imprimante 3D [[equipement:impression_3d:bambu_lab_p1s|Bambu Lab P1S]]
+  * Imprimante 3D [[equipement:impression_3d:bambu_lab_a1_mini|Bambu Lab A1 mini]]
+  * Imprimante 3D Creality Ender
+  * Imprimante 3D [[equipement:impression_3d:lulzbot-taz-workhorse|LulzBot TAZ Workhorse]]
+
+  * [[equipement:impression_3d:inventaire|Inventaire du matériel d'impression 3D]]
+
+==== Préparer une impression ====
+  * [[equipement:impression_3d:bambu_studio|Bambu Studio]] : préparer, trancher et envoyer un modèle vers les imprimantes Bambu Lab.
+  * [[equipement:impression_3d:bambu_lab_p1s|Guide d'utilisation de la Bambu Lab P1S]]
+  * [[equipement:impression_3d:bambu_lab_a1_mini|Guide d'utilisation de la Bambu Lab A1 mini]]
+
+==== Ressources web ====
+  * [[https://www.printables.com/fr/model|Printables]] : une vaste bibliothèque de modèles à imprimer en 3D.
+  * [[https://www.bidouille2geek.fr/category/imp-3d/|Bidouille2Geek]] : des tutoriels consacrés à l'impression 3D.
+
+==== Projets réalisés par les membres ====
+  * [[projets:bac_pour_bio-sceau|Bac antifuite pour seau à compost du Grand Lyon]]

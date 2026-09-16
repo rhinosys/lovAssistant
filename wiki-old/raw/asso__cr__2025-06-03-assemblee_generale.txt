@@ -1,0 +1,239 @@
+Compte-rendu d'assemblée générale extraordinaire du Laboratoire Ouvert Villeurbannais (LOV) 
+
+Date : 2025-06-03 à 19H30
+
+Présents
+ * @Grapsus (Alexis B., président)
+ * @Nrineau (Nicolas R., trésorier)
+ * @Obiyan_lilian (Lilian T., secrétaire)
+ * @Dawad (David P., membre du CA)
+ * @jdorel
+ * @dodoqueen24
+ * @dadouville
+ * @vtheuer
+ * @piouw
+ * @Nouckey
+ * @necrogimp
+ * @jroy
+ * @thierry
+ * @ludo
+ * @Antho
+ *  @Christianad
+ * @Christelle
+
+Représentés
+ * Géraldine par Alexis B.
+ * Maxime W., membre du CA, par Alexis B.
+ * Irène L-B par Nicolas R.
+ * Ilias par Jonas D.
+
+Invités (ne prenant pas part du vote)
+*Ludovyc B. (Ikona)
+*Thierry R. (Ikona)
+
+Ordre du jour 
+	* mise à jour de l'adresse vers 21 places des Maisons Neuves
+	* vote pour l'ajout aux status d'un article interdisant la rémunération des dirigeants de l'association (exigence du statut d'intérêt général)
+
+Mise à jour de l'adresse
+
+21 places de Maisons Neuves, 69100 Villeurbanne
+
+vote : adopté à l'unanimité
+
+Non rémunération des dirigeants de l'association
+
+Le LOV étant reconnu d'utilité publique (décision DGFIP Rhône 12/2024), nous devons inscrire dans nos status une interdiction de rémunération des dirigeants de l'association (CA et bureau). Personne n'est rémunéré actuellement, mais nos status ne l'interdisent pas.
+
+Nouvel article ajouté au status: 
+
+"Les fonctions dirigeantes au sein de l'association (conseil d'administration et bureau) sont exercées à titre entièrement bénévole et ne peuvent être rémunérées."
+
+vote : adopté à l'unanimité
+
+fin AG extra-ordinaire à 19h38
+
+Compte-rendu d'assemblée générale ordinaire du Laboratoire Ouvert Villeurbannais (LOV) 
+
+Date : 2025-06-03 à 19H40
+
+Présents
+	*@Grapsus 
+	*@Nrineau
+	*@Obiyan_lilian
+	*@jdorel
+	*@dodoqueen24
+	*@dadouville
+	*@vtheuer
+	*@piouw
+	*@Dawad
+	*@Nouckey
+	*@necrogimp
+	*@jroy
+	*@thierry
+	*@ludo
+	*@Anth.o
+	*@Christianad
+	*@Christelle
+	*@Camlafit
+	
+	Représentés:
+	   * Géraldine
+	   * Maxime W
+	   * Jonas représente Ilias Amri
+	
+*Ordre du jour 
+	* bilan moral
+	* bilan financier
+	* vote pour simplifier les tarifs d'adhésion (40e en début de saison, puis 20, au lieu des 4 paliers actuels)
+	* questions diverses
+	* élection des membres du CA
+*
+*Bilan moral
+
+Mot du président: l'année dernière j'étais heureux de souligner l'implication de nombreux adhérents dans l'amélioration et l'animation de notre association, cette année je constate que cette implication est encore plus forte: beaucoup de nouveaux et anciens adhérents participent aux différents projets communs et aident à accueillir des nouveaux arrivants, un grand merci à tous. En plus de l'implication grandissante des adhérents dans la vie de l'association, la situation des comptes s'est améliorée et de nombreux projets ont pu être financés de façon participative. Un véritable modèle de fonctionnement pérenne s'est mis en place. Entre l'implication de ses adhérents et ses finances solides, le LOV arrive vers sa 10e année avec l'opportunié de devenir une véritable institution, avec son identité propre, ses traditions et son histoire.
+
+Projets marquants
+
+	* décoration vitrine, remerciements à la mairie de Villeurbanne, à tous les bénévoles du LOV, en particulier Shagané pour la création graphique et Géraldine pour sa patience dans le collage des vinyles
+	* badges pour accès autonome au local: succès, une quinzaine de badges ont été distribués, le local est ouvert beaucoup plus souvent
+	* débarras et rangement du local, merci à tous les adhérents, en particulier Lilian
+	* poste à souder: table solide et plate, poste à souder plein de fonctionnalités, soudure automatique au gaz possible
+	* nouvelle découpeuse laser (LED): plus fiable et polyvalente que les k40, grand merci à tous les adhérents qui travaillent à sa mise en place, reste à installer l'extension 40x80cm et améliorer l'extraction, taquets pour le zéro
+	* CNC: nouveau PC de contrôle, système d'inserts sur la table, merci à Nicolas et Axel
+	* cagnote nouvelles imprimantes 3D: financement réussi, merci à Nicolas et Piouw pour l'organisation
+	* cycle de formation électronique: 10 participants, à refaire l'année prochaine dans des vraies salles de TP ?
+	* LOV inscrit sur réparons.org et formation pour utiliser le site
+	* snack-bar: en place, paiement en espèces, helloasso ou paypal, merci à Illias pour les courses
+	* imprimante résine: machine en place + extraction
+	* carte du quartier: on est pas loin, progrès avec Blender
+
+Partenaritats 
+
+	* partenariat signé avec ECE (école d'ingénieur en électronique): l'école paie les adhésions de ses étudiants, synergies pour des formations en électronique, le LOV peut avoir accès à une salle de TP, l'ECE peut proposer des intervenants pour des formations ponctuelles autour de l'électronique
+	* partenariat signé avec les repair cafés Ikona: repair café animé au LOV 1/2 mardis, très grande complémentarité entre les créneaux en autonomie du LOV et les sessions plus encadrées de Ikona
+	* partenariat Illyse: reconduit, on accueille avec plaisir les permanences de ce FAI alternatif
+	* partenariat JDLL: reconduit, utilisation du local pour l'organisation de cet événement proche du LOV
+
+Plans pour l'avenir
+
+	* cycle de formation modélisation / impression 3D: recherche bénévoles
+	* animations 3D avec le Rize : une séance modélisation, une impression
+	* nouvelles imprimantes 3D: financement sécurisé, reste achat + installation
+	* CNC cloisonner l'espace, améliorer l'extraction, fabrication des cloisons chez Cobois (merci jdorel)
+	* découpe laser: terminer la mise place de la Ortur
+	* caves: espace de rangement pour les matériaux, casiers adhérents ?
+	* aménagement du local: améliorer les tables du milieu, améliorer les espaces de travail
+	* piste bénévoles sur https://www.jeveuxaider.gouv.fr 
+	* piste site internet https://www.geev.com/fr
+	* piste partenariat: animer un atelier pour l'Université Populaire de Villeurbanne (contact avec la mairie en mai)
+	* campus du libre à Lyon (INSA) 15 novembre: thème communs, un stand pour le LOV ?
+	* forum des associations septembre 2025
+	* souhait pour décoration et aménagement interieur (murs, meubles, wc..), voir financement par budget participatif ?
+
+vote: adopté à l'unanimité
+
+*Bilan financier
+
+Bilan Financier de l'Association Labovilleurbanne 2024-2025
+
+Tous les chiffres sont arrondis à l'euro pour plus de lisibilité. Les comptes complets sont disponibles auprès du trésorier.
+
+Trésorerie 2024/06 : 43 €
+Trésorerie 2025/06 : 1278 € (dont 900€ en attente d'être dépensés pour la 3D)
+
+Communications (Internet + Serveur + Domaine) 413€ se décomposant en:
+	* Abonnement fibre Free : 359 €
+	* Serveur externe Hetzner : 80 €
+	* Domaine et mails OVH : 33 €
+Électricité : 991 €
+Banque : 87 €
+Assurance : 265 €
+Dépenses Ponctuelles : 506 € se décomposant en:
+	* Poste à souder 190 €
+	* Fournitures vitrine 402 €
+Découpeuse laser Ortur et accessoires 601 €
+Autres matières et fournitures  52 €
+Recharge snack  67 €
+Total Dépenses : 3 638 €
+
+Cotisations : 2 200 €
+Dons Helloasso : 476 €
+Dons JDDL + autres dons en espèces: 430 €
+Campagne imprimante 3d: 900 €
+Campagne découpeuse laser: 400 €
+Subvention mairie (vitrine): 400 €
+PAYPAL - SNACK    61 €
+Remboursement OVH 6 €
+Total Recettes : 4 917 € 
+
+67 adhérents à jour de cotisation, pensez à renouveler votre adhésion pour la saison 2025-2026 (dont 14 tarif réduit)
+https://www.helloasso.com/associations/laboratoire-ouvert-villeurbannais/adhesions/cotisation-2025
+
+vote: adopté à l'unanimité
+
+*Simplification des tarifs d'adhésion
+
+La tarification actuelle comporte 4 paliers, selon le trismetre d'adhésion, gestion trop lourde.
+
+Proposition de passer à 2 paliers:
+	* 6 mois et plus avant l'AG: 100% du tarif
+	* moins de 6 mois avant l'AG: 50% du tarif
+	* moins de 1 mois avant l'AG: adhésion pour l'année en cours et l'année suivante à 100% du tarif
+
+Les tarifs restent inchangés :)
+
+vote: adopté à l'unanimité
+
+*Questions diverses
+alternative à Mattermost:être au courant des annonces, peut-être articles de blog
+
+*Election des membres du CA
+
+
+Avant propos: le conseil d'administration est un moyen de s'impliquer d'avantage dans la gestion de l'association. Nous sommes heureux d'accueillir de nouveaux membres au CA. Cependant, soyez réalistes sur votre disponibilité:
+	* le CA se réunit une fois par mois, chaque date est décidée ensemble pour convenir au plus grand nombre, visio possible, durée: 1h
+	* le CA prend des décisions sur un canal mattermost, nous vous demandons de vérifier s'il y a des décisions à prendre au moins une fois par semaine
+	* si vous rejoignez le CA, merci de prendre en charge au moins une activité courante de l'association: vérifier la boite mail, répondre à questions sur mattermost, faire des achats de fournitures (on a une CB), recharger le snack etc.
+Ces engagements sont pris pour un an. Avoir des membres inactifs au CA (absence supérieure à un mois) nuit à la prise de décision et au moral des autres membres du CA.
+Il reste possible de s'investir dans n'importe quel projet du LOV sans être membre du CA. Rejoindre le CA est un engagement moral à s'investir dans l'association pour un an.
+
+Candidats:
+    *Alexis
+    *Nicolas
+    *Lilian
+    *David
+    *François
+    *Jonas
+    *Jean
+    
+Vote:
+    
+CA adopté à l'unanimité
+    
+– fin AG à 21:10
+
+*Réunion Conseil d'administration
+
+date 03/06/2025 à 21h20
+
+présents:     
+    * Alexis
+    * Nicolas
+    * Lilian
+    * David
+    * François
+    * Jonas
+    * Jean
+
+ordre du jour
+  * élection du bureau
+
+candidats au bureau:
+  * Alexis B. président
+  * Nicolas R. trésorier
+  * Jonas D. secrétaire
+
+vote: bureau élu
+
+fin réunion à 21h30

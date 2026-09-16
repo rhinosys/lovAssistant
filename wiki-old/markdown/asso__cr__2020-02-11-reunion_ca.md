@@ -1,0 +1,209 @@
+# 2020-02-11 Réunion CA, procès verbal
+## Présent
+  - rdeville (CA)
+  - fredervish (CA)
+  - grapsus (CA)
+  - sylavin (CA)
+  
+## Absent
+ 1. jfm (CA)
+  
+## ODJ
+  - Rappel des TODO
+  - Déménagement du siège social
+  - Arrivée de la CNC
+  - Point trésorie
+  - Événement
+    - Primevere
+    - Ateliers Février/Mars
+    - JDLL
+  - Communication
+  - Achats à faire
+    - Matière première découpeuse laser (bois et filtres)
+  - Questions diverses
+
+# Rappel des TODO
+TODO: (Sylvain) Mettre à jour le siège social sur https://www.service-public.fr/compte/se-connecter?targetUrl=/loginSuccessFromSp&typeCompte=association, à priori seul Sylvain peut le faire.
+Nouveau siège social au local des maisons neuves : 21 place des maisons neuves, 69100 Villeurbanne
+
+  - Le problème c'est que le siège social doit être dans les status, donc il faudrait modifier les status.
+  - Sylvain va chercher les sources des statuts pours les mettre à jours durant la réunion CA.
+
+TODO: (Team communication sur canal com de mattermost & Romain qui lance sur le canal) Commencer à faire de la communication concernant les JDLL en février, pas mal plus en mars. 
+
+  - Contexte de la tache, c'est qu'on a des gens qui sont sur les médias sociaux et qui relais bien ce que l'on mets dans le canal communication.
+  - Romain : J'ai pas vu/oublié que la tâche m'était assigné.
+
+TODO: (rdeville) Faire des portes-clés/flyers pour mi-mars
+
+  - Cf point flyers primevere.
+
+~~TODO: (rdeville) Faire un framadate pour savoir qui serait présent et quand pour les JDLL, todo à laisser pour la prochaine réunion CA.~~
+
+  - Non fait exprés, car gardé de côté pour le mois de février/mars
+
+~~TODO: (rdeville) Organiser les deux réunions de préparation au JDLL comme l'année dernière.~~
+
+  - Non fait exprés, car gardé de côté pour le mois de février/mars
+
+~~TODO: (rdeville & fredervish) Faire des portes-clés et flyers en prévision de primevère.~~
+
+  - 40 porte clé de fait (reste à les limers un peu)
+  - 20 de plus seront fait mercredi 12 février 2020
+  - Des flyers seront (re)fait mercredi 12 février 2020
+  - Dépots des flyers dans "Shared Multimédia > Documents > Communications"
+
+TODO: (grapsus) Répondre à la journaliste de Viva, on attends que la date de la CNC soit fixé.
+
+  - Date de la CNC fixé, arrivé de la CNC fixé le 18 février 2020
+  - Pas encore fait, mais devrait être fait durant la réunion. 
+
+# Déménagement du siège social
+La sources des statuts n'a pas été trouvé, donc copier/coller depuis le PDF.
+Ils n'ont subit que comme modification : 
+  1. Un peu de forme du au copier/coller
+  1. Changement de l'adresse du siège social pour le mettre à l'adresse actuelle du LOV à villeurbanne.
+
+La version PDF sera à mettre en ligne sur le site une fois validée par la préfecture.
+La soumission à la préfecture a été faite en ligne durant la réunion.
+
+# Point trésorie
+Pour rappel les achats peuvent être demandés sur le mattermost ou directement en ajoutant une entrée dans le tableau d'achat à la page suivante: [..:achats](https://labovilleurbanne.fr/dokuwiki/..:achats).
+
+Achats de matériel electronique pour automatisé le chauffage de l'asso pour que l'on puisse le démarré quelques heures avant.
+
+Pas eut de gros mouvement particulier.
+
+Probablement un peu d'achat de matière à faire pour la CNC, voir point suivant.
+
+# Arrivée de la CNC
+La CNC arrive le mardi 18 février 2020 le matin, mais cela mobilisera les membres toutes la journée.
+
+Dans le cadre de l'achat de la CNC, Sylvain avait demandé d'avoir plus d'outils et moins de matière, ce qui en résulte le todo suivant: Achat de matière pour la CNC.
+
+Organisation de la journée.
+
+Contexte : Pour l'installation de la CNC, nous avions fait un Frama pour savoir qui serais dispo et quand.
+Ce qui est cool c'est que plein de personne étaient motivé, mais l'installateur préfère qu'il n'y ai que 2 personnes.
+On part sur 2 (3) personnes présentes: 
+  1. Confirmé : 
+    1. Sylvain
+    1. Romain, mais peut se désister au profit d'un personne qui resta sur lyon après septembre.
+  1. A Confirmé : 
+    1. grapsus
+    1. ofé
+
+Dans l'idée, nous essayerons de faire en sorte que la formation soit transmise au membre via des ateliers.
+ 
+Lors de l'installation, si l'installateur est OK, nous aimerions filmer l'installation et/ou prendre en photo pour documenter/communiquer.
+
+Se posera la question de license des utilisateurs. Sylva à déjà un workflow en tête, mais il pourrait y avoir des limitations et nous devrons peut-être acheter des logiciels.
+
+Discussion lors la réunions: 
+  1. Est-ce l'elec' du labo supportera ? 
+  1. Oui
+
+  1. Niveau matière, qu'est-ce que l'on peut faire ? 
+  1. Surtout des matériaux mou. On devrait avoir de quoi travailler du bois, du PCB (circuit imprimé), de l'alu. Après il faudra confirmé lors de l'installation avec l'installateur ce que l'on peut faire et avec quoi.
+
+Avec la CNC, faire un grand pochoir du logo pour le peindre sur le rideau de la porte.
+
+## =Événement
+## Primevere
+Primevère est un salon-rencontres alter-écolo, qui aura lieu le 6/8 mars.
+
+40 porté-clé ont été fait (et 20 à venir) pour primevère.
+Des flyers vont être imprimé mercredi 12 févrière pour primevère.
+
+Nous ne sommes pas officiellement sur la programmation, mais nous aurons probablement un coin de table et des membres qui seront présent en tant que visiteur/pour d'autre association. 
+
+Donc l'idée est de mettre à disposition des flyers et des portes-clés et de répondre aux intérogation des gens qui s'y intéressent en fonction des membres qui seront sur place. Normalement il y aura fredervish, romain, athony et jfm, pour d'autre asso/visiteur dans le pole numérique de primevère.
+
+TODO: Préparer un carton la semaine d'avant.
+
+## Ateliers Février/Mars=
+Romain va faire un atelier "Installation d'un console de rétrogaming", le tuto PDF est prêt pour windows, presque pour linux (il faut le modifier pour le faire sans les droits sudo).
+
+Pour faire l'atelier, il faudrait : 
+  1. 5 RPi3 (alims, carte SD) = 40/50 €
+  1. 5 adaptateurs HDMI-> VGA  = 10/15€
+  1. 5 Paires de manette SNES USB = 10/15€
+
+Total 300/400€
+
+Ce qui permettrai de faire un atelier pouvant accueillir jusqu'à 10 personne et pourrait ouvrir la suite à un atelier fabrication de la borne.
+
+TODO: Définir une date un samedi après-midi à priori. 
+
+TODO: Faire de la comm'
+
+TODO: Faire de la comm' pour trouver un atelier pour fin mars/avril
+
+## JDLL=
+Les [JDLL](https://jdll.org), journée du logiciel libre, est un évènement qui se déroule à la maison pour tous, salle des rancys.
+
+Cette année les JDLL ont pour thèmes : **Utopies concrètes et accessibles**.
+
+Elles auront lieu le 04 & 05 avril de 10h à 18h.
+
+Jfm a fait un dépot de demande de stand au JDLL. Il a reçu un accusé de réception lui disant que la demande à été reçue. Nous aurons la confirmation de la tenu du stand après la cloture des soumissions, courant février/mars.
+
+Habituellement, l'installation des orgas des JDLL se fait le vendredi soir.
+Nous arrivons le samedi matin entre 8h et 9h, heure à définir plus précisément pour installer le stand.
+
+L'année dernière, nous avions réussi à motiver une dizaine de membres sur le week-end à raison de deux membres par demi-journée en gros. Pour s'organiser, nous avions fait un framadate un mois avant pour savoir qui était motivé et quand. Une réunion deux semaines avant pour se mettre d'accord sur qui fait quelle demi-journée. Et le lundi précédent les JDLL nous avions fait les cartons que nous avions emmené au JDLL.
+
+TODO: Commencer à faire de la communication concernant les JDLL en février, pas mal plus en mars. 
+
+TODO: Faire des portes-clés/flyers pour fin février, avant primevere qui aura lieu le 6/8 mars.
+
+TODO: Faire un framadate pour savoir qui serait présent et quand.
+
+TODO: Organiser les deux réunions de préparation au JDLL comme l'année dernière.
+
+# Communication
+La plupart des membres du CA ne sont pas sur les réseaux sociaux, donc nous avons peu de visibilité sur ce qui a été fait. Mais dans l'ensemble, ceux qui sont sur les médias font des allers/retours sur mattermost.
+
+On sait que ca marche car des gens on eut vent des ateliers via FB.
+
+emmanuelrouxfr nous a fait part d'un communication de la part de I-buycott lyon. Il voudrait faire des pochoirs. Normalement, il leur a été répondu que ce sera faisable avec la CNC.
+
+En revanche, il ne faut pas que le LOV soit associé au revendication de I-buycott. Donc, cela pourrait être des membres de leur association qui s'inscrive en tant que particulier au LOV pour faire les dits pochoirs.
+
+# Questions diverses
+# TODO
+TODO: (Romain & Team communication sur canal com de mattermost) Commencer à faire de la communication concernant les JDLL en février, pas mal plus en mars. 
+
+TODO: (rdeville) Faire des portes-clés/flyers pour les JDLL
+
+TODO: (rdeville) Faire un framadate pour savoir qui serait présent et quand pour les JDLL, todo à laisser pour la prochaine réunion CA.
+
+TODO: (rdeville) Organiser les deux réunions de préparation au JDLL comme l'année dernière.
+
+TODO: (rdeville)Faire imprimer des vrais flyers pour les JDLL
+
+TODO: (grapsus) Acheter 100 anneaux de porte-clé pour primevère et JDLL
+
+TODO: (grapsus) Répondre à la journaliste de Viva, on attends que la date de la CNC soit fixé.
+
+TODO: Mettre en ligne la version PDF des status. (à reporter)
+
+TODO: Achat de matière pour la CNC (à reporter)
+
+TODO: (rdeville) Ramener/prêter appareil photo pour l'installation de la CNC.
+
+TODO: Faire un état des lieux des logiciels CNC. (à reporter)
+
+TODO: Faire le logo en pochoir pour la CNC. (à reporter)
+
+TODO: (rdeville & fredervish) préparer le carton primevère la semaine avant.
+
+TODO: (rdeville) Définir une date un samedi après-midi à priori pour l'atelier retro gaming
+
+TODO: (rdeville) Faire de la comm' pour l'atelier retro gaming
+
+TODO: (sylvain) Faire de la comm' pour trouver un atelier pour fin mars/avril
+
+TODO: (grapsus) Organisation session travail samedi aprèm elec
+
+TODO: (grapsus) Acheter matériel atelier retro-gaming dès que fournis par rdeville

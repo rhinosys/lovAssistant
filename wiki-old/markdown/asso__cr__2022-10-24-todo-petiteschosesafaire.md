@@ -1,0 +1,36 @@
+- TAHIN Party - Micoro édition 
+    - Propose la 3eme édition du guide d'autodéfense numérique. On pourrait en prendre quelques exemplaires
+
+  - Agir à Lyon - JF propose de prendre un abonnement au mensuel
+
+  - Nom à trouver : festival Makers Villeurbanne / journée V pour Villeurbanne
+    - discussions avec Sayat 
+    - proposition pour organiser ça au printemps au CCO
+    - structures de Villeurbanne qu'on va contacter en priorité
+      - LOV (c'est nous)
+      - CCO - La Rayonne
+      - La Miete (Handilab)
+      - Hangar Computer Club production@hangarcomputer.club 
+      - MJC la Rize (EPN) 
+      - Village Vertical 
+      - Cyclub
+      - Cobois 
+      - La Myne 
+      - https://astech-fablab.fr/ Fablab de l'INSA 
+      - Club Elec https://www.clubelek.fr/ 
+      - Pôle Pixel 
+      - AADN
+      - (Studio 24 )
+      - Youfactory
+    - à voir https://lequilibriste-lyon.fr/notre-association/ - voisins de Lyon, mais pas loin 
+    - organisation 
+      - ce n'est pas le LOV qui va porter le sujet à 100%
+      - idéalement il faudrait 3 structures pour gérer l'organisation 
+      - on peut solliciter Anciela
+      - le BIJ
+    - Format :
+      - village asso avec stand + quelques démo
+      - éventuellement des espaces pour ateliers / conférences
+      - concert le soir 
+
+ - info intéressante : EPN en cours de création vers le chateau sans souci (derrière la ligne T3)

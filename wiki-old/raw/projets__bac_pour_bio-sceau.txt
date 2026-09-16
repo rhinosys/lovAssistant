@@ -1,0 +1,20 @@
+====== Bac anti-fuite pour seau à compost du Grand Lyon ======
+{{https://labovilleurbanne.fr/blog/wp-content/uploads/2023/08/2023-08-14-14-36-40-686-1024x768.webp?600}}
+{{https://labovilleurbanne.fr/blog/wp-content/uploads/2023/08/2023-08-14-14-36-55-406-768x1024.webp?600}}
+
+Simple de bac de récupération d’éventuelles fuites pour les seaux à compost ajourés distribués par la métropole du Grand Lyon.
+
+A imprimer en mode vase avec des parois assez épaisses.
+
+Il a été imprimé en Prusament PETG recyclé avec des parois de 0.8mm (buse de 0.6mm) et une hauteur de couche de 0.4mm.
+
+
+Fichier FreeCAD inclus pour les remixes.
+
+[[https://www.printables.com/fr/model/552753-bac-anti-fuite-pour-seau-a-compost-du-grand-lyon|Télécharger le modèle c’est ICI]]
+
+Comment puis-je récupérer un bioseau et mon lot de sacs kraft ?
+
+Les bioseaux et sacs sont distribués par la Métropole gratuitement à tous les usagers qui souhaitent s’engager dans le tri de leurs déchets alimentaires. Des distributions ont lieu en porte-à-porte sur certains quartiers. Des stands sont également tenus, dans certaines copropriétés, sur les marchés ou lors d’évènements.
+
+Il est également possible d’utiliser un contenant de « récup’ » : il faut un contenant avec couvercle et anse, vous pouvez donc réutiliser tout type de contenant ayant ces caractéristiques et ainsi participer encore plus activement à la prévention des déchets ! Par exemple, vous pouvez récupérer des pots de sauce ou de crème fraîche dans les restaurants, ils sont parfaitement adaptés.

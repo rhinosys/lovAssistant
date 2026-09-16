@@ -1,0 +1,103 @@
+# Polargraph en chantier !
+![image](https://content.instructables.com/FA2/XZWB/JDUKM2P5/FA2XZWBJDUKM2P5.jpg)
+
+**idée : dessiner au crayon, au feutre ... sur un format A0.**\\
+**Voici quelques notes prises en cours de fabrication du polargraph.**\\
+\\
+[modèle grand format](https://www.instructables.com/id/Large-Scale-Polargraph-Drawing-Machine-W-Retractab/)
+[modèle petit format](https://www.instructables.com/id/Polargraph-Drawing-Machine/)
+
+### Objectifs
+Cette machine est est une tentative de sortir de l’espace de l'écran , parfaitement pixelisé. C'est une machine à dessiner qui utilsie le stylo (un outil humain) et l'utilise pour dessiner de façon singulièrement robotique, avec des résultats remarquables.
+Il ne dessine pas du tout comme nous pourrions le faire  et nous aurions du mal à dessiner exactement comme il le fait.
+Il peut s’appuyer sur des choses de différents formats 
+
+### Comment faire ? Idées de départ ...
+  - 1. **Support du crayon** : Porter, lever et baisser le crayon : support appelé gondola (projet euphy) avec servomoteur
+    *élec : câblage servomoteur
+    *méca : découper les pièces du support -> différents modèles
+  *2. **Déplacer le crayon :** moteur pas à pas - courroie ou chaine
+    *élec : câblage des 2 moteurs
+    *méca : choix de la transmission puis impression des 2 poulies
+  *3. **Gérer le tout :** PC avec logiciel pour produire du "GCODE like" - interface de puissance avec Arduino et shield type moteur pas à pas
+    *info : logiciel pour produire du "GCODE like"
+    *élec : firmware pour carte Arduino pour interpreter le "GCODE like"
+
+## Pré-requis=
+### Logiciels
+  *Arduino : https://www.arduino.cc/  
+  *Cura : https://dagoma.fr/cura-by-dagoma.html
+  *Thingiverse → openscad → stl
+
+### Matériels
+![image](projets:polargraph:f15nvjzguwhgnz6.large.jpg)
+(photographie à refaire/remodifier...)
+
+*Lister ici le matériel nécessaire*
+  - 1 imprimante 3d
+  - Carte Arduino etc...
+  - 1 x Shield
+  - 2 boulons : 25mm
+  - 1 stylo
+  - câblage servomoteur
+  - 1 servomoteur
+  - 1 moteur pas à pas - 
+  - 1 courroie ou chaine
+  - une alimentation 5V/2A : chargeur de téléphone à essayer !
+    - courant maintien à la position home d'environ 600mA
+    - pendant le déplacement le courant moyen est plus faible
+
+### Pièces 3d à imprimer DIY
+**Polargraph : Gondola** 
+
+![image](projets:polargraph:gondola-v3.jpg)
+
+**Poulie crantée : **  
+
+![image](projets:polargraph:h-10t-od29.55_preview_featured.jpg)
+
+## Partie 1 : support du crayon
+Le support de [Alassi](https://www.thingiverse.com/thing:2801412) est intéressant mais la description est incomplète, il manque le mécanisme de cremaillere entre le moteur et le porte crayon.\\
+  *fichiers
+    *[Gondola de Rincey12](https://www.thingiverse.com/thing:472573/files)
+## Partie 2 : déplacement du crayon
+poulie crantée T5 : facile à imprimer, paramétrage\\
+\\
+**dessin 3D** : thingiverse -> openscad -> stl\\
+\\
+**impression** : stl -> cura -> layer view -> sans support -> parametrage -> gcode -> carte sd\\
+
+  *fichiers : [poulie T5 paramétrique](https://www.thingiverse.com/thing:16627)\\
+  *liste du matériel : 2 boulons : 25mm 
+  *problèmes rencontrés : rentrer l'écrou à chaud (avec la panne du fer à souder) dans le logement prévu
+## Partie 3 : gestion soft et réglage
+  *fichiers
+    *soft utilisant procesing : [polargraph controller avec processing](https://github.com/euphy/polargraphcontroller)
+    *firmware arduino : [firmware Arduino avec Shield Motor V1](https://github.com/euphy/polargraph_server_a1)
+  *liste du matériel-réglage
+    *largeur machine : 710 mm\\
+    *hauteur machine : 1100 mm\\
+    *tour de roue : 109 mm\\
+    *home x : 355 mm\\
+    *home y : 120 mm\\
+  *problèmes rencontrés
+    *gestion du port série 
+      *port série non valide dans l'IDE arduino : [droits sur ttyUSB0](https://askubuntu.com/questions/1034173/arduino-serial-communication-uploader-not-working)\\
+      *télécharger une version d'arduino plus récente que celle native d'ubuntu 18.04.1 LTS\\
+      *respecter les infos du github d'euphy\\
+    *dessin déformé allongé : courroie mal tendue -> lester le support du crayon (boitier de HDD)
+    *tracage de fichier svg avec beaucoup de détails
+      *beaucoup trop de va et vient inutile\\
+      *moulinette : [Vector Optimizer](https://github.com/euphy/polargraph/wiki/Vector-Optimizer)\\
+## Nos  dessins !
+![image](:undefined:img_20181030_000651.jpg)
+![image](:undefined:img_20181030_000731-1.jpg)\\
+![image](projets:polargraph:gnu-lov-comp-2.jpg)
+... les premiers essais ...\\
+... video ...
+[polargraph-anim](https://labovilleurbanne.fr/nextcloud/index.php/s/HE6befNJxqW4bfn)
+## Ressources intéressantes
+[site Euphy](http://www.polargraph.co.uk/)
+[Github Euphy](https://github.com/euphy/)\\
+
+----

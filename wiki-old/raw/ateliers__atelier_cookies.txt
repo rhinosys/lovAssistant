@@ -1,0 +1,35 @@
+MIGRÉ
+
+===== Atelier cookies de Noël =====
+
+Le but de l'atelier est de créer des emporte-pièces personnalisés qu'on va imprimer avec une imprimante 3D.
+Puis pendant que les emporte-pièces des participants s'imprimeront, on fera des gâteaux en pain d'épices avec des emporte-pièces pré-fabriqués par le LOV.
+
+Il y a trois façons de faire des emporte-pièces avec une imprimante 3D:
+  * dessiner une forme simple et fermée avec Inkscape, puis l'extruder avec http://svg2stl.com/ (par exemple une étoile), possibilités limitées mais très rapide à imprimer (10 min)
+  * dessiner des formes plus complexes et faire un emporte-pièces avec une grille qui tient tous les éléments: https://www.instructables.com/id/Advanced-cookies-cutter-generator/ beaucoup de possibilités mais attention au temps d'impression
+  * faire un emporte-pièces avec des reliefs complexes et différents niveaux de profondeur: utilisation d'un logiciel de CAO, pas couvert par cet atelier car trop complexe
+
+==== Déroulement de l'atelier ====
+
+  * avant l'atelier démarrer une impression 3D en guide de démo
+  * présenter le LOV
+  * présenter le déroulement de l'atelier
+  * s'assurer que chaque participant dispose d'un PC avec Inkscape
+  * montrer au vidéo projecteur comment faire des formes simples avec inkscape
+  * montrer comment cette forme rend sous forme d'emporte-pièce
+  * démarrer l'atelier: chaque participant va dessiner une forme d'emporte-pièce simple et un emporte-pièce plus complexe
+  * les modèles des participants sont récoltés par un organisateur puis transformés pour impression 3D, on imprimera d'abord les formes simples de tous les participants, puis s'il reste du temps des formes complexes
+  * pendant que ça imprime on va faire des gâteaux avec les emporte-pièces préparés en avance
+
+==== Données techniques pour les emporte-pièces ====
+
+  * taille globale: carré de 6-7 cm pour un temps d'impression pas trop grand
+  * profondeur d'extrusion: minimum 10mm, 12mm mieux
+  * épaisseur des bords: 1.2mm (s'assurer que ça devient 4 périmètres à l'impression 3D)
+  * impression 3D:
+    * couche initiale: 10mm/s
+    * top, bottom, wall: 30 mm/s
+    * hauteur des couches: 0.3 mm
+    * brim de 3 périmètres
+

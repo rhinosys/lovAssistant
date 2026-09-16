@@ -1,0 +1,55 @@
+## Compte-rendu du conseil d'administration du Laboratoire Ouvert Villeurbannais (LOV) 
+ Date : 2023-11-06 à 20H00 
+ rappel membres du CA : @grapsus (president), @nrineau (trésorier), @obiyan (secretaire), @citrouilleorange, @dawad, @ddp, @fredervish
+ rappel lien vers le compte rendu précédent : [https://labovilleurbanne.fr/dokuwiki/asso:cr:start](https://labovilleurbanne.fr/dokuwiki/asso:cr:start)
+
+### Ordre du jour 
+vitrine
+Ateliers futur
+Adhesion / finance 
+rendez-vous avec la mairie (BIJ)
+Visite du service accompagnement jeunesse et relations aux établissements du collège à l’université au LOV
+partenariat JDLL
+astech
+Imprimante resine Status
+
+### Participant.e.s 
+présents: @grapsus @nrineau @dawad @ddp
+Adhérent.e.s : 
+
+vitrine:
+    ok pour la proposition de @shaga
+    la modification du logo est une autre décision
+    financement: vente de boules de Noel en cours, présentoir démarré, à améliorer
+
+ateliers:
+    celui de Halloween annulé, pas assez d'inscrits (même canaux que d'hab) mais premier samedi des vacances de Toussaint ?
+    atelier du 25/11: @dawad dispo, on confirme l'atelier, Alexis fait la comm, Nicolas diffuse le flyer
+    atelier du 9/12: @grapsus dispo
+    on peut s'inspirer de https://labovilleurbanne.fr/dokuwiki/ateliers:initiation_decoupe_laser_inkscape
+
+finances: adhésions ~40 membres, 600 euros
+
+rendez-vous BIJ: toujours pas de date fixée, malgré relances de Lilian
+mais on s'y prépare
+il faut resigner la convention pour 3 ans
+
+adjointe au conseillier municipal commerce prise de contact, mail envoyé le 30/10 pour la rencontrer
+
+partenariat:
+     les JDLL utilisent notre local les jeudis soirs
+contanct Err0r (Laura)
+ils ont leur propre assurance (est-ce qu'il y a un des adhérents des JDLL qui est adhérents du LOV ?)
+on signera une convention de partenariat
+
+astech:
+    Alexis : préparer un messages aux anciens adhérents de l'Astech
+
+Imprimante Resine:
+    1. 60 euros sur 100 euros
+    Nicolas: go pour diffuser la cagnotte auprès des adhérents/sympathisants
+
+Prochaine réunion de CA: 5/12
+
+Autres infos:
+    générer des emporte pieces facilement: cookiecad.com

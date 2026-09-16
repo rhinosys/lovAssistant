@@ -1,0 +1,50 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: admin_lova_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+      POSTGRES_DB: admin_lova
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d admin_lova"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: admin_lova_app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "postgresql://postgres:postgrespassword@postgres:5432/admin_lova"
+      OLLAMA_BASE_URL: "${OLLAMA_BASE_URL:-http://192.168.42.138:11434}"
+      OLLAMA_MODEL: "${OLLAMA_MODEL:-qwen2.5:7b-instruct-q4_K_M}"
+      APP_BASE_URL: "${APP_BASE_URL:-http://localhost:3000}"
+      SESSION_SECRET: "${SESSION_SECRET:-development-production-session-secret-min-16-chars}"
+      LOG_LEVEL: "${LOG_LEVEL:-info}"
+      PORT: "3000"
+      MISTRAL_API_KEY: "${MISTRAL_API_KEY}"
+      MISTRAL_MODEL: "${MISTRAL_MODEL:-mistral-small-latest}"
+      MISTRAL_BASE_URL: "${MISTRAL_BASE_URL:-https://api.mistral.ai/v1}"
+      DEFAULT_LLM_PROVIDER: "${DEFAULT_LLM_PROVIDER:-mistral}"
+      YESWIKI_BASE_URL: "${YESWIKI_BASE_URL:-https://labovilleurbanne.fr/yeswiki/}"
+      YESWIKI_COOKIE: "${YESWIKI_COOKIE:-}"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+    driver: local

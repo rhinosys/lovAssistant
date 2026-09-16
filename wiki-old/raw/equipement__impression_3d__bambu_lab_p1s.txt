@@ -1,0 +1,50 @@
+====== Bambu Lab P1S ======
+
+La Bambu Lab P1S est une imprimante 3D FDM fermée. Elle est adaptée aux pièces en PLA, PETG et, après validation avec les référents, aux matériaux plus techniques.
+
+{{https://www.reprapwarehouse.com/cdn/shop/files/p1s-footer-8b1ba6b450474.png?v=1760821667&width=900}}
+//Bambu Lab P1S.//
+
+===== Avant toute impression =====
+
+  * Vérifier que l'imprimante est disponible et que l'impression est autorisée.
+  * Contrôler que le plateau est propre, correctement remis en place et sans objet dessus.
+  * Vérifier le filament : bobine compatible, quantité suffisante et type choisi dans Bambu Studio identique au filament réellement chargé.
+  * Ne pas lancer une impression sans rester à proximité pendant la première couche.
+
+===== Démarrage =====
+
+  - Allumer l'imprimante par l'interrupteur situé à l'arrière.
+  - Attendre l'initialisation, puis vérifier l'écran : aucune alerte ne doit être présente.
+  - Charger le filament depuis l'écran de l'imprimante ou depuis l'AMS s'il est installé. Lors d'un changement de matière ou de couleur, purger jusqu'à obtenir un filament propre.
+  - Dans [[equipement:impression_3d:bambu_studio|Bambu Studio]], sélectionner l'imprimante **Bambu Lab P1S** et le plateau correspondant.
+
+===== Lancer une impression =====
+
+  - Préparer le modèle et le trancher dans Bambu Studio.
+  - Vérifier l'aperçu couche par couche, le temps estimé, la quantité de filament et l'absence de pièce hors plateau.
+  - Envoyer le fichier vers la P1S ou l'exporter sur carte microSD selon la configuration du LOV.
+  - Démarrer l'impression et observer attentivement la première couche.
+  - En cas de décollement, de bruit anormal ou de filament qui s'emmêle : arrêter l'impression depuis l'écran avant d'intervenir.
+
+===== Pendant et après l'impression =====
+
+  * Garder la porte et le dessus fermés si le profil le demande ; ne jamais forcer les mécanismes pendant un déplacement.
+  * Ne pas toucher la buse, le plateau ou les axes pendant le travail : ils sont chauds et mobiles.
+  * À la fin, attendre le refroidissement du plateau avant de retirer la pièce.
+  * Retirer les résidus de purge et laisser le plateau propre pour la personne suivante.
+  * Signaler tout défaut, erreur ou pièce abandonnée dans le canal de suivi du LOV.
+
+===== Impression de démonstration : le Benchy =====
+
+Le **3D Benchy** est un petit bateau de test. Il sert à vérifier l'adhérence, les parois, les ponts et l'état général de l'imprimante.
+
+  - Ouvrir le modèle Benchy dans Bambu Studio ; utiliser le modèle interne de Bambu Studio si disponible, ou un fichier approuvé par le LOV.
+  - Choisir le profil **Bambu Lab P1S** et le filament réellement chargé (PLA conseillé pour une démonstration).
+  - Placer le modèle à plat sur le plateau, puis lancer le tranchage.
+  - Vérifier l'aperçu et démarrer l'impression.
+  - Surveiller la première couche. Conserver le Benchy avec la date, le matériau et tout problème observé : il constitue un témoin utile de l'état de la machine.
+
+===== En cas de problème =====
+
+Arrêter l'impression si la pièce se détache, si la buse racle fortement, si le filament ne sort plus ou si une alerte apparaît. Ne pas démonter l'extrudeur ni modifier les réglages de maintenance sans l'accord d'un référent.

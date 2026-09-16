@@ -1,0 +1,195 @@
+## Compte-rendu d’assemblée générale ordinaire du Laboratoire Ouvert Villeurbannais (LOV)
+  - Date : 2023-06-12 à 20H00 (12 juin 2023)
+
+#### Personnes présentes
+##### Adhérents :
+   - @gofanon, Denis
+   - @grapsus, Alexis
+   - @sha, Shagané
+   - @obiyan, Lilian
+   - @christian, Gilles
+   - @nrino, Nicolas
+   - @ddp\_, Derek
+   - @citrouilleorange, Nolwenn
+   - @fredervish, Fred
+   - @dawad, David
+   - @xaviermeunier, Xavier
+   - @arofarn, Pierrick
+   - @camlafit, Camille
+   - @celosie, Céline
+   - @jraffin, Jonathan
+ 
+
+##### Invités :
+   - @gastonmoustache, Clément
+
+### Bilan moral
+   - 33 adhérents à jour de cotisation (20 en 2022)
+
+#### Projets en cours:
+##### Établi :
+   - Saison 1 en 2022 : planches récupérées chez Mineka préparée collectivement. Voir : [https://labovilleurbanne.fr/dokuwiki/projets:etabli\_bois](https://labovilleurbanne.fr/dokuwiki/projets:etabli\_bois),
+   - Saison 2 en 2022 : plan, dégauchissage et assemblage, premier vernis. Voir : [https://labovilleurbanne.fr/blog/2023/02/15/etabli-l-o-v/](https://labovilleurbanne.fr/blog/2023/02/15/etabli-l-o-v/),
+   - Reste à faire: vernis, peindre pieds, tole pour la soudure.
+##### Informatique:
+   - migration serveur externe : nouveau serveur yunohost. Merci @gofanon
+   - reste à faire: suivi mises à jour => canal SI et réunion pour se coordonner: @obiyan, @arofarn, @christian, @fredervish
+##### Mise à jour si interne:
+   - réunion de formation @nrineau @fredervish @camlafit
+##### Site web :
+   - présentation de l'évolution du blog vers un site web. Merci @citrouilleorange
+   - lien vers la page d'accueil à valider ? voté oui à l'unanimité
+   - lien à modifier et @citrouilleorange à prévenir
+   - à venir : ateliers pour améliorer la charte graphique (web et vitrine du LOV), volontaires @camlafit @sha @obiyan sur le canal #communication du framateam. D'autres membres peuvent rejoindre l'atelier charte graphique.
+##### Le grand rangement de l'été
+   - plusieurs allers retours à la déchetterie ont été faits
+   - nettoyage
+   - merci à tous !
+##### Projet pour l'année prochaine : réagencement du local :
+   - table plus petite pour la CNC
+   - plans de travail le long du mur : voir : [https://labovilleurbanne.fr/blog/wp-content/uploads/2023/02/Croqui002-1200x742.png](https://labovilleurbanne.fr/blog/wp-content/uploads/2023/02/Croqui002-1200x742.png)
+   - ouvrir entre l'espace cuisine et les tables centrales
+=> création d'un canal aménagement du local: @obiyan @derek @nrineau
+
+note: prendre en compte la poussière et dérangement du local pendant les changements
+##### Projets des membres :
+   - Documenter ses projets dans le wiki (technique), blog (communication)
+   - Demander ses accès au blog si oubli sur le canal SI du framateam
+##### Téléphone en libre service :
+   - connecter au nextcloud pour pouvoir prendre des photos de ses réalisations et les partager.
+
+#### Les machines, ça tourne bien ?
+##### Une scie radiale achetée :
+   - documentation Wiki à faire
+   - problème copeaux, aspiration à tester
+##### Machines à coudre :
+   - trouver une table dédiée
+   - problème pour la maitriser
+##### Impression 3D :
+   - fredervish : souvent des problèmes d'accroche
+   - docs pas à jour sur wiki
+   - atelier imprimante 3D: @grapsus, Alexis propose un atelier pour expliquer aux membres son fonctionnement
+##### Découpe laser :
+   - calibration faite en cours d'année
+   - puissance presque nominale (on a une sonde)
+##### CNC :
+   - aspiration connectée
+   - penser aux fraises gauches pour moins de copeaux
+   - formation faite par Val : tuto à héberger sur le wiki.
+   - Hébergement de vidéos / tutos pour CNC filmés?
+#### Achat d'une nouvelle machine ?
+   - Réflexion autours  de l'achat d'une imprimante résine + machine pour fixation : attention aux émanations
+   - Plus grosse découpeuse laser ? voir si on trouve le budget
+   - Découpe vinyle : à tester sur la CNC
+
+#### Évènements
+##### Évènements externes :
+   - 20 mai  2023 : le Rize visite le LOV
+   - Quelques sollicitations du conseil de quartier en relation depuis la dernière fête des crapauds (ZAC maisons neuves), nous n'avons pas donné suite
+
+#### Évènements internes :
+   - Formation CNC : merci @duberval
+   - Barbecue :le barbecue 1 mois avant l'AG reconduit avec succès. Refaire à la rentrée de septembre ? OK. @grapsus, Alexis
+
+##### 22/06 à 9h30 rendez-vous avec la mairie au local
+#### Les soucis rencontrés cette année
+##### la fuite d'eau
+Merci le bureau ! c'est réparé
+
+##### le rideau de fer de la porte d'entée cassé
+En  cours de réparation ...    
+
+##### la chasse d'eau
+Merci @christian pour la réparation en interne (cordon et filasse au robinet)
+
+#### Les taches administratives du LOV (appel aux volontaires)
+   - Relevé des boites mail contact
+   - Relevé de la boite mail bureau
+   - Dépôt du CR AG en préfecture et déclaration du CA / bureau
+   - Référencement du LOV (wikivilleurbanne)
+   - Entretenir le lien à la mairie
+   - Demande de subvention
+   - Suivi des comptes et des cotisations
+   - Règlement des factures (électricité, internet, serveur)
+   - Achat consommables
+   - Annoncer les ouvertures du LOV
+
+#### Les taches du quotidien du LOV
+   - Nettoyer évier "bricolage"
+   - Nettoyer évier "cuisine"
+   - Nettoyer les WC
+   - Nettoyer le sol
+   - Sortir les poubelles
+   - Faire les vitres
+
+**Vote du bilan moral : **
+   - Abstentions: 3
+   - Pour: 14
+   - Contre: 0
+
+### Bilan financier
+   - trésorerie 2022/06: 1499.99
+   - résultat saison: **-1432.78**
+   - trésorerie 2023/06: **67.21**
+
+#### Détail du résultat:
+   - dépenses courantes: (1713.31)
+       - communications (internet + serveur + domaine): 552.19
+       - électricité: 842.69
+       - banque: 90.86
+       - assurance: 227.57
+   - dépenses ponctuelles: (604.47)
+       - aménagement local: 147.31 (établi principalement)
+       - usinage: 457.16 (scie radiale)
+   - revenus courants: 885.00
+       - cotisations: 885.00
+   - dons en nature:
+       - local: 9 441
+   - total dépenses: 2317.78
+   - total recettes: 885.00
+
+#### Synthèse du bilan :
+33 membres à jour de cotisation
+
+Prix de l'élec: +200 euros / 2021-2022
+
+#### Pistes de financement :
+   - 2022-2023 subvention non demandée, rendez-vous 22/06 avec la mairie (exposer nos problèmes de chauffage) pour demander à reconduire la subvention de fonctionnement.
+   - Autre piste de financement: un rescrit fiscal a été demandé, s'il accepté sous 6 mois on pourra percevoir des dons défiscalisables de sociétés et particuliers
+   - Augmentation de la cotisation (en dernier recours)
+
+**Vote du bilan financier :** 
+
+   - abstensions: 3
+   - contre: 0
+   - pour: 14
+
+### Questions diverses
+Accès au nextcloud: pour les membres à qui il manquerait un compte demander sur le canal SI
+
+### Élection du conseil d'administration
+#### Précédent conseil d'administration :
+    - Denis @gofanon
+    - Valentin @duberval
+    - Derek @ddp_
+    - Alexis @grapsus
+    - Frédéric @fredervish
+    - Jean François @jfm
+    
+#### Candidats:
+   - Derek
+   - Alexis
+   - Fred
+   - Nicolas
+   - David
+   - Lilian
+   - Nolwenn
+ 
+
+**Vote du CA :** 
+
+   - contre: 0
+   - abstentions: 3
+   - pour : 14 
+
+Fin: 22:12

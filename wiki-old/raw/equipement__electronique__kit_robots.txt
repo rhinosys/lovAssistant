@@ -1,0 +1,15 @@
+=====KIT pour atelier Robots=====
+{{https://labovilleurbanne.fr/blog/wp-content/uploads/2023/02/20180928_05_MOD-1200x884.jpg?600}}
+
+  * Carte Arduino etc…
+  * 1 x châssis de voiture (cf. [[equipement:decoupe_laser:decoupeuse_laser_k40|découpe laser]])
+  * 2 x moteur a engrenages
+  * 2 x pneu de voiture (cf. [[equipement:impression_3d:lulzbot-taz-workhorse|Impression 3d]])
+  * 2 x capteur de vitesse
+  * 2 x Attache
+  * 1 x roue universelle
+  * 1 x Tournevis
+  * 1 x boite de la batterie
+  * Vis nécessaires et noix
+
+Le tuto pour le déroulement de l'atelier est [[ateliers:robot_arduino|ici]].

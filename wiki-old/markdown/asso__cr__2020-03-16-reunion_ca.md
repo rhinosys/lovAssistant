@@ -1,0 +1,58 @@
+# 2020-03-16 Réunion CA, procès verbal
+## Présent
+## Absent
+## ODJ
+  - Rappel des TODO et MAJ des TODO
+  - Politique d'ouverture rapport à l'épidémie de Covid-19
+  - Point trésorie
+  - Événement
+    - Primevere
+    - JDLL
+  - Questions diverses
+
+# Rappel des TODO et MAJ des TODO
+~~ TODO: (Romain & Team communication sur canal com de mattermost) Commencer à faire de la communication concernant les JDLL en février, pas mal plus en mars. ~~ Annulation des JDLL
+
+~~ TODO: (rdeville) Faire des portes-clés/flyers pour les JDLL ~~ Annulation des JDLL
+
+~~ TODO: (rdeville) Faire un framadate pour savoir qui serait présent et quand pour les JDLL, todo à laisser pour la prochaine réunion CA. ~~ Annulation des JDLL
+
+~~ TODO: (rdeville) Organiser les deux réunions de préparation au JDLL comme l'année dernière. ~~ Annulation des JDLL
+
+~~ TODO: (rdeville)Faire imprimer des vrais flyers pour les JDLL ~~ Annulation des JDLL
+
+~~ TODO: (grapsus) Acheter 100 anneaux de porte-clé pour primevère et JDLL ~~ Fait
+
+TODO: (grapsus) Répondre à la journaliste de Viva, on attends que la date de la CNC soit fixé.
+
+TODO: Mettre en ligne la version PDF des status. (à reporter)
+
+TODO: Achat de matière pour la CNC (à reporter)
+
+~~ TODO: (rdeville) Ramener/prêter appareil photo pour l'installation de la CNC. ~~ Fait
+TODO: (rdeville) Uploader les photos
+
+TODO: Faire un état des lieux des logiciels CNC. (à reporter)
+
+TODO: Faire le logo en pochoir pour la CNC. (à reporter)
+
+~~ TODO: (rdeville & fredervish) préparer le carton primevère la semaine avant.~~ Primevère fini
+
+TODO: (rdeville) Définir une date un samedi après-midi à priori pour l'atelier retro gaming
+
+TODO: (rdeville) Faire de la comm' pour l'atelier retro gaming
+
+TODO: (sylvain) Faire de la comm' pour trouver un atelier pour fin mars/avril
+
+TODO: (grapsus) Organisation session travail samedi aprèm elec
+
+TODO: (grapsus) Acheter matériel atelier retro-gaming dès que fournis par rdeville
+
+# Politique d'ouverture rapport à l'épidémie de Covid-19
+# Événement
+## Primevere (Retour)
+## Atelier i-buycott (Retour)
+## JDLL (Annulé)
+# Questions diverses
+# TODO
+TODO: (rdeville) Uploader les photos

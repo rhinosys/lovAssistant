@@ -103,6 +103,9 @@ export class TokenAuthService implements IAuthService {
     }
 
     // 3. YunoHost SSO (SSOwat) headers — takes priority over the legacy dev fallback
+    // SECURITY: these headers are only trustworthy behind a reverse proxy (e.g. YunoHost's
+    // SSOwat) that strips any client-supplied Remote-User/Auth-User before proxying. Never
+    // expose this app directly to untrusted clients without such a proxy in front of it.
     const remoteUser = getHeader("remote-user") || getHeader("auth-user");
     if (remoteUser) {
       const userRepo = getUserRepository();

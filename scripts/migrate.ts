@@ -1,5 +1,6 @@
 import { runMigrations } from "../src/server/persistence/migrate";
 import { resetConfigCache } from "../src/server/config";
+import { closeDbPool } from "../src/server/persistence/db";
 
 // Load local environment variables
 try {
@@ -22,6 +23,7 @@ async function run() {
       console.log(`  - ${name}`);
     }
   }
+  await closeDbPool();
 }
 
 run().catch((err) => {

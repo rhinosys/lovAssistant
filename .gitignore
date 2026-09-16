@@ -6,3 +6,5 @@ node_modules/
 .claude-flow/
 .agents/
 .cline/
+.worktrees/
+.superpowers/

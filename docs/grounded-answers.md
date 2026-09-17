@@ -1,42 +1,45 @@
-# Réponses factuelles vérifiables
+# Accompagnement à partir des documents, puis du web
 
-## Incident corrigé
+Le chat reformule les documents en réponses naturelles : étapes, explications,
+questions utiles. Il ne juxtapose plus des citations littérales. Aucune question
+ou catégorie de matériel ne dispose d’une réponse ou d’un compteur codé en dur.
+Les documents retrouvés sont développés dans leur ordre de pertinence pour
+conserver autant que possible les procédures et listes complètes.
 
-Le client YesWiki renvoyait un faux inventaire Laser/Prusa quand BazarAPI ne
-répondait pas ou renvoyait du HTML. Ces fixtures étaient présentées au modèle
-comme de vraies sources. La disponibilité, les matériaux et les liens des
-machines inconnues étaient aussi inventés. Tous ces fallbacks ont été retirés.
-Les fixtures n'existent désormais que dans les tests.
+## Sources et comportement
 
-## Contrat de réponse
+Les faits concernant le LOV viennent des documents récupérés. Une provenance
+DokuWiki ne signifie pas qu’une machine est retirée. Une affirmation utilisateur
+ou une réponse antérieure ne constitue pas une preuve. Les informations absentes
+sont signalées ; les étapes déjà documentées restent expliquées.
 
-Le modèle sélectionne des extraits sous forme JSON. Le serveur vérifie chaque
-identifiant de source et chaque citation exacte, puis compose la réponse à
-partir de ces citations et des URLs récupérées. La prose générée n'est jamais
-affichée comme un fait. Une citation invalide, une sortie non structurée ou
-une sélection vide conduit à une réponse d'abstention. Les citations sont
-échappées comme texte Markdown ; les liens sont construits côté serveur.
+Si une aide technique manque, le modèle propose une requête autonome et le serveur
+exécute une recherche via Mistral Conversations et son outil web_search. La réponse
+externe est identifiée explicitement et accompagnée des références renvoyées par
+l’outil. Une réponse sans exécution de recherche ou sans références est refusée.
+Une indisponibilité est annoncée, sans prétendre avoir trouvé une procédure.
+Le web ne sert pas à supposer la disponibilité ou les règles locales du LOV.
 
-Le navigateur ne peut pas transmettre de message system. Le prompt serveur
-est toujours présent et les réponses assistant passées ne sont pas utilisées
-comme preuves. Les messages utilisateur récents servent seulement à retrouver
-le sujet d'une question de suivi.
+## Protections et limites
 
-Les demandes d'imprimantes parcourent les documents d'impression 3D de l'index,
-regroupés par document, au lieu des trois seuls fragments les plus similaires.
-Les liens vers les pages YesWiki complémentaires proviennent des pages lues.
+- Aucun faux inventaire de secours YesWiki ni état disponible par défaut.
+- Les messages système provenant du navigateur sont refusés.
+- Une seconde passe retire les précisions non étayées tout en gardant une aide
+  pédagogique. La validation sémantique par modèle n’est pas une garantie absolue.
+- Les liens RAG sont issus des identifiants validés ; les liens web proviennent
+  des références de l’outil, pas des URL écrites librement dans la réponse.
+- Les documents peuvent être incomplets ou obsolètes ; les nombres décrivent
+  les entrées documentées et ne prouvent pas l’inventaire opérationnel actuel.
+- La recherche web nécessite la clé Mistral et utilise ce service cloud même si
+  le modèle de conversation choisi est Ollama. Seule la requête technique est
+  envoyée, avec consigne d’exclure données personnelles et contenu interne.
+- La relecture et le web ajoutent de la latence et des appels facturables.
+  Le compteur de tokens du chat inclut la relecture, pas la recherche web.
 
-## Limites explicites
+## Vérification
 
-Cette sélection de documents n'est pas un inventaire exhaustif. Une page
-DokuWiki n'indique pas que sa machine est historique, retirée ou indisponible.
-Une mention ne confirme pas un état actuel. Le contenu du wiki peut lui-même
-être obsolète ou faux ; vérifier l'état auprès des référents. La pertinence de
-la sélection reste dépendante du modèle. Les réponses sont désormais des
-extraits sourcés plutôt qu'une synthèse libre ; l'affichage attend leur validation
-au lieu de diffuser des tokens non contrôlés.
-
-Pour « liste les imprimantes 3D », les lignes d'imprimantes de la page
-« Impression 3D » sont extraites directement et citées sans génération par le
-modèle. Cela évite les erreurs de recopie JSON et la variabilité de sélection
-pour cette demande d'inventaire documentaire.
+Tests de reformulation, références invalides, Markdown, absence de faux inventaire,
+décision de recherche et provenance web. Validation réelle avec les modèles et
+le service Next.js dans le conteneur YunoHost : procédure documentée, synthèse
+d’un inventaire et aide technique absente du RAG. Les formulations des questions
+sont des scénarios de test, jamais des branches dans le code de production.

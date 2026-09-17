@@ -1,26 +1,22 @@
 import { describe, expect, it, vi, afterEach } from "vitest";
-import { EvidenceSource, renderEvidence, NO_EVIDENCE, printerInventoryEvidence } from "./grounding";
+import { EvidenceSource, renderEvidence, NO_EVIDENCE, webFallbackQuery } from "./grounding";
 import { YesWikiClient } from "../mcp/yeswiki-client";
 const sources: EvidenceSource[] = [{ id: "S1", title: "Bambu Lab P1S", url: "https://example.org/p1s", origin: "DokuWiki", content: "La Bambu Lab P1S utilise Bambu Studio. Vérifiez sa disponibilité auprès du référent." }];
 afterEach(() => vi.restoreAllMocks());
-describe("verified factual answers", () => {
-  it("renders only exact quotations with real source links", () => {
-    const text = renderEvidence(JSON.stringify({ evidence: [{ sourceId: "S1", quote: "La Bambu Lab P1S utilise Bambu Studio." }], answer: "Prusa disponible" }), sources);
-    expect(text).toContain("Bambu Lab P1S");
-    expect(text).toContain("https://example.org/p1s");
-    expect(text).not.toContain("Prusa");
-    expect(text).toContain("ne confirme pas la disponibilité");
+describe("guided sourced answers", () => {
+  it("allows helpful reformulation and Markdown with sources listed once", () => {
+    const text = renderEvidence(JSON.stringify({ answer: "1. Ouvre **Bambu Studio**.\n2. Choisis la P1S.", sourceIds: ["S1", "S1"] }), sources);
+    expect(text).toContain("1. Ouvre **Bambu Studio**.");
+    expect(text.match(/https:\/\/example.org/g)).toHaveLength(1);
+    expect(text).not.toContain("inventaire exhaustif");
   });
-  it.each([
-    { sourceId: "S1", quote: "La Prusa MK3S+ est disponible." },
-    { sourceId: "S99", quote: "La Bambu Lab P1S utilise Bambu Studio." },
-    { sourceId: "S1", quote: "La Bambu Lab P1S est historique et indisponible." },
-  ])("rejects invented quotes, links and unsupported status", item => {
-    expect(renderEvidence(JSON.stringify({ evidence: [item] }), sources)).toBe(NO_EVIDENCE);
+  it("rejects fabricated source references and generated URLs", () => {
+    expect(renderEvidence(JSON.stringify({ answer: "Une procédure", sourceIds: ["S99"] }), sources)).toBe(NO_EVIDENCE);
+    expect(renderEvidence(JSON.stringify({ answer: "Voir https://invented.example", sourceIds: ["S1"] }), sources)).toBe(NO_EVIDENCE);
   });
-  it("abstains on invalid or empty model output", () => {
-    expect(renderEvidence("Voici la liste exhaustive : Prusa", sources)).toBe(NO_EVIDENCE);
-    expect(renderEvidence('{"evidence":[]}', sources)).toBe(NO_EVIDENCE);
+  it("abstains on empty or malformed output", () => {
+    expect(renderEvidence("Prusa", sources)).toBe(NO_EVIDENCE);
+    expect(renderEvidence(JSON.stringify({ answer: "Prusa", sourceIds: [] }), sources)).toBe(NO_EVIDENCE);
   });
 });
 describe("wiki failures never create inventory", () => {
@@ -40,11 +36,10 @@ describe("wiki failures never create inventory", () => {
   });
 });
 
-it("lists printer entries straight from the source index without generative copying", () => {
-  const index: EvidenceSource[] = [{ ...sources[0], title: "Impression 3D", content: "- Imprimante 3D Bambu Lab P1S\n- Imprimante 3D LulzBot TAZ Workhorse" }];
-  const raw = printerInventoryEvidence("liste les imprimantes 3D", index);
-  expect(raw).toBeDefined();
-  expect(renderEvidence(raw!, index)).toContain("Bambu Lab P1S");
-  expect(renderEvidence(raw!, index)).not.toContain("Prusa");
-  expect(printerInventoryEvidence("Tu as oublié la Prusa", index)).toBeUndefined();
+describe("web fallback decision", () => {
+  it("requires an explicit request and a usable query", () => {
+    expect(webFallbackQuery(JSON.stringify({ needsWeb: true, webQuery: "manuel officiel procédure" }))).toBe("manuel officiel procédure");
+    expect(webFallbackQuery(JSON.stringify({ needsWeb: false, webQuery: "manuel" }))).toBeNull();
+    expect(webFallbackQuery("invalid")).toBeNull();
+  });
 });

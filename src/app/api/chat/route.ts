@@ -15,7 +15,8 @@ import {
   MistralAPIError,
 } from "@/server/model";
 import { logger } from "@/server/observability/logger";
-import { collectEvidence, evidencePrompt, renderEvidence, NO_EVIDENCE, printerInventoryEvidence } from "@/server/chat/grounding";
+import { searchWebGuidance } from "@/server/chat/web-guidance";
+import { collectEvidence, evidencePrompt, renderEvidence, NO_EVIDENCE, webFallbackQuery } from "@/server/chat/grounding";
 
 const chatRequestSchema = z.object({
   threadId: z.string().optional(),
@@ -120,13 +121,12 @@ export async function POST(req: NextRequest) {
     const modelProvider = getModelProvider(provider);
     const activeProviderName = modelProvider.providerType || provider || "default";
 
-    const inventory = printerInventoryEvidence(message, sources);
-    const stream = inventory ? (async function* () { yield { text: inventory, totalTokens: 0 }; })() : sources.length ? modelProvider.streamChat({
+    const stream = modelProvider.streamChat({
       messages: messagesForProvider,
       model,
       abortSignal: req.signal,
       temperature: 0,
-    }) : (async function* () { yield { text: '{"evidence":[]}', totalTokens: 0 }; })();
+    });
 
     const encoder = new TextEncoder();
     let assistantFullText = "";
@@ -150,7 +150,30 @@ export async function POST(req: NextRequest) {
             }
           }
 
-          assistantFullText = sources.length ? renderEvidence(assistantFullText, sources) : NO_EVIDENCE;
+          // Review the draft for unsupported details while keeping a useful, natural guide.
+          if (sources.length && assistantFullText) {
+            const draft = assistantFullText;
+            assistantFullText = "";
+            const reviewed = modelProvider.streamChat({
+              messages: [
+                { role: "system", content: `${evidencePrompt(sources)}\nTu es le relecteur factuel de la réponse proposée. Supprime toute précision qui n'est pas étayée : emplacement d'un bouton, confirmation sur un écran, canal de communication, valeur technique ou état d'une machine. Une liste seule ne prouve jamais une disponibilité : remplace les affirmations « disponibles » par « référencés dans la documentation » lorsque aucun état actuel daté n’est fourni. Ne rajoute aucun détail. Conserve les étapes documentées, les précautions, la structure guidée et le ton naturel. Retourne le même JSON answer/sourceIds/needsWeb/webQuery. Si les sources sont insuffisantes pour une aide technique, conserve la demande de recherche web.` },
+                { role: "user", content: JSON.stringify({ question: message, draft }) },
+              ], model, temperature: 0, abortSignal: req.signal,
+            });
+            for await (const chunk of reviewed) {
+              assistantFullText += chunk.text || "";
+              if (chunk.totalTokens) totalTokens += chunk.totalTokens;
+              if (assistantFullText.length > 30000) { assistantFullText = ""; break; }
+            }
+          }
+          const searchQuery = webFallbackQuery(assistantFullText);
+          const localAnswer = sources.length ? renderEvidence(assistantFullText, sources) : NO_EVIDENCE;
+          if (searchQuery) {
+            const webAnswer = await searchWebGuidance(searchQuery, req.signal);
+            assistantFullText = `${localAnswer === NO_EVIDENCE ? "Je n’ai pas trouvé assez d’informations dans la documentation du LOV pour te guider sur ce point." : localAnswer}\n\n${webAnswer ?? "La recherche web n’a pas abouti à des sources exploitables. Je préfère te le signaler plutôt qu’inventer une procédure."}`;
+          } else {
+            assistantFullText = localAnswer;
+          }
           controller.enqueue(encoder.encode(`data: ${JSON.stringify({ event: "text", text: assistantFullText })}\n\n`));
 
           // Persist completed assistant message

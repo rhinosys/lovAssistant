@@ -7,6 +7,8 @@ import {
   DELETE as deleteThread,
 } from "./threads/[id]/route";
 import { POST as handleChat } from "./chat/route";
+import { searchWebGuidance } from "@/server/chat/web-guidance";
+vi.mock("@/server/chat/web-guidance", () => ({ searchWebGuidance: vi.fn() }));
 import {
   setForceInMemoryRepositories,
   getUserRepository,
@@ -115,6 +117,25 @@ describe("API Routes & Chat Streaming", () => {
       expect((await handleChat(req)).status).toBe(400);
     });
 
+    it.each(["Une procédure externe sourcée", null])("uses real web fallback and discloses failures (%s)", async webResult => {
+      vi.mocked(searchWebGuidance).mockResolvedValue(webResult);
+      setModelProvider({
+        async *streamChat() {
+          yield { text: JSON.stringify({ answer: "Documentation insuffisante", sourceIds: [], needsWeb: true, webQuery: "manuel officiel outil" }), done: true };
+        },
+        async checkHealth() { return { healthy: true, latencyMs: 1 }; },
+        async checkModelAvailability() { return true; },
+      });
+      const response = await handleChat(new NextRequest("http://localhost/api/chat", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: "Comment utiliser cet outil ?" }),
+      }));
+      const body = await response.text();
+      expect(searchWebGuidance).toHaveBeenCalledWith("manuel officiel outil", expect.any(AbortSignal));
+      expect(body).toContain(webResult ?? "La recherche web n’a pas abouti");
+      expect(body).toContain("documentation du LOV");
+    });
+
     it("rejects message exceeding 10,000 characters", async () => {
       const userRepo = getUserRepository();
       const user = await userRepo.createOrFind("chatter");
@@ -143,8 +164,8 @@ describe("API Routes & Chat Streaming", () => {
       // Mock model provider
       const mockProvider: ChatModelProvider = {
         async *streamChat() {
-          yield { text: '{"evidence":[{"sourceId":"S1","quote":"Bonjour ' };
-          yield { text: 'membre du Fablab !"}]}', done: true, totalTokens: 6 };
+          yield { text: '{"answer":"Bonjour ' };
+          yield { text: 'membre du Fablab !","sourceIds":["S1"]}', done: true, totalTokens: 6 };
         },
         async checkHealth() {
           return { healthy: true, latencyMs: 5 };
@@ -207,7 +228,7 @@ describe("API Routes & Chat Streaming", () => {
       const mockMistralProvider: ChatModelProvider = {
         providerType: "mistral",
         async *streamChat() {
-          yield { text: JSON.stringify({ evidence: [{ sourceId: "S1", quote: "Réponse de Mistral !" }] }), done: true, totalTokens: 12 };
+          yield { text: JSON.stringify({ answer: "Réponse de Mistral !", sourceIds: ["S1"] }), done: true, totalTokens: 12 };
         },
         async checkHealth() {
           return { healthy: true, latencyMs: 10 };
@@ -252,7 +273,7 @@ describe("API Routes & Chat Streaming", () => {
       expect(persistedMessages[1].content).toContain("Réponse de Mistral");
       expect(persistedMessages[1].metadata?.provider).toBe("mistral");
       expect(persistedMessages[1].metadata?.model).toBe("mistral-large-latest");
-      expect(persistedMessages[1].metadata?.tokenCount).toBe(12);
+      expect(persistedMessages[1].metadata?.tokenCount).toBe(24);
     });
   });
 });

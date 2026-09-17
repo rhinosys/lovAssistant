@@ -15,7 +15,7 @@ import {
   MistralAPIError,
 } from "@/server/model";
 import { logger } from "@/server/observability/logger";
-import { collectEvidence, evidencePrompt, renderEvidence, NO_EVIDENCE } from "@/server/chat/grounding";
+import { collectEvidence, evidencePrompt, renderEvidence, NO_EVIDENCE, printerInventoryEvidence } from "@/server/chat/grounding";
 
 const chatRequestSchema = z.object({
   threadId: z.string().optional(),
@@ -120,7 +120,8 @@ export async function POST(req: NextRequest) {
     const modelProvider = getModelProvider(provider);
     const activeProviderName = modelProvider.providerType || provider || "default";
 
-    const stream = sources.length ? modelProvider.streamChat({
+    const inventory = printerInventoryEvidence(message, sources);
+    const stream = inventory ? (async function* () { yield { text: inventory, totalTokens: 0 }; })() : sources.length ? modelProvider.streamChat({
       messages: messagesForProvider,
       model,
       abortSignal: req.signal,

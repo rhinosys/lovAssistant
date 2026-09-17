@@ -35,3 +35,8 @@ Une mention ne confirme pas un état actuel. Le contenu du wiki peut lui-même
 la sélection reste dépendante du modèle. Les réponses sont désormais des
 extraits sourcés plutôt qu'une synthèse libre ; l'affichage attend leur validation
 au lieu de diffuser des tokens non contrôlés.
+
+Pour « liste les imprimantes 3D », les lignes d'imprimantes de la page
+« Impression 3D » sont extraites directement et citées sans génération par le
+modèle. Cela évite les erreurs de recopie JSON et la variabilité de sélection
+pour cette demande d'inventaire documentaire.

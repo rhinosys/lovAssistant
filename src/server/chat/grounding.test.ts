@@ -1,5 +1,5 @@
 import { describe, expect, it, vi, afterEach } from "vitest";
-import { EvidenceSource, renderEvidence, NO_EVIDENCE } from "./grounding";
+import { EvidenceSource, renderEvidence, NO_EVIDENCE, printerInventoryEvidence } from "./grounding";
 import { YesWikiClient } from "../mcp/yeswiki-client";
 const sources: EvidenceSource[] = [{ id: "S1", title: "Bambu Lab P1S", url: "https://example.org/p1s", origin: "DokuWiki", content: "La Bambu Lab P1S utilise Bambu Studio. Vérifiez sa disponibilité auprès du référent." }];
 afterEach(() => vi.restoreAllMocks());
@@ -38,4 +38,13 @@ describe("wiki failures never create inventory", () => {
     vi.spyOn(client, "getBazarEntries").mockResolvedValue([{ id: "real", title: "P1S", fields: {}, canonicalUrl: "https://example.org/p1s" }]);
     expect(await client.getMachineStatus("P1S")).toMatchObject({ status: "inconnu", materials: [] });
   });
+});
+
+it("lists printer entries straight from the source index without generative copying", () => {
+  const index: EvidenceSource[] = [{ ...sources[0], title: "Impression 3D", content: "- Imprimante 3D Bambu Lab P1S\n- Imprimante 3D LulzBot TAZ Workhorse" }];
+  const raw = printerInventoryEvidence("liste les imprimantes 3D", index);
+  expect(raw).toBeDefined();
+  expect(renderEvidence(raw!, index)).toContain("Bambu Lab P1S");
+  expect(renderEvidence(raw!, index)).not.toContain("Prusa");
+  expect(printerInventoryEvidence("Tu as oublié la Prusa", index)).toBeUndefined();
 });

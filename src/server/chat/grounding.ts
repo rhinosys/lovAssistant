@@ -62,3 +62,13 @@ export const renderEvidence = (raw: string, sources: EvidenceSource[]): string =
   }
   return `Voici les passages vérifiés dans les documents consultés. Cette sélection n’est pas un inventaire exhaustif et ne confirme pas la disponibilité actuelle des machines.\n\n${passages.join("\n\n---\n\n")}`;
 };
+
+// Enumerations use the actual index-page lines, without asking a model to copy them.
+export const printerInventoryEvidence = (query: string, sources: EvidenceSource[]): string | undefined => {
+  if (!/list|quelles|quels/i.test(query) || !/imprim|impress|\b3d\b/i.test(query)) return undefined;
+  const evidence = sources.filter(source => /^impression\s*3d$/i.test(source.title)).flatMap(source =>
+    source.content.split("\n").filter(line => /imprimante\s+3d/i.test(line) && line.length >= 15 && line.length <= 1200)
+      .map(quote => ({ sourceId: source.id, quote }))
+  ).slice(0, 12);
+  return evidence.length ? JSON.stringify({ evidence }) : undefined;
+};

@@ -65,6 +65,9 @@ export class YesWikiClient {
       }
 
       const rawContent = await res.text();
+      if (/<!doctype html|<html[\s>]/i.test(rawContent)) {
+        throw new Error("YesWiki returned an HTML/error page instead of raw source text");
+      }
       let formattedContent = rawContent;
 
       if (format === "markdown") {
@@ -188,7 +191,7 @@ export class YesWikiClient {
             category: item.category || category,
             description: item.description || item.bf_description,
             fields: item,
-            canonicalUrl: this.getCanonicalUrl(item.pageName || `Fiche_${item.id || idx}`),
+            canonicalUrl: item.pageName ? this.getCanonicalUrl(item.pageName) : endpoint,
           }));
         }
       }
@@ -196,64 +199,26 @@ export class YesWikiClient {
       // Fallback
     }
 
-    // Default mock/fallback structure for test compatibility
-    return [
-      {
-        id: "mach_01",
-        title: "Découpeuse Laser CO2 100W",
-        category: "machines",
-        description: "Découpeuse et graveuse laser grand format",
-        fields: {
-          etat: "disponible",
-          materiaux: ["Bois", "Acrylique", "Carton", "Cuir"],
-          puissance: "100W",
-        },
-        canonicalUrl: this.getCanonicalUrl("DecoupeuseLaser"),
-      },
-      {
-        id: "mach_02",
-        title: "Imprimante 3D Prusa MK3S+",
-        category: "machines",
-        description: "Imprimante FDM haute précision",
-        fields: {
-          etat: "disponible",
-          materiaux: ["PLA", "PETG", "TPU"],
-          buse: "0.4mm",
-        },
-        canonicalUrl: this.getCanonicalUrl("Imprimante3DPrusa"),
-      },
-    ];
+    // An unavailable endpoint is not an inventory. Never substitute demo machines.
+    logger.warn("YesWiki Bazar inventory unavailable", { formId });
+    return [];
   }
 
   async getMachineStatus(machineName: string): Promise<YesWikiMachineStatus> {
-    const normalized = machineName.toLowerCase();
     const entries = await this.getBazarEntries("machines");
-
-    const found = entries.find((e) => e.title.toLowerCase().includes(normalized));
-
-    if (found) {
-      const fields = found.fields as any;
-      const rawStatus = (fields.etat || "disponible").toLowerCase();
-      let status: YesWikiMachineStatus["status"] = "disponible";
-      if (rawStatus.includes("maint")) status = "maintenance";
-      else if (rawStatus.includes("reserv")) status = "reserve";
-      else if (rawStatus.includes("hors")) status = "hors_service";
-
-      return {
-        name: found.title,
-        status,
-        materials: Array.isArray(fields.materiaux) ? fields.materiaux : ["PLA", "Bois"],
-        notes: fields.description || "Fonctionnement nominal",
-        guideUrl: found.canonicalUrl,
-      };
-    }
-
+    const found = entries.find(entry => entry.title.toLowerCase().includes(machineName.toLowerCase()));
+    const fields = found?.fields ?? {};
+    const raw = String(fields.etat ?? "").toLowerCase();
+    const statuses: Record<string, YesWikiMachineStatus["status"]> = {
+      disponible: "disponible", maintenance: "maintenance", reserve: "reserve",
+      réservé: "reserve", hors_service: "hors_service", "hors service": "hors_service",
+    };
     return {
-      name: machineName,
-      status: "disponible",
-      materials: ["PLA", "Bois", "Acrylique"],
-      notes: "Machine disponible pour les adhérents formés.",
-      guideUrl: this.getCanonicalUrl(machineName.replace(/\s+/g, "")),
+      name: found?.title ?? machineName,
+      status: statuses[raw] ?? "inconnu",
+      materials: Array.isArray(fields.materiaux) ? fields.materiaux.filter((value: unknown) => typeof value === "string") : [],
+      notes: typeof fields.description === "string" ? fields.description : "Disponibilité et caractéristiques non confirmées par les sources.",
+      guideUrl: found?.canonicalUrl,
     };
   }
 

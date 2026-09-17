@@ -15,99 +15,7 @@ import {
   MistralAPIError,
 } from "@/server/model";
 import { logger } from "@/server/observability/logger";
-import { YesWikiClient } from "@/server/mcp/yeswiki-client";
-
-async function fetchYesWikiGroundingContext(query: string): Promise<string> {
-  const normalized = query.toLowerCase();
-  const yeswikiKeywords = [
-    "wiki",
-    "machine",
-    "imprimante",
-    "3d",
-    "decoupeuse",
-    "laser",
-    "cnc",
-    "fablab",
-    "lov",
-    "bazar",
-    "statut",
-    "materiel",
-    "outil",
-    "projet",
-    "atelier",
-    "mcp",
-    "combien",
-  ];
-  const isRelevant = yeswikiKeywords.some((kw) => normalized.includes(kw));
-
-  if (!isRelevant) {
-    return "";
-  }
-
-  const client = new YesWikiClient();
-  const contextParts: string[] = [];
-
-  try {
-    if (
-      normalized.includes("machine") ||
-      normalized.includes("imprimante") ||
-      normalized.includes("3d") ||
-      normalized.includes("laser") ||
-      normalized.includes("cnc") ||
-      normalized.includes("outil") ||
-      normalized.includes("combien")
-    ) {
-      const [machinesPage, zonesPage, bazarMachines] = await Promise.allSettled([
-        client.getPage("MachinesEtOutils", "markdown"),
-        client.getPage("ZonesDuLocal", "markdown"),
-        client.getBazarEntries("machines"),
-      ]);
-
-      if (machinesPage.status === "fulfilled" && machinesPage.value.content) {
-        contextParts.push(`Page Wiki 'MachinesEtOutils' (${machinesPage.value.canonicalUrl}):\n${machinesPage.value.content}`);
-      }
-      if (zonesPage.status === "fulfilled" && zonesPage.value.content) {
-        contextParts.push(`Page Wiki 'ZonesDuLocal' (${zonesPage.value.canonicalUrl}):\n${zonesPage.value.content}`);
-      }
-      if (bazarMachines.status === "fulfilled" && bazarMachines.value.length > 0) {
-        contextParts.push(
-          `Inventaire Bazar Machines:\n` +
-            bazarMachines.value
-              .map((m) => `- ${m.title}: ${JSON.stringify(m.fields)} (Lien: ${m.canonicalUrl})`)
-              .join("\n")
-        );
-      }
-    } else {
-      const searchResults = await client.searchPages(query, 3);
-      if (searchResults.length > 0) {
-        contextParts.push(
-          `Résultats de recherche sur le Wiki pour "${query}":\n` +
-            searchResults.map((r) => `- ${r.title} (${r.canonicalUrl})`).join("\n")
-        );
-        const firstPage = await client.getPage(searchResults[0].pageName, "markdown").catch(() => null);
-        if (firstPage?.content) {
-          contextParts.push(`Extrait de la page '${firstPage.pageName}':\n${firstPage.content.slice(0, 1500)}`);
-        }
-      }
-    }
-  } catch (err) {
-    logger.warn("Failed to fetch YesWiki grounding context", { error: String(err) });
-  }
-
-  return contextParts.join("\n\n");
-}
-
-async function fetchDokuWikiRAGContext(query: string): Promise<string> {
-  try {
-    const { getRAGService } = await import("@/server/rag/retrieval/rag-service");
-    const rag = getRAGService();
-    const context = await rag.getAugmentedContext(query, 3);
-    return context;
-  } catch (err) {
-    logger.warn("Failed to retrieve DokuWiki RAG context", { error: String(err) });
-    return "";
-  }
-}
+import { collectEvidence, evidencePrompt, renderEvidence, NO_EVIDENCE } from "@/server/chat/grounding";
 
 const chatRequestSchema = z.object({
   threadId: z.string().optional(),
@@ -118,7 +26,7 @@ const chatRequestSchema = z.object({
   messages: z
     .array(
       z.object({
-        role: z.enum(["user", "assistant", "system"]),
+        role: z.enum(["user", "assistant"]),
         content: z.string().max(10000),
       })
     )
@@ -201,40 +109,23 @@ export async function POST(req: NextRequest) {
       }));
     }
 
-    const [groundingContext, dokuwikiRagContext] = await Promise.all([
-      fetchYesWikiGroundingContext(message),
-      fetchDokuWikiRAGContext(message),
-    ]);
-
-    const systemPromptText = `Tu es l'assistant IA officiel du FabLab de Villeurbanne (LOV).
-Tu aides les adhérents et membres à comprendre les règles de l'atelier, utiliser les machines, consulter la documentation et trouver les informations sur le wiki du LOV (https://labovilleurbanne.fr/yeswiki/?PagePrincipale).
-Tu as également accès aux archives historiques du DokuWiki du FabLab (https://labovilleurbanne.fr/dokuwiki/).
-Tu réponds en français, avec clarté, bienveillance et précision.
-
-RÈGLES STRICTES D'ANCRAGE AUX SOURCES :
-- Base tes réponses UNIQUEMENT sur les données fournies ci-dessous (wiki YesWiki actuel et archives DokuWiki). N'utilise jamais tes connaissances générales pour décrire une machine, un modèle, une marque ou une procédure spécifique au LOV.
-- Ne mentionne JAMAIS un nom de machine, de modèle (ex: marque/référence d'imprimante) qui n'apparaît pas explicitement dans les sources fournies, même s'il te semble plausible ou courant dans d'autres FabLabs.
-- N'invente jamais de lien, d'URL ou de référence (vidéo, documentation) qui n'est pas donné tel quel dans les sources.
-- Si les sources fournies ne contiennent pas l'information demandée, dis-le clairement ("Je n'ai pas trouvé cette information dans le wiki du LOV") plutôt que de répondre avec des connaissances générales. Tu peux alors proposer de reformuler la question ou d'orienter vers un membre du LOV.
-${groundingContext ? `\n--- DONNÉES DU WIKI ACTUEL (YESWIKI) ---\n${groundingContext}\n----------------------------------------` : ""}
-${dokuwikiRagContext ? `\n${dokuwikiRagContext}\n----------------------------------------` : ""}
-${!groundingContext && !dokuwikiRagContext ? "\n(Aucune donnée pertinente trouvée dans les sources pour cette question.)" : ""}
-
-RAPPEL FINAL (le plus important) : les seules machines, marques et modèles que tu as le droit de citer sont ceux qui apparaissent MOT POUR MOT dans les blocs de sources ci-dessus. Avant d'écrire le nom d'une machine, vérifie qu'il apparaît littéralement dans les sources. Si tu as un doute, ou si aucune source pertinente n'est fournie ci-dessus, réponds que tu n'as pas trouvé l'information dans le wiki du LOV — ne complète JAMAIS avec une machine ou un modèle générique que tu connais par ailleurs (ex: ne dis jamais "Prusa" si ce mot n'apparaît pas dans les sources).`;
-
-    const hasSystem = fullMessages.some((m) => m.role === "system");
-    const messagesForProvider: ChatMessage[] = hasSystem
-      ? fullMessages
-      : [{ role: "system", content: systemPromptText }, ...fullMessages];
+    // Prior assistant answers are not evidence, especially after a corrected hallucination.
+    const userHistory = fullMessages.filter(item => item.role === "user").slice(-3);
+    const sources = await collectEvidence(userHistory.map(item => item.content).join("\n"));
+    const messagesForProvider: ChatMessage[] = [
+      { role: "system", content: evidencePrompt(sources) },
+      ...userHistory,
+    ];
 
     const modelProvider = getModelProvider(provider);
     const activeProviderName = modelProvider.providerType || provider || "default";
 
-    const stream = modelProvider.streamChat({
+    const stream = sources.length ? modelProvider.streamChat({
       messages: messagesForProvider,
       model,
       abortSignal: req.signal,
-    });
+      temperature: 0,
+    }) : (async function* () { yield { text: '{"evidence":[]}', totalTokens: 0 }; })();
 
     const encoder = new TextEncoder();
     let assistantFullText = "";
@@ -250,13 +141,16 @@ RAPPEL FINAL (le plus important) : les seules machines, marques et modèles que 
           for await (const chunk of stream) {
             if (chunk.text) {
               assistantFullText += chunk.text;
-              const textEvent = JSON.stringify({ event: "text", text: chunk.text }) + "\n";
-              controller.enqueue(encoder.encode(`data: ${textEvent}\n`));
+              if (assistantFullText.length > 30000) { assistantFullText = ""; break; }
+
             }
             if (chunk.totalTokens) {
               totalTokens = chunk.totalTokens;
             }
           }
+
+          assistantFullText = sources.length ? renderEvidence(assistantFullText, sources) : NO_EVIDENCE;
+          controller.enqueue(encoder.encode(`data: ${JSON.stringify({ event: "text", text: assistantFullText })}\n\n`));
 
           // Persist completed assistant message
           if (assistantFullText.length > 0) {

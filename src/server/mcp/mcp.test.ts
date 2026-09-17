@@ -107,6 +107,9 @@ describe("YesWiki MCP Server & Tools", () => {
 
     it("extracts machine status from Bazar records", async () => {
       const client = new YesWikiClient({ baseUrl: "https://labovilleurbanne.fr/yeswiki/" });
+      vi.spyOn(client, "getBazarEntries").mockResolvedValue([{
+        id: "fixture", title: "Laser de test", fields: { etat: "disponible", materiaux: ["Bois"] }, canonicalUrl: "https://example.org/laser",
+      }]);
       const status = await yeswikiTools.yeswiki_get_machine_status.execute(
         { machine_name: "Laser" },
         client

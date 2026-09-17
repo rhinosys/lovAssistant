@@ -42,7 +42,7 @@ export interface YesWikiMachineStatus {
   status: "disponible" | "maintenance" | "reserve" | "hors_service" | "inconnu";
   materials: string[];
   notes?: string;
-  guideUrl: string;
+  guideUrl?: string;
 }
 
 export interface PreparedPageUpdate {

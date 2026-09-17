@@ -12,7 +12,7 @@ try {
 
 async function run() {
   console.log("=== DOKUWIKI CRAWLER (wiki-old) ===");
-  const outputDir = path.join(process.cwd(), "wiki-old");
+  const outputDir = process.env.RAG_DATA_DIR || path.join(process.cwd(), "wiki-old");
   const crawler = new DokuWikiCrawler({
     baseUrl: "https://labovilleurbanne.fr/dokuwiki",
     outputDir,

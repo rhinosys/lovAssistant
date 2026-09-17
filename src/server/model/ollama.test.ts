@@ -62,7 +62,7 @@ describe("Ollama Model Provider", () => {
       messages: [{ role: "user", content: "Test" }],
     });
 
-    await expect(generator.next()).rejects.toThrow(OllamaUnavailableError);
+    await expect(generator[Symbol.asyncIterator]().next()).rejects.toThrow(OllamaUnavailableError);
   });
 
   it("throws ModelNotFoundError when Ollama returns 404 model not found", async () => {
@@ -78,7 +78,7 @@ describe("Ollama Model Provider", () => {
       messages: [{ role: "user", content: "Test" }],
     });
 
-    await expect(generator.next()).rejects.toThrow(ModelNotFoundError);
+    await expect(generator[Symbol.asyncIterator]().next()).rejects.toThrow(ModelNotFoundError);
   });
 
   it("reports healthy status with installed model tags", async () => {

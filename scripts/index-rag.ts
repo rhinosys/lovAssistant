@@ -19,7 +19,7 @@ try {
 
 async function run() {
   console.log("=== RAG VECTOR INDEXER ===");
-  const baseDir = path.join(process.cwd(), "wiki-old");
+  const baseDir = process.env.RAG_DATA_DIR || path.join(process.cwd(), "wiki-old");
   const manifestPath = path.join(baseDir, "manifest.json");
 
   let manifest: WikiManifest;

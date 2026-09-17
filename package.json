@@ -13,7 +13,8 @@
     "mcp:yeswiki": "tsx src/server/mcp/cli.ts",
     "rag:crawl": "tsx scripts/crawl-old-wiki.ts",
     "rag:index": "tsx scripts/index-rag.ts",
-    "rag:query": "tsx scripts/query-rag.ts"
+    "rag:query": "tsx scripts/query-rag.ts",
+    "rag:refresh": "tsx scripts/refresh-rag.ts"
   },
   "dependencies": {
     "@assistant-ui/react": "^0.7.83",

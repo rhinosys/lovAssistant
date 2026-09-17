@@ -68,7 +68,7 @@ describe("Mistral Model Provider", () => {
       messages: [{ role: "user", content: "Hello" }],
     });
 
-    await expect(generator.next()).rejects.toThrow(MistralAuthenticationError);
+    await expect(generator[Symbol.asyncIterator]().next()).rejects.toThrow(MistralAuthenticationError);
   });
 
   it("throws MistralAuthenticationError when Mistral API returns HTTP 401", async () => {
@@ -84,7 +84,7 @@ describe("Mistral Model Provider", () => {
       messages: [{ role: "user", content: "Test" }],
     });
 
-    await expect(generator.next()).rejects.toThrow(MistralAuthenticationError);
+    await expect(generator[Symbol.asyncIterator]().next()).rejects.toThrow(MistralAuthenticationError);
   });
 
   it("throws MistralRateLimitError when Mistral API returns HTTP 429", async () => {
@@ -100,7 +100,7 @@ describe("Mistral Model Provider", () => {
       messages: [{ role: "user", content: "Test" }],
     });
 
-    await expect(generator.next()).rejects.toThrow(MistralRateLimitError);
+    await expect(generator[Symbol.asyncIterator]().next()).rejects.toThrow(MistralRateLimitError);
   });
 
   it("throws MistralTimeoutError on abort signal", async () => {
@@ -113,7 +113,7 @@ describe("Mistral Model Provider", () => {
       messages: [{ role: "user", content: "Test" }],
     });
 
-    await expect(generator.next()).rejects.toThrow(MistralTimeoutError);
+    await expect(generator[Symbol.asyncIterator]().next()).rejects.toThrow(MistralTimeoutError);
   });
 
   it("throws MistralAPIError when upstream returns 500", async () => {
@@ -129,7 +129,7 @@ describe("Mistral Model Provider", () => {
       messages: [{ role: "user", content: "Test" }],
     });
 
-    await expect(generator.next()).rejects.toThrow(MistralAPIError);
+    await expect(generator[Symbol.asyncIterator]().next()).rejects.toThrow(MistralAPIError);
   });
 
   it("reports healthy status with available models from /v1/models", async () => {

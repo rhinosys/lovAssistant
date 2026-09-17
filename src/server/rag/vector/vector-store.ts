@@ -15,6 +15,8 @@ interface SerializedVectorIndex {
 export class LocalVectorStore implements VectorStore {
   private chunks: DocumentChunk[] = [];
   private indexPath: string;
+  private loadedMtime = 0;
+  private pendingChanges = false;
 
   constructor(indexPath?: string) {
     this.indexPath = indexPath || path.join(process.cwd(), "wiki-old", "vector-index.json");
@@ -26,6 +28,7 @@ export class LocalVectorStore implements VectorStore {
 
   async addChunks(chunks: DocumentChunk[]): Promise<void> {
     this.chunks.push(...chunks);
+    this.pendingChanges = true;
   }
 
   private computeBM25Score(queryWords: string[], content: string, title: string): number {
@@ -55,7 +58,9 @@ export class LocalVectorStore implements VectorStore {
     const mode = options.mode ?? "hybrid";
     const namespaceFilter = options.namespace;
 
-    if (this.chunks.length === 0) {
+    // Refresh cached chunks when the CLI or web job publishes a new index.
+    const mtime = await fs.stat(this.indexPath).then(stat => stat.mtimeMs).catch(() => 0);
+    if (!this.pendingChanges && (this.chunks.length === 0 || mtime !== this.loadedMtime)) {
       await this.load();
     }
 
@@ -126,7 +131,11 @@ export class LocalVectorStore implements VectorStore {
         chunks: this.chunks,
       };
 
-      await fs.writeFile(this.indexPath, JSON.stringify(payload), "utf-8");
+      const temporaryPath = `${this.indexPath}.${process.pid}.tmp`;
+      await fs.writeFile(temporaryPath, JSON.stringify(payload), "utf-8");
+      await fs.rename(temporaryPath, this.indexPath);
+      this.loadedMtime = (await fs.stat(this.indexPath)).mtimeMs;
+      this.pendingChanges = false;
       logger.info("Vector store index saved successfully", {
         path: this.indexPath,
         chunkCount: this.chunks.length,
@@ -138,10 +147,12 @@ export class LocalVectorStore implements VectorStore {
 
   async load(): Promise<boolean> {
     try {
+      const mtime = (await fs.stat(this.indexPath)).mtimeMs;
       const data = await fs.readFile(this.indexPath, "utf-8");
       const payload = JSON.parse(data) as SerializedVectorIndex;
       if (Array.isArray(payload.chunks)) {
         this.chunks = payload.chunks;
+        this.loadedMtime = mtime;
         return true;
       }
       return false;

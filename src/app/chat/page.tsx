@@ -19,6 +19,7 @@ import {
   Cpu,
   Zap,
 } from "lucide-react";
+import { RagStatus } from "./RagStatus";
 import { MarkdownContent } from "./MarkdownContent";
 import { apiUrl } from "@/lib/api-url";
 
@@ -437,6 +438,8 @@ export default function ChatPage() {
                 ))}
           </select>
         </div>
+
+        <RagStatus />
 
         {/* Threads List */}
         <div className="flex-1 overflow-y-auto px-3 py-1 space-y-1">

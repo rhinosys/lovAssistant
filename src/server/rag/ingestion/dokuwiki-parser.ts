@@ -79,11 +79,21 @@ export const parseDokuWikiToMarkdown = (wikitext: string, pageId = "page"): Pars
   // 7. Strikethrough <del>text</del> -> ~~text~~
   md = md.replace(/<del>([\s\S]*?)<\/del>/gi, "~~$1~~");
 
-  // 8. Images {{url?params|alt}} -> ![alt](url)
-  md = md.replace(/\{\{([^|\n]+?)(?:\|([^}\n]*))?\}\}/g, (_, url, alt) => {
-    const cleanUrl = url.split("?")[0].trim();
+  // 8. Images {{namespace:file.jpg?params|alt}} -> ![alt](absolute fetch.php URL)
+  // DokuWiki media refs are internal namespace paths (e.g. ":equipement:foo.jpg"), not URLs —
+  // they must be resolved through lib/exe/fetch.php?media=<namespace:file> to be fetchable.
+  md = md.replace(/\{\{([^|\n]+?)(?:\|([^}\n]*))?\}\}/g, (_, mediaRef, alt) => {
+    const cleanRef = mediaRef.split("?")[0].trim().replace(/^:/, "");
     const altText = alt ? alt.trim() : "image";
-    return `![${altText}](${cleanUrl})`;
+
+    // External images (already a full URL) pass through unchanged; only bare wiki namespace
+    // refs need resolving via fetch.php.
+    if (/^https?:\/\//.test(cleanRef)) {
+      return `![${altText}](${cleanRef})`;
+    }
+
+    const mediaUrl = `https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=${encodeURIComponent(cleanRef)}`;
+    return `![${altText}](${mediaUrl})`;
   });
 
   // 9. Links [[url|label]] or [[url]]

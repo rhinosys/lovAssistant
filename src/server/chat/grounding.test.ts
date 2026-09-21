@@ -14,6 +14,15 @@ describe("guided sourced answers", () => {
     expect(renderEvidence(JSON.stringify({ answer: "Une procédure", sourceIds: ["S99"] }), sources)).toBe(NO_EVIDENCE);
     expect(renderEvidence(JSON.stringify({ answer: "Voir https://invented.example", sourceIds: ["S1"] }), sources)).toBe(NO_EVIDENCE);
   });
+  it("keeps an image copied verbatim from a cited source, but drops an invented one", () => {
+    const withImage: EvidenceSource[] = [{ id: "S1", title: "Laser Master 2 Pro S2", url: "https://example.org/laser", origin: "DokuWiki", content: "Allumer la barre d'alimentation.\n![Barre d'alimentation](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement:decoupe_laser:multiprise.jpg)" }];
+    const kept = renderEvidence(JSON.stringify({ answer: "1. Allume la barre.\n![Barre d'alimentation](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement:decoupe_laser:multiprise.jpg)", sourceIds: ["S1"] }), withImage);
+    expect(kept).toContain("![Barre d'alimentation](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement:decoupe_laser:multiprise.jpg)");
+
+    const invented = renderEvidence(JSON.stringify({ answer: "1. Allume la barre.\n![Photo](https://evil.example/fake.jpg)", sourceIds: ["S1"] }), withImage);
+    expect(invented).not.toContain("evil.example");
+    expect(invented).not.toBe(NO_EVIDENCE);
+  });
   it("abstains on empty or malformed output", () => {
     expect(renderEvidence("Prusa", sources)).toBe(NO_EVIDENCE);
     expect(renderEvidence(JSON.stringify({ answer: "Prusa", sourceIds: [] }), sources)).toBe(NO_EVIDENCE);

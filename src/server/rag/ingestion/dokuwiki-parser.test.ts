@@ -33,6 +33,15 @@ describe("DokuWiki to Markdown Parser", () => {
     expect(result.markdown).toContain("![Photo du Fablab](https://labovilleurbanne.fr/photo.jpg)");
   });
 
+  it("resolves internal wiki media refs to a fetchable fetch.php URL", () => {
+    const wikitext = `{{:equipement:decoupe_laser:lm2_pro_s2_main.jpg?600|Ortur Laser Master 2 Pro S2}}`;
+
+    const result = parseDokuWikiToMarkdown(wikitext, "test");
+    expect(result.markdown).toContain(
+      "![Ortur Laser Master 2 Pro S2](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Adecoupe_laser%3Alm2_pro_s2_main.jpg)"
+    );
+  });
+
   it("converts inline styling and lists", () => {
     const wikitext = `**Gras** et //Italique// et ''Code inline'' et __Souligné__
   * Puce 1

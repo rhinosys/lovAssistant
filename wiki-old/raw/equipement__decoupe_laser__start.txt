@@ -3,8 +3,9 @@
 
 
 ==== Matos ====
-
+  * [[equipement:decoupe_laser:DemarrageStation ]]
   * [[equipement:decoupe_laser:Découpeuse laser k40]]
+  * [[equipement:decoupe_laser:laser_master_2_pro_s2|Laser Master 2 Pro S2]]
   * [[equipement:decoupe_laser:Suivi machine|]]
 
 ==== Logiciels ====
@@ -12,6 +13,8 @@
 On dessine sous [[https://inkscape.org/| Inkscape]] (ou tout logiciel qui sort du svg ou du dxf)
 
 On grave/découpe avec [[http://www.scorchworks.com/K40whisperer/k40whisperer.html|K40 Whisperer]], qui est installé au LOV. 
+
+Pour la [[equipement:decoupe_laser:laser_master_2_pro_s2|Laser Master 2 Pro S2]] on utilise [[equipement:decoupe_laser:lightburn|LightBurn]]
 
 ==== Ressources Web ====
 

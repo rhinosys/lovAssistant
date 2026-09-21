@@ -4,7 +4,7 @@ Pour utiliser l'imprimante Lulzbot, il faut avoir un dessin 3D (typiquement STL)
 
 On va ensuite passer le dessin au logiciel Cura (installé sur l'ordinateur attenant).
 
-![image](equipement:impression_3d:cura.png)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Aimpression_3d%3Acura.png)
 
 On sélectionne l'imprimante en question (en haut à droite)
 

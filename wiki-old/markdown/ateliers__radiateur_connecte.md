@@ -7,11 +7,11 @@ Le tout permet par exemple d'économiser un peu d'énergie en programmant une (v
 ### Contrôle du radiateur
 On positionne le radiateur en mode manuel et on met au maximum. Puis on branche le radiateur à travers une prise électrique commandée par radio. De cette façon, on court-circuite le thermostat interne et la prise contrôle directement la résistance du radiateur.
 
-![image](:ateliers:20161122_0035.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A20161122_0035.jpg)
 
 Pour tester le bon fonctionnement de cette partie, il suffit d'utiliser la télécommande fournie avec la prise: à l'arrêt le radiateur est éteint, en marche le radiateur doit chauffer au maximum sans arrêt.
 
-![image](:ateliers:20161122_0039.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A20161122_0039.jpg)
 
 ### Contrôle avec le Raspberry Pi
 Maintenant que le radiateur peut-être commandé par radio, on va le piloter depuis un programme qui tourne sur le raspberry pi.
@@ -20,25 +20,25 @@ On pourrait juste démonter la télé-commande et brancher des pins du raspberry
 
 Il existe des modules émetteurs 433 MHz à très bas coût. Ils ont seulement trois pins: deux pour l'alimentation et un pour activer ou désactiver l'oscillateur. Seule la modulation OOK est donc supportée, mais c'est suffisant pour commander des prises DI-O.
 
-![image](:ateliers:20161122_0023.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A20161122_0023.jpg)
 
 Le branchement de l'émetteur et le logiciel pour le piloter sont détaillés à l'adresse: http://blog.idleman.fr/raspberry-pi-12-allumer-des-prises-distance/
 
-![image](:ateliers:20161122_0027.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A20161122_0027.jpg)
 
 ### Mesure de la température avec le Raspberry Pi
 On utilise une sonde de température DS18B20 qui renvoie directement la température sous forme numérique.
 
-![image](:ateliers:20161122_0041.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A20161122_0041.jpg)
 
 Le branchement est détaillé à l'adresse suivante: http://www.framboise314.fr/mesure-de-temperature-1-wire-ds18b20-avec-le-raspberry-pi/
 
-![image](:ateliers:20161122_0046.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A20161122_0046.jpg)
 
 Le driver pour ces sondes est directement présent dans le noyau Linux et les valeurs sont lisibles depuis un script shell en interrogeant simplement un fichier du sysfs.
 
 ### Tout ça mis ensemble pour faire un asservissement de la température
-![image](:ateliers:20161122_0050.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A20161122_0050.jpg)
 
 ```
 #!/bin/bash

@@ -5,7 +5,7 @@ Lancement de l'idée en **Mai/Juin 2021** par @jfm et @gofannon et est toujours 
 
 L'établi devra faire 200x90cm pour "remplacer" la table existante
 
-![image](:projets:20210705_emplacement_etabli.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20210705_emplacement_etabli.jpg)
 
 ### Cahier des charges
 A la louche:
@@ -21,17 +21,17 @@ Découverte de l'association [Minéka](https://mineka.fr) qui fait du réemploi 
 
 **10 juillet**, achat d'environ 16 poteaux de plus de 2m à 2€ le mètre => XX€
 
-![image](:projets:20210710-achat_bois.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20210710-achat_bois.jpg)
 
 ### Préparation du bois - décloutage
 Courant juillet, décloutage des poteaux, premier croquis et création de cette page
 
-![image](:projets:20210726_croquis.jpg)
-![image](:projets:20210726_decloutage.jpg)
-![image](:projets:20210726_decloutage2.jpg)
-![image](:projets:20210726_decloutage3.jpg)
-![image](:projets:20210726_decloutage4.jpg)
-![image](:projets:20210726_collage.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20210726_croquis.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20210726_decloutage.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20210726_decloutage2.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20210726_decloutage3.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20210726_decloutage4.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20210726_collage.jpg)
 
 Prochaine étape, trouver un moyen d'avoir des poteaux lisses pour pouvoir les coller (tests de poncage à la ponceuse à bande, vérifier si quelqu'un a de grands serres joints @jfm et @gofannon)
 
@@ -53,9 +53,9 @@ Prochaine étape, trouver un moyen d'avoir des poteaux lisses pour pouvoir les c
   1. la premier planche rabotée à finit comme support sous les pieds !
 1. bricolage de la sortie d'aspiration de la machine pour éviter les copeaux partout
 
-![image](:projets:20211027_tablesortie1.jpg)
-![image](:projets:20211027_tablesortie2.jpg)
-![image](:projets:20211027_tablesortie3.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211027_tablesortie1.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211027_tablesortie2.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211027_tablesortie3.jpg)
 
 #### 1 ou 8 novembre
 1. nettoyage aspirateur chantier
@@ -67,19 +67,19 @@ Prochaine étape, trouver un moyen d'avoir des poteaux lisses pour pouvoir les c
   1. ca dégauchit super bien
   1. Le bastaings est trapézoïdal ... (photo)
 
-![image](:projets:20211113_montage1.jpg)
-![image](:projets:20211113_montage2.jpg)
-![image](:projets:20211113_montage3.jpg)
-![image](:projets:20211113_montage4.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211113_montage1.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211113_montage2.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211113_montage3.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211113_montage4.jpg)
 
-![image](:projets:20211113_degau-passage1.jpg)
-![image](:projets:20211113_degau-passage3.jpg)
-![image](:projets:20211113_degau-passage4.jpg)
-![image](:projets:20211113_degau-passage5.jpg)
-![image](:projets:20211113_degau-passage6.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211113_degau-passage1.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211113_degau-passage3.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211113_degau-passage4.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211113_degau-passage5.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211113_degau-passage6.jpg)
 
-![image](:projets:20211113_degau-trapeze1.jpg)
-![image](:projets:20211113_degau-trapeze2.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211113_degau-trapeze1.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3A20211113_degau-trapeze2.jpg)
 
 #### 14 février
 1. Découpe d'un bastaing de 2 mètres en morceaux de 80cm

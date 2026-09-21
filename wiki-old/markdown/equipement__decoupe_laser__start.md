@@ -2,13 +2,17 @@
 ![image](https://labovilleurbanne.fr/blog/wp-content/uploads/2023/06/IMG_3989_MOD-scaled.jpg)
 
 ### Matos
+  - [equipement:decoupe_laser:DemarrageStation](https://labovilleurbanne.fr/dokuwiki/equipement:decoupe_laser:DemarrageStation)
   - [equipement:decoupe_laser:Découpeuse laser k40](https://labovilleurbanne.fr/dokuwiki/equipement:decoupe_laser:Découpeuse laser k40)
+  - [Laser Master 2 Pro S2](https://labovilleurbanne.fr/dokuwiki/equipement:decoupe_laser:laser_master_2_pro_s2)
   - [equipement:decoupe_laser:Suivi machine](https://labovilleurbanne.fr/dokuwiki/equipement:decoupe_laser:Suivi machine)
 
 ### Logiciels
 On dessine sous [Inkscape](https://inkscape.org/) (ou tout logiciel qui sort du svg ou du dxf)
 
 On grave/découpe avec [K40 Whisperer](http://www.scorchworks.com/K40whisperer/k40whisperer.html), qui est installé au LOV. 
+
+Pour la [Laser Master 2 Pro S2](https://labovilleurbanne.fr/dokuwiki/equipement:decoupe_laser:laser_master_2_pro_s2) on utilise [LightBurn](https://labovilleurbanne.fr/dokuwiki/equipement:decoupe_laser:lightburn)
 
 ### Ressources Web
 Générateur de boites de différentes formes : https://www.festi.info/boxes.py/?language=fr

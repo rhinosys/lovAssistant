@@ -21,12 +21,12 @@ Pas de prérequis. Adolescents et adultes (sécurité laser)
 
 ---
 
-Note : vous trouverez dans ![cette archive](:ateliers:initiation_decoupe_laser:sources.zip)
+Note : vous trouverez dans ![cette archive](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Ainitiation_decoupe_laser%3Asources.zip)
 les sources de tous les dessins utilisés plus loin.
 
 ### 1. Présentation de la découpe laser
-  1. petite démonstration (1) : découpe d'un objet 2D : ![image](:ateliers:initiation_decoupe_laser:lov.png)
-  1. petite démonstration (2) : découpe de pièces 2D et assemblage en objet 3D, ![image](:ateliers:initiation_decoupe_laser:minif16.png) (tiré de ![Thingiverse](https://www.thingiverse.com/thing:449571)
+  1. petite démonstration (1) : découpe d'un objet 2D : ![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Ainitiation_decoupe_laser%3Alov.png)
+  1. petite démonstration (2) : découpe de pièces 2D et assemblage en objet 3D, ![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Ainitiation_decoupe_laser%3Aminif16.png) (tiré de ![Thingiverse](https://www.thingiverse.com/thing:449571)
   1. un peu de théorie sur le laser : pourquoi ça coupe ? pourquoi il faut faire attention (même à un bête pointeur laser) !
   1. Dessin point par point *vs*. dessin vectoriel
 
@@ -43,7 +43,7 @@ Créons un flocon de neige, que nous découperons.
   1. ajustement de l'ancre de rotation
   1. duplication, rotation, répétition...
 
-![image](:ateliers:initiation_decoupe_laser:flocon_lignes.png)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Ainitiation_decoupe_laser%3Aflocon_lignes.png)
 
 On découpe sur papier... SURPRISE !!!!
 
@@ -52,4 +52,4 @@ On corrige :
   1. contour en chemin
   1. union
 
-![image](:ateliers:initiation_decoupe_laser:flocon_contours.png)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Ainitiation_decoupe_laser%3Aflocon_contours.png)

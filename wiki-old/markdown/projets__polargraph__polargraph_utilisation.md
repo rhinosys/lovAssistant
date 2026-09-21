@@ -1,6 +1,6 @@
 ## = Comment utiliser le polargraph du LOV ?
-![image](projets:polargraph:vue-ensemble.jpg)
-![image](projets:polargraph:gondole.jpg)\\
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Avue-ensemble.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Agondole.jpg)\\
 ### Vous avez besoin de :
   *1 planche de 120 cm x 90 cm au minimum,
   *1 kit polargraph :
@@ -18,31 +18,31 @@
   *de la patience.
 ### 1- Assemblage du polargraph
   *Fixer les deux moteurs (gauche et droite) sur le haut de la planche à l'aide des pinces.
-![image](projets:polargraph:moteur-gauche.jpg)
-![image](projets:polargraph:moteur-droit.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Amoteur-gauche.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Amoteur-droit.jpg)
   *Positionner la gondole au milieu de la planche en passant les courroies autour des poulies.
   *Accrocher les deux contrepoids pour tendre les courroies.
-![image](projets:polargraph:contrepoids-gauche.jpg)
-![image](projets:polargraph:contrepoids-droit.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Acontrepoids-gauche.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Acontrepoids-droit.jpg)
 ### 2- Câblage du polargraph
 Penser à bien respecter la couleur des fils.
     *du moteur gauche à la carte Arduino
-![image](projets:polargraph:cablage-moteur-gauche-2.jpg)
-![image](projets:polargraph:cablage-moteur-gauche-1.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Acablage-moteur-gauche-2.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Acablage-moteur-gauche-1.jpg)
     *du moteur droit à la carte Arduino
-![image](projets:polargraph:cablage-moteur-droit-3.jpg)
-![image](projets:polargraph:cablage-moteur-droit-2.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Acablage-moteur-droit-3.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Acablage-moteur-droit-2.jpg)
     *du servomoteur (doigt pour lever le crayon) à la carte Arduino.
 Faire passer les fils au centre de la planche en utilisant les aimants comme guide.\\
-![image](projets:polargraph:cablage-servo-1.jpg)
-![image](projets:polargraph:guidage-fils-servo.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Acablage-servo-1.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Aguidage-fils-servo.jpg)
 ### 3- Soft Polargraph sous Processing.
 lien pour téléchargement => processing 2.2 et polargraph à partir des sources d'Euphy.
 [outils du lov Ubuntu 18.04.1 LTS](https://labovilleurbanne.fr/nextcloud/index.php/s/2LwBHE8yHgSKpid)
 ### 4- Propriétés de la machine.
 [propriétés de la machine selon Euphy](http://www.polargraph.co.uk/wp-content/uploads/2012/07/marking-diagram.jpg)
 
-![image](projets:polargraph:marking-diagram.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Amarking-diagram.jpg)
 
     *circonférence de la poulie = mm per rev => 109mm
     *nombre de pas du moteur = steps per rev => 200
@@ -65,6 +65,6 @@ lien pour téléchargement => processing 2.2 et polargraph à partir des sources
     *vitesse de rotation max = motor max speed => 500 pas par seconde
     *acceleration max = motor acceleration => 250 pas par seconde
 
-![?600](projets:polargraph:parametre-polar.png)
+![?600](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Aparametre-polar.png)
 
 ##### principaux paramètres à prendre en compte pour dessiner un dessin vectoriel (svg)

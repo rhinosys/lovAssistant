@@ -28,7 +28,7 @@ Arduino : https://www.arduino.cc/
 ---
 
 #### Matériel
-![image](:ateliers:ff.png)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Aff.png)
 
   - Carte Arduino etc...
   - 1 x Shield
@@ -49,32 +49,32 @@ Arduino : https://www.arduino.cc/
 #### Pièces 3d à imprimer DIY
 **Clips moteur:** https://www.thingiverse.com/thing:750963
 
-![image](:ateliers:2wdmount-left_preview_featured.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A2wdmount-left_preview_featured.jpg)
 
 **Roues:** https://www.thingiverse.com/lluiscolomer/about
 
-![image](:ateliers:e4d309aee797010f7962010d51102811_preview_featured.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Ae4d309aee797010f7962010d51102811_preview_featured.jpg)
 
 **Châssis en 3D:** https://www.thingiverse.com/thing:1011890
 
-![image](:ateliers:frame_preview_featured.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Aframe_preview_featured.jpg)
 
 **Roue avant**
 
-![image](:ateliers:4b463275e89caa7c0bc5452119beeb60_preview_featured.jpg)
-![image](:ateliers:24f7ccc1978b127b019495800edf43cc_preview_featured.jpg)
-![image](:ateliers:87d1fa7950b544043a0e384d335953ec_preview_featured.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A4b463275e89caa7c0bc5452119beeb60_preview_featured.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A24f7ccc1978b127b019495800edf43cc_preview_featured.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A87d1fa7950b544043a0e384d335953ec_preview_featured.jpg)
 
 ---
 
 #### Pièce à découper
 **Plateau / Châssis**
 
-![image](:ateliers:01a.png)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A01a.png)
 
 ### I. Présentation de la carte Arduino
-![image](:ateliers:arduino-uno_details.png)
-![image](:ateliers:10-arduino-uno-board-front-view-and-explanation-of-pins-see-appendix-a-for-the-full.png)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Aarduino-uno_details.png)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A10-arduino-uno-board-front-view-and-explanation-of-pins-see-appendix-a-for-the-full.png)
 
 Explications basiques sur l'intérêt de piloter un circuit électrique avec un ordinateur.
 
@@ -117,7 +117,7 @@ Laisser les gens chercher comment marche une plaque à trous.
 1. Une carte Arduino
 1. Un câble USB ou une pile
 
-![image](:ateliers:untitled_sketch_2_bb.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Auntitled_sketch_2_bb.jpg)
 
 ### III. Un peu plus loin avec la carte Arduino
 Expliquer les sorties (exemple avec LED pin 12) et les entrées (exemple avec un bouton pin 2).
@@ -140,13 +140,13 @@ void loop() {
 
 <u>Exercice:</u> faire un programme qui clignote un signal SOS avec une LED quand on appuie sur un bouton.
 
-**Aide >** ![image](:ateliers:lalphabet-morse_0_730_457.png)
+**Aide >** ![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Alalphabet-morse_0_730_457.png)
 
 Puis alimenter un moteur directement avec une pile.
 
-![image](:ateliers:pile-lithium-9v-er9-v.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Apile-lithium-9v-er9-v.jpg)
 
-![image](:ateliers:untitled_sketch_2_bb.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Auntitled_sketch_2_bb.jpg)
 ### V. Présentation du shield pour piloter les moteurs
 Expliquer pourquoi on ne peut pas connecter directement un moteur à la carte Arduino.
 
@@ -207,7 +207,7 @@ void loop() {
 ```
 
 ### VII. Construction du robot
-![image](:ateliers:arduino-car-robot-chassis.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3Aarduino-car-robot-chassis.jpg)
 
 Montage de l'arduino dans le châssis, connexion.
 

@@ -25,7 +25,7 @@ Enfin on peux créer le fil sans nécessairement aiguiser au quart de poil.
 Après un surfaçage j'ai commencé par fraiser les poches sur lesquelles vont se fixer les renforts en laiton en utilisant le plateau comme référence. soit une hauteur de 2mm. Ensuite je fraise les poches qui correspondent à la surface visible du bois soit 5mm de hauteur et enfin je découpe la pièce en laissant cochée l'option "accroches" qui laisse quelques morceau de matière pour qu'a la fin du détourage la pièce fraisée reste solidaire du brut. 
 
 ### Étape fonderie
-![image](projets:couteau:img_20211119_125449_658.jpg)![image](projets:couteau:img_20211210_125810_796.jpg)![image](projets:couteau:img_20211119_131406_074.jpg)![image](projets:couteau:img_20211210_132559_013.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Acouteau%3Aimg_20211119_125449_658.jpg)![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Acouteau%3Aimg_20211210_125810_796.jpg)![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Acouteau%3Aimg_20211119_131406_074.jpg)![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Acouteau%3Aimg_20211210_132559_013.jpg)
 
 étape 1 : on récupère des vieux morceaux de laiton (ici des cosses de tableau électrique des échecs de fonderie avec un post a arc (ca marche pas...))
 
@@ -38,7 +38,7 @@ Après un surfaçage j'ai commencé par fraiser les poches sur lesquelles vont s
 !!!! warning !!! j'ai essayé sans les briques mais avec de la terre tassée. la première fois pas de problème avec un rendu plus moche que les briques. la seconde fois la terre devais être trop humide. résultat explosion et projection de laiton (vive les fringues de sécu)
 
 ### Étape usinage
-![image](projets:couteau:img_20211203_113808_909.jpg)![image](projets:couteau:img_20211203_120606_929.jpg)![image](projets:couteau:img_20211209_134329_384.jpg)![image](projets:couteau:img_20211209_140648_169.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Acouteau%3Aimg_20211203_113808_909.jpg)![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Acouteau%3Aimg_20211203_120606_929.jpg)![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Acouteau%3Aimg_20211209_134329_384.jpg)![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Acouteau%3Aimg_20211209_140648_169.jpg)
 
 étape 1 les morceaux brut de fonderie
 

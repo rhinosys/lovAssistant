@@ -1,7 +1,7 @@
 SECTION ENTIÈREMENT MIGRÉE
 
 # ATELIERS ANIMES PAR LE LOV
-![image](:ateliers:3_modules.png)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A3_modules.png)
 
 La liste (que nous espérons garder exhaustive, mais ça vient sans garantie) des ateliers que nous avons animés (ou allons bientôt animer) « à la maison » ou lors de salons, manifestations...
 

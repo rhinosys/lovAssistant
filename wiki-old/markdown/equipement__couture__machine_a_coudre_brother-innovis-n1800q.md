@@ -64,9 +64,9 @@ Dans le tiroir à accessoire du caisson "couture" :
     - Guide de couture (F016N) à utiliser avec le pied double entraînement ouvert F062 (Kit Quilting Brother QKF2)
 
 ### Documents
-  - ![Manuel d'utilisation](equipement:couture:brother-innov-is-nv1800q_manuel.pdf)
-  - ![Fiche de référence rapide](equipement:couture:brother-innov-is-nv1800q_ref-rapide.pdf)
-  - ![Catalogue illustré et traduit des accessoires, pieds,...](equipement:couture:brother-innov-is-nv1800q_accessoires.pdf)
+  - ![Manuel d'utilisation](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Acouture%3Abrother-innov-is-nv1800q_manuel.pdf)
+  - ![Fiche de référence rapide](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Acouture%3Abrother-innov-is-nv1800q_ref-rapide.pdf)
+  - ![Catalogue illustré et traduit des accessoires, pieds,...](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Acouture%3Abrother-innov-is-nv1800q_accessoires.pdf)
 
 ### Liens
   - [site du fabricant](https://sewingcraft.brother.eu/fr-fr/produits/machines/machines-a-coudre/machines-a-coudre-pour-couturiers-debutants/innov-is-nv1800q)

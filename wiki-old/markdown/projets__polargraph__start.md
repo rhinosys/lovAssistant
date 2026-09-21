@@ -30,7 +30,7 @@ Il peut s’appuyer sur des choses de différents formats
   *Thingiverse → openscad → stl
 
 ### Matériels
-![image](projets:polargraph:f15nvjzguwhgnz6.large.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Af15nvjzguwhgnz6.large.jpg)
 (photographie à refaire/remodifier...)
 
 *Lister ici le matériel nécessaire*
@@ -50,11 +50,11 @@ Il peut s’appuyer sur des choses de différents formats
 ### Pièces 3d à imprimer DIY
 **Polargraph : Gondola** 
 
-![image](projets:polargraph:gondola-v3.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Agondola-v3.jpg)
 
 **Poulie crantée : **  
 
-![image](projets:polargraph:h-10t-od29.55_preview_featured.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Ah-10t-od29.55_preview_featured.jpg)
 
 ## Partie 1 : support du crayon
 Le support de [Alassi](https://www.thingiverse.com/thing:2801412) est intéressant mais la description est incomplète, il manque le mécanisme de cremaillere entre le moteur et le porte crayon.\\
@@ -90,9 +90,9 @@ poulie crantée T5 : facile à imprimer, paramétrage\\
       *beaucoup trop de va et vient inutile\\
       *moulinette : [Vector Optimizer](https://github.com/euphy/polargraph/wiki/Vector-Optimizer)\\
 ## Nos  dessins !
-![image](:undefined:img_20181030_000651.jpg)
-![image](:undefined:img_20181030_000731-1.jpg)\\
-![image](projets:polargraph:gnu-lov-comp-2.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=undefined%3Aimg_20181030_000651.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=undefined%3Aimg_20181030_000731-1.jpg)\\
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Apolargraph%3Agnu-lov-comp-2.jpg)
 ... les premiers essais ...\\
 ... video ...
 [polargraph-anim](https://labovilleurbanne.fr/nextcloud/index.php/s/HE6befNJxqW4bfn)

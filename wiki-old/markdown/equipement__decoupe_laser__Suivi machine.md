@@ -17,15 +17,15 @@ Grapsus : je note les mesures de puissance tant que je m'en rappelle (puissances
 Fred et Jeremie :
   - changement du lit de la graveuse en conservant finalement la plaque nid d'abeille en alu. Le test avec le grillage n'est pas satisfaisant car il marque le dos de la plaque à découper.
   - test de la focale avec une la plaque en pente. Cette plaque est conservée à la dernière page du cahier rouge.
-![image](:equipement:decoupe_laser:test_laser_wiki_.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Adecoupe_laser%3Atest_laser_wiki_.jpg)
   - une cale définie pour la découpe de plaque de 3mm d'épaisseur est rangée au fond de la découpe Laser.
   - positionner la cale à côté de la "poulie guide" peinte en blanc (à faire **hors tension**)
-![image](:equipement:decoupe_laser:cale_blanche_wiki_.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Adecoupe_laser%3Acale_blanche_wiki_.jpg)
   - les parties blanches doivent être alignées en tout point de la découpeuse (à faire **hors tension**).
 
 **2022-09-01** entretien unité de filtration SFM410
   - l'unité de filtration date de 2009
-  - manuel entretien : ![image](:equipement:decoupe_laser:unite_de_filtration_sfm410_notice.pdf)
+  - manuel entretien : ![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Adecoupe_laser%3Aunite_de_filtration_sfm410_notice.pdf)
 
 Ci-dessous, voici la liste du matériel commandé en 2009 :
 

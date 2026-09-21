@@ -6,7 +6,7 @@ URL: https://grid.space/kiri/
 
 Si vous utilisez l'ordinateur de la CNC, la configuration de l'[ID CNC PRO](https://labovilleurbanne.fr/dokuwiki/equipement:cnc:idcncpro) est déjà stocké dans le cache du navigateur.
 
-Si vous utilisez votre ordinateur, *importez* les fichiers de l'archive suivante : ![image](:equipement:cnc:id-cnc-pro_kiri-moro.zip)
+Si vous utilisez votre ordinateur, *importez* les fichiers de l'archive suivante : ![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Acnc%3Aid-cnc-pro_kiri-moro.zip)
   - id_cnc_pro.km : configuration de la machine
   - tools.km : configuration des têtes de fraisage
 

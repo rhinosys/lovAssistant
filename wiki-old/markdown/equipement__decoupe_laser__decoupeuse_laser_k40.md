@@ -14,7 +14,7 @@ La découpeuse laser ne doit pas être encore allumée !
 
 Avant d'utiliser directement la K40, il vous faudra préparer votre découpe sous [Inkscape](https://inkscape.org/fr/).
 
-![image](youtube>aDp5x59pu24)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=youtube%3EaDp5x59pu24)
 
 Une bonne playlist de vidéos pour apprendre Inkscape sur la chaîne du blog du TIM [la chaîne du prof du TIM](https://www.youtube.com/playlist?list=PLT22zthn8ytwA4vOHYDTjxwIrK63sGkMa).
 
@@ -30,7 +30,7 @@ La découpeuse laser ne considère que trois couleurs :
 
 De ce fait, sur votre fichier Inkscape, assurez-vous que celui-ci ne comporte bien que trois couleurs.
 
-![image](youtube>9wYvbenigtk)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=youtube%3E9wYvbenigtk)
 Avec une petite vidéo, c'est plus simple à comprendre.
 
 ** Mise en route **
@@ -51,7 +51,7 @@ Vous pouvez maintenant allumer la découpeuse laser (mais pas le laser pour l'in
 
 Cliquez ensuite sur "Initialise Laser Cutter".
 
-![image](youtube>wdRsg4wllmo)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=youtube%3EwdRsg4wllmo)
 Le fabricant propose une [playlist complète](https://youtu.be/PEUJQFAEDcE?si=EY8fJBk-rvqnKSxY) de vidéos en ligne.
 
 Il y a aussi un [manuel de référence](https://www.scorchworks.com/K40whisperer/k40w_manual.html) (en anglais).
@@ -78,7 +78,7 @@ Avant l'usage de la découpeuse laser, il faut s'assurer des points suivants :
   - Quand vous allumez la multiprise, appuyez ensuite sur le bouton principale de la découpeuse *(mais pas le laser, cf **TODO :** mettre l'image bouton_principal*), assurez-vous que la pompe fonctionne. Normalement, cela devrait s'entendre.
   - De plus assurez-vous que l'eau circule dans la pompe, pour cela, soulever le tuyau de sortie d'eau. Normalement de l'eau devrait couler *(** TODO :** mettre le gif circulation_eau.gif)*.
   - Assurez-vous que le laser est bien immergé. Pour cela, il faut que la bulle située au bout du laser, soit la plus petite possible *(** TODO : ** Mettre les images location_laser et bulle_laser)*. Si celle-ci est plus grande que sur l'image, soulevez délicatement le coin gauche de la découpeuse laser pour évacuer le surplus d'air du laser //(**TODO : ** Mettre l'image/gif evacuation_eau)//.
-  - Les fumées générées sont aspirées et filtrées par l'unité de filtration SFM410. Le filtre doit être en marche et son voyant indiquant l'état de colmatage des filtres éteint. ![image](:equipement:decoupe_laser:unite_de_filtration_sfm410_notice.pdf)
+  - Les fumées générées sont aspirées et filtrées par l'unité de filtration SFM410. Le filtre doit être en marche et son voyant indiquant l'état de colmatage des filtres éteint. ![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Adecoupe_laser%3Aunite_de_filtration_sfm410_notice.pdf)
 
 Ces points peuvent se récapituler comme suit : 
 

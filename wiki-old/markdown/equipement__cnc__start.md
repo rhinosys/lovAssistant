@@ -10,7 +10,7 @@ Dans le petit meuble blanc marqué CNC, vous trouverez:
 1. les vis de fixation
 
 ### Principe de fonctionnement
-![image](equipement:cnc:process.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Acnc%3Aprocess.jpg)
 
 1 préparer le dessin pour qu'il soit lisible par cam bam en résumé simplifier au possible
 cam bam peut lire du format DXF pour la 2D et du STL pour la 3D

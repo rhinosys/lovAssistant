@@ -1,5 +1,5 @@
 # EXPERIMENTATIONS ET PROJETS COLLECTIFS EN COURS
-![image](:projets:lov_com_logov3_gravure4.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Alov_com_logov3_gravure4.jpg)
 
 **Électronique et CNC**
   - [Gravure de circuits imprimés](https://labovilleurbanne.fr/dokuwiki/projets:gravure_circuits)

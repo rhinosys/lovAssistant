@@ -29,7 +29,7 @@
 
 ##### Technique :
   - [site du fabricant](https://sewingcraft.brother.eu/fr-fr/produits/machines/surjeteuses/surjeteuses/3034dwt)
-  - ![Manuel d'utilisation](equipement:couture:brother_surjeteuse-3034dwt_manuel.pdf)
+  - ![Manuel d'utilisation](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=equipement%3Acouture%3Abrother_surjeteuse-3034dwt_manuel.pdf)
 
 ##### Tutos :
   - Une playlist utile de vidéos pour commencer à la surjeteuse : [La surjeteuse, par Enjoy Couture](https://www.youtube.com/playlist?list=PLhHdiSVFRmJ2oS9nZBsCQEJ4Htr4EiSQj)

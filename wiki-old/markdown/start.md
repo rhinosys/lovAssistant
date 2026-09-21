@@ -14,7 +14,7 @@ Bienvenue sur le wiki du LOV. Ces pages servent à documenter le fonctionnement 
   - [un suivi des achats de l'association (consommables)](https://labovilleurbanne.fr/dokuwiki/asso:achats).
 
 ## Ateliers proposés par le LOV
-[[ateliers:start|![image](ateliers:3_modules.png)]]
+[[ateliers:start|![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=ateliers%3A3_modules.png)]]
 
 [Ateliers proposés par le LOV :](https://labovilleurbanne.fr/dokuwiki/ateliers:start)
   - [Radiateur connecté](https://labovilleurbanne.fr/dokuwiki/ateliers:radiateur_connecte) ;
@@ -39,7 +39,7 @@ Bienvenue sur le wiki du LOV. Ces pages servent à documenter le fonctionnement 
   - Kit pour atelier robots.
 
 ## Expérimentations et projets collectifs en cours
-[[projets:start|![image](:projets:lov_com_logov3_gravure4.jpg)]]
+[[projets:start|![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Alov_com_logov3_gravure4.jpg)]]
 
 [Expérimentations et projets collectifs en cours :](https://labovilleurbanne.fr/dokuwiki/projets:start)
   - Électronique et CNC ;

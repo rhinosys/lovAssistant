@@ -1,5 +1,5 @@
 # Gravure du circuit (en chantier) =
-![image](:projets:gravure_circuit_imprime_moyen.jpg)
+![image](https://labovilleurbanne.fr/dokuwiki/lib/exe/fetch.php?media=projets%3Agravure_circuit_imprime_moyen.jpg)
 
 Ceci est une page de prise de notes pour de premiers essais de réalisation de circuits imprimés à l'aide de la CNC en simple face.\\
 

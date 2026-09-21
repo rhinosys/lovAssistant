@@ -1,6 +1,6 @@
 {
-  "scrapedAt": "2026-09-16T19:47:36.514Z",
-  "totalDocuments": 74,
+  "scrapedAt": "2026-09-21T18:08:19.210Z",
+  "totalDocuments": 77,
   "documents": {
     "start": {
       "id": "start",
@@ -9,7 +9,7 @@
       "rawPath": "raw/start.txt",
       "markdownPath": "markdown/start.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/start",
-      "byteSize": 2957
+      "byteSize": 3082
     },
     "asso:start": {
       "id": "asso:start",
@@ -18,7 +18,7 @@
       "rawPath": "raw/asso__start.txt",
       "markdownPath": "markdown/asso__start.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Astart",
-      "byteSize": 2860
+      "byteSize": 3108
     },
     "asso:docs_admin": {
       "id": "asso:docs_admin",
@@ -27,7 +27,7 @@
       "rawPath": "raw/asso__docs_admin.txt",
       "markdownPath": "markdown/asso__docs_admin.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/asso%3Adocs_admin",
-      "byteSize": 390
+      "byteSize": 638
     },
     "asso:cr:start": {
       "id": "asso:cr:start",
@@ -72,7 +72,7 @@
       "rawPath": "raw/ateliers__start.txt",
       "markdownPath": "markdown/ateliers__start.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/ateliers%3Astart",
-      "byteSize": 734
+      "byteSize": 796
     },
     "ateliers:radiateur_connecte": {
       "id": "ateliers:radiateur_connecte",
@@ -81,7 +81,7 @@
       "rawPath": "raw/ateliers__radiateur_connecte.txt",
       "markdownPath": "markdown/ateliers__radiateur_connecte.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/ateliers%3Aradiateur_connecte",
-      "byteSize": 4291
+      "byteSize": 4725
     },
     "ateliers:robot_arduino": {
       "id": "ateliers:robot_arduino",
@@ -90,7 +90,7 @@
       "rawPath": "raw/ateliers__robot_arduino.txt",
       "markdownPath": "markdown/ateliers__robot_arduino.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/ateliers%3Arobot_arduino",
-      "byteSize": 9695
+      "byteSize": 10625
     },
     "ateliers:initiation_decoupe_laser_inkscape": {
       "id": "ateliers:initiation_decoupe_laser_inkscape",
@@ -99,7 +99,7 @@
       "rawPath": "raw/ateliers__initiation_decoupe_laser_inkscape.txt",
       "markdownPath": "markdown/ateliers__initiation_decoupe_laser_inkscape.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/ateliers%3Ainitiation_decoupe_laser_inkscape",
-      "byteSize": 1971
+      "byteSize": 2291
     },
     "ateliers:atelier_cookies": {
       "id": "ateliers:atelier_cookies",
@@ -126,7 +126,7 @@
       "rawPath": "raw/equipement__cnc__start.txt",
       "markdownPath": "markdown/equipement__cnc__start.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Acnc%3Astart",
-      "byteSize": 1648
+      "byteSize": 1713
     },
     "equipement:couture:start": {
       "id": "equipement:couture:start",
@@ -144,7 +144,7 @@
       "rawPath": "raw/equipement__decoupe_laser__start.txt",
       "markdownPath": "markdown/equipement__decoupe_laser__start.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Adecoupe_laser%3Astart",
-      "byteSize": 1285
+      "byteSize": 1740
     },
     "equipement:impression_3d:impression_3d": {
       "id": "equipement:impression_3d:impression_3d",
@@ -171,7 +171,7 @@
       "rawPath": "raw/projets__start.txt",
       "markdownPath": "markdown/projets__start.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Astart",
-      "byteSize": 934
+      "byteSize": 996
     },
     "asso:cr:2015-07-17-assemblee_generale": {
       "id": "asso:cr:2015-07-17-assemblee_generale",
@@ -459,7 +459,7 @@
       "rawPath": "raw/equipement__couture__surjeteuse_brother-3034dwt.txt",
       "markdownPath": "markdown/equipement__couture__surjeteuse_brother-3034dwt.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Acouture%3Asurjeteuse_brother-3034dwt",
-      "byteSize": 1342
+      "byteSize": 1407
     },
     "equipement:couture:machine_a_coudre_brother-innovis-n1800q": {
       "id": "equipement:couture:machine_a_coudre_brother-innovis-n1800q",
@@ -468,7 +468,16 @@
       "rawPath": "raw/equipement__couture__machine_a_coudre_brother-innovis-n1800q.txt",
       "markdownPath": "markdown/equipement__couture__machine_a_coudre_brother-innovis-n1800q.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Acouture%3Amachine_a_coudre_brother-innovis-n1800q",
-      "byteSize": 3684
+      "byteSize": 3879
+    },
+    "equipement:decoupe_laser:DemarrageStation": {
+      "id": "equipement:decoupe_laser:DemarrageStation",
+      "title": "Démarrage de la découpe laser",
+      "namespace": "equipement:decoupe_laser",
+      "rawPath": "raw/equipement__decoupe_laser__DemarrageStation.txt",
+      "markdownPath": "markdown/equipement__decoupe_laser__DemarrageStation.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Adecoupe_laser%3ADemarrageStation",
+      "byteSize": 1531
     },
     "equipement:decoupe_laser:Découpeuse laser k40": {
       "id": "equipement:decoupe_laser:Découpeuse laser k40",
@@ -477,7 +486,16 @@
       "rawPath": "raw/equipement__decoupe_laser__Découpeuse laser k40.txt",
       "markdownPath": "markdown/equipement__decoupe_laser__Découpeuse laser k40.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Adecoupe_laser%3AD%C3%A9coupeuse%20laser%20k40",
-      "byteSize": 5613
+      "byteSize": 5866
+    },
+    "equipement:decoupe_laser:laser_master_2_pro_s2": {
+      "id": "equipement:decoupe_laser:laser_master_2_pro_s2",
+      "title": "Laser Master 2 Pro S2",
+      "namespace": "equipement:decoupe_laser",
+      "rawPath": "raw/equipement__decoupe_laser__laser_master_2_pro_s2.txt",
+      "markdownPath": "markdown/equipement__decoupe_laser__laser_master_2_pro_s2.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Adecoupe_laser%3Alaser_master_2_pro_s2",
+      "byteSize": 6922
     },
     "equipement:decoupe_laser:Suivi machine": {
       "id": "equipement:decoupe_laser:Suivi machine",
@@ -486,7 +504,16 @@
       "rawPath": "raw/equipement__decoupe_laser__Suivi machine.txt",
       "markdownPath": "markdown/equipement__decoupe_laser__Suivi machine.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Adecoupe_laser%3ASuivi%20machine",
-      "byteSize": 2231
+      "byteSize": 2423
+    },
+    "equipement:decoupe_laser:lightburn": {
+      "id": "equipement:decoupe_laser:lightburn",
+      "title": "LightBurn",
+      "namespace": "equipement:decoupe_laser",
+      "rawPath": "raw/equipement__decoupe_laser__lightburn.txt",
+      "markdownPath": "markdown/equipement__decoupe_laser__lightburn.md",
+      "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Adecoupe_laser%3Alightburn",
+      "byteSize": 9278
     },
     "equipement:impression_3d:bambu_lab_p1s": {
       "id": "equipement:impression_3d:bambu_lab_p1s",
@@ -513,7 +540,7 @@
       "rawPath": "raw/equipement__impression_3d__lulzbot-taz-workhorse.txt",
       "markdownPath": "markdown/equipement__impression_3d__lulzbot-taz-workhorse.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Aimpression_3d%3Alulzbot-taz-workhorse",
-      "byteSize": 3341
+      "byteSize": 3406
     },
     "equipement:impression_3d:inventaire": {
       "id": "equipement:impression_3d:inventaire",
@@ -558,7 +585,7 @@
       "rawPath": "raw/equipement__inventaire_menuiserie__scie_radiale.txt",
       "markdownPath": "markdown/equipement__inventaire_menuiserie__scie_radiale.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Ainventaire_menuiserie%3Ascie_radiale",
-      "byteSize": 1240
+      "byteSize": 1368
     },
     "projets:gravure_circuits": {
       "id": "projets:gravure_circuits",
@@ -567,7 +594,7 @@
       "rawPath": "raw/projets__gravure_circuits.txt",
       "markdownPath": "markdown/projets__gravure_circuits.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Agravure_circuits",
-      "byteSize": 4792
+      "byteSize": 4854
     },
     "projets:couteau:couteau": {
       "id": "projets:couteau:couteau",
@@ -576,7 +603,7 @@
       "rawPath": "raw/projets__couteau__couteau.txt",
       "markdownPath": "markdown/projets__couteau__couteau.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Acouteau%3Acouteau",
-      "byteSize": 5317
+      "byteSize": 5837
     },
     "projets:etagere_pour_le_local:start": {
       "id": "projets:etagere_pour_le_local:start",
@@ -585,7 +612,7 @@
       "rawPath": "raw/projets__etagere_pour_le_local__start.txt",
       "markdownPath": "markdown/projets__etagere_pour_le_local__start.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Aetagere_pour_le_local%3Astart",
-      "byteSize": 414
+      "byteSize": 739
     },
     "projets:etabli_bois": {
       "id": "projets:etabli_bois",
@@ -594,7 +621,7 @@
       "rawPath": "raw/projets__etabli_bois.txt",
       "markdownPath": "markdown/projets__etabli_bois.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Aetabli_bois",
-      "byteSize": 4749
+      "byteSize": 6113
     },
     "projets:polargraph:start": {
       "id": "projets:polargraph:start",
@@ -603,7 +630,7 @@
       "rawPath": "raw/projets__polargraph__start.txt",
       "markdownPath": "markdown/projets__polargraph__start.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Apolargraph%3Astart",
-      "byteSize": 4822
+      "byteSize": 5206
     },
     "projets:polargraph:polargraph_utilisation": {
       "id": "projets:polargraph:polargraph_utilisation",
@@ -612,7 +639,7 @@
       "rawPath": "raw/projets__polargraph__polargraph_utilisation.txt",
       "markdownPath": "markdown/projets__polargraph__polargraph_utilisation.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/projets%3Apolargraph%3Apolargraph_utilisation",
-      "byteSize": 3320
+      "byteSize": 4230
     },
     "..:achats": {
       "id": "..:achats",
@@ -648,7 +675,7 @@
       "rawPath": "raw/equipement__decoupe_laser__decoupeuse_laser_k40.txt",
       "markdownPath": "markdown/equipement__decoupe_laser__decoupeuse_laser_k40.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Adecoupe_laser%3Adecoupeuse_laser_k40",
-      "byteSize": 5613
+      "byteSize": 5866
     },
     "equipement:cnc:kiri-moto": {
       "id": "equipement:cnc:kiri-moto",
@@ -657,7 +684,7 @@
       "rawPath": "raw/equipement__cnc__kiri-moto.txt",
       "markdownPath": "markdown/equipement__cnc__kiri-moto.md",
       "canonicalUrl": "https://labovilleurbanne.fr/dokuwiki/equipement%3Acnc%3Akiri-moto",
-      "byteSize": 2272
+      "byteSize": 2336
     },
     "user:elementw": {
       "id": "user:elementw",
@@ -669,5 +696,5 @@
       "byteSize": 28802
     }
   },
-  "totalChunks": 383
+  "totalChunks": 411
 }

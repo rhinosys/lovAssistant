@@ -18,6 +18,7 @@ import {
   Cloud,
   Cpu,
   Zap,
+  Mic,
 } from "lucide-react";
 import { RagStatus } from "./RagStatus";
 import { MarkdownContent } from "./MarkdownContent";
@@ -47,6 +48,7 @@ interface MessageItem {
 }
 
 export type LLMProviderChoice = "ollama" | "mistral";
+type VoiceInputState = "idle" | "recording" | "transcribing" | "error";
 
 const DEFAULT_MISTRAL_MODELS = [
   { id: "mistral-small-latest", name: "Mistral Small (Rapide & Économique)" },
@@ -71,6 +73,16 @@ export default function ChatPage() {
   const [selectedModel, setSelectedModel] = useState<string>("mistral-small-latest");
   const [ollamaModels, setOllamaModels] = useState(DEFAULT_OLLAMA_MODELS);
   const [mistralModels, setMistralModels] = useState(DEFAULT_MISTRAL_MODELS);
+  const [voiceState, setVoiceState] = useState<VoiceInputState>("idle");
+  const [voiceError, setVoiceError] = useState<string | null>(null);
+  const [voiceSupported, setVoiceSupported] = useState(false);
+  const [audioLevels, setAudioLevels] = useState<number[]>([0, 0, 0, 0, 0]);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const audioChunksRef = useRef<Blob[]>([]);
+  const audioContextRef = useRef<AudioContext | null>(null);
+  const analyserRef = useRef<AnalyserNode | null>(null);
+  const animationFrameRef = useRef<number | null>(null);
+  const recordingStartedAtRef = useRef<number | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -97,6 +109,172 @@ export default function ChatPage() {
   useEffect(() => {
     fetchThreads();
   }, [fetchThreads]);
+
+  // Feature-detect voice input support once on mount; hide the mic button entirely
+  // (not just disable it) when unsupported so the composer looks unchanged.
+  useEffect(() => {
+    const supported =
+      typeof window !== "undefined" &&
+      typeof window.MediaRecorder !== "undefined" &&
+      !!navigator.mediaDevices?.getUserMedia;
+    setVoiceSupported(supported);
+  }, []);
+
+  const stopLevelMeter = useCallback(() => {
+    if (animationFrameRef.current !== null) {
+      cancelAnimationFrame(animationFrameRef.current);
+      animationFrameRef.current = null;
+    }
+    analyserRef.current = null;
+    if (audioContextRef.current) {
+      audioContextRef.current.close().catch(() => {});
+      audioContextRef.current = null;
+    }
+    setAudioLevels([0, 0, 0, 0, 0]);
+  }, []);
+
+  const startLevelMeter = useCallback((stream: MediaStream) => {
+    const AudioContextCtor =
+      window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+    if (!AudioContextCtor) return;
+
+    const audioContext = new AudioContextCtor();
+    if (audioContext.state === "suspended") {
+      audioContext.resume().catch(() => {});
+    }
+    const analyser = audioContext.createAnalyser();
+    analyser.fftSize = 32;
+    const source = audioContext.createMediaStreamSource(stream);
+    source.connect(analyser);
+
+    audioContextRef.current = audioContext;
+    analyserRef.current = analyser;
+
+    const data = new Uint8Array(analyser.frequencyBinCount);
+    const bars = 5;
+
+    const tick = () => {
+      analyser.getByteFrequencyData(data);
+      const step = Math.max(1, Math.floor(data.length / bars));
+      const next = Array.from({ length: bars }, (_, i) => {
+        const slice = data.slice(i * step, (i + 1) * step);
+        const avg = slice.reduce((sum, v) => sum + v, 0) / (slice.length || 1);
+        return Math.min(1, avg / 160);
+      });
+      setAudioLevels(next);
+      animationFrameRef.current = requestAnimationFrame(tick);
+    };
+    animationFrameRef.current = requestAnimationFrame(tick);
+  }, []);
+
+  const startRecording = async () => {
+    setVoiceError(null);
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const recorder = new MediaRecorder(stream);
+      audioChunksRef.current = [];
+      recordingStartedAtRef.current = Date.now();
+
+      recorder.ondataavailable = (e) => {
+        // eslint-disable-next-line no-console
+        console.log("[voice-input] ondataavailable", { size: e.data.size, state: recorder.state });
+        if (e.data.size > 0) {
+          audioChunksRef.current.push(e.data);
+        }
+      };
+
+      recorder.onstop = async () => {
+        const elapsedMs = Date.now() - (recordingStartedAtRef.current ?? Date.now());
+        // eslint-disable-next-line no-console
+        console.log("[voice-input] onstop", { elapsedMs, chunkCount: audioChunksRef.current.length });
+        stream.getTracks().forEach((track) => track.stop());
+        stopLevelMeter();
+        const audioBlob = new Blob(audioChunksRef.current, {
+          type: recorder.mimeType || "audio/webm",
+        });
+        await transcribeAndFillComposer(audioBlob, elapsedMs);
+      };
+
+      mediaRecorderRef.current = recorder;
+      recorder.start();
+      // eslint-disable-next-line no-console
+      console.log("[voice-input] started", { mimeType: recorder.mimeType, state: recorder.state });
+      startLevelMeter(stream);
+      setVoiceState("recording");
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.log("[voice-input] getUserMedia failed", err);
+      setVoiceState("error");
+      setVoiceError("Microphone inaccessible. Vérifiez l'autorisation du navigateur.");
+    }
+  };
+
+  const stopRecording = () => {
+    // eslint-disable-next-line no-console
+    console.log("[voice-input] stopRecording called", {
+      state: mediaRecorderRef.current?.state,
+    });
+    if (mediaRecorderRef.current && mediaRecorderRef.current.state !== "inactive") {
+      setVoiceState("transcribing");
+      mediaRecorderRef.current.stop();
+    }
+  };
+
+  // Belt-and-suspenders cleanup: stop any running level-meter loop on unmount.
+  useEffect(() => {
+    return () => stopLevelMeter();
+  }, [stopLevelMeter]);
+
+  const transcribeAndFillComposer = async (audioBlob: Blob, elapsedMs?: number) => {
+    // eslint-disable-next-line no-console
+    console.log("[voice-input] recorded blob", { size: audioBlob.size, type: audioBlob.type, elapsedMs });
+    try {
+      const form = new FormData();
+      form.append("audio", audioBlob, "recording.webm");
+
+      const res = await fetch(apiUrl("/api/transcribe"), {
+        method: "POST",
+        body: form,
+      });
+
+      if (!res.ok) {
+        let message = "Échec de la transcription.";
+        try {
+          const errData = await res.json();
+          message = errData.error?.message || message;
+        } catch {
+          // ignore
+        }
+        throw new Error(message);
+      }
+
+      const data = await res.json();
+      const text = (data.text || "").trim();
+      if (!text) {
+        setVoiceState("error");
+        setVoiceError(
+          `Rien n'a été compris dans l'enregistrement (${Math.round(audioBlob.size / 1024)} ko, ${
+            elapsedMs ? Math.round(elapsedMs / 100) / 10 : "?"
+          }s capturés). Réessayez en parlant un peu plus fort/longtemps.`
+        );
+        return;
+      }
+
+      setInputValue((prev) => (prev ? `${prev} ${text}` : text));
+      setVoiceState("idle");
+    } catch (err: unknown) {
+      setVoiceState("error");
+      setVoiceError(err instanceof Error ? err.message : "Échec de la transcription.");
+    }
+  };
+
+  const handleMicClick = () => {
+    if (voiceState === "recording") {
+      stopRecording();
+    } else {
+      startRecording();
+    }
+  };
 
   // Dynamically load installed models from backend
   useEffect(() => {
@@ -699,11 +877,41 @@ export default function ChatPage() {
               disabled={isLoading}
               placeholder="Écrivez votre message en français... (Entrée pour envoyer, Maj+Entrée pour saut de ligne)"
               rows={1}
-              className="w-full pl-4 pr-12 py-3 bg-slate-900 border border-slate-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl text-sm text-slate-100 placeholder:text-slate-400 resize-none outline-none transition-all disabled:opacity-50"
+              className={`w-full pl-4 py-3 bg-slate-900 border border-slate-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl text-sm text-slate-100 placeholder:text-slate-400 resize-none outline-none transition-all disabled:opacity-50 ${
+                voiceSupported ? "pr-20" : "pr-12"
+              }`}
             />
+            {voiceSupported && (
+              <button
+                onClick={handleMicClick}
+                disabled={isLoading || voiceState === "transcribing"}
+                className={`absolute right-12 p-2 rounded-lg transition-colors disabled:opacity-40 ${
+                  voiceState === "recording"
+                    ? "bg-red-600 hover:bg-red-500 text-white"
+                    : "bg-slate-800 hover:bg-slate-700 text-slate-300"
+                }`}
+                title={voiceState === "recording" ? "Arrêter l'enregistrement" : "Dicter un message"}
+              >
+                {voiceState === "recording" ? (
+                  <span className="flex items-end gap-[2px] w-4 h-4 justify-center">
+                    {audioLevels.map((level, i) => (
+                      <span
+                        key={i}
+                        className="w-[2px] bg-white rounded-full transition-[height] duration-75"
+                        style={{ height: `${Math.max(3, level * 16)}px` }}
+                      />
+                    ))}
+                  </span>
+                ) : voiceState === "transcribing" ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Mic className="w-4 h-4" />
+                )}
+              </button>
+            )}
             <button
               onClick={() => sendMessage(inputValue)}
-              disabled={!inputValue.trim() || isLoading}
+              disabled={!inputValue.trim() || isLoading || voiceState === "transcribing"}
               className="absolute right-2 p-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 disabled:hover:bg-emerald-600 text-white rounded-lg transition-colors"
               title="Envoyer"
             >
@@ -714,6 +922,11 @@ export default function ChatPage() {
               )}
             </button>
           </div>
+          {voiceError && (
+            <div className="max-w-4xl mx-auto mt-2 text-[11px] text-red-300 text-center">
+              {voiceError}
+            </div>
+          )}
           <div className="max-w-4xl mx-auto mt-2 text-[11px] text-slate-400 text-center">
             Assistant IA Fablab •{" "}
             {selectedProvider === "mistral"

@@ -157,4 +157,118 @@ describe("Mistral Model Provider", () => {
     const available = await provider.checkModelAvailability("mistral-small-latest");
     expect(available).toBe(true);
   });
+
+  describe("transcribeAudio", () => {
+    it("posts multipart form data with the voxtral model to /audio/transcriptions", async () => {
+      const fetchMock = vi.fn().mockResolvedValue(
+        new Response(JSON.stringify({ text: "Bonjour le fablab" }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" },
+        })
+      );
+      globalThis.fetch = fetchMock;
+
+      const provider = new MistralProvider("test-key", "https://api.mistral.ai/v1");
+      const audio = new Blob([new Uint8Array([1, 2, 3])], { type: "audio/webm" });
+      const text = await provider.transcribeAudio(audio, "recording.webm");
+
+      expect(text).toBe("Bonjour le fablab");
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      const [url, init] = fetchMock.mock.calls[0];
+      expect(url).toBe("https://api.mistral.ai/v1/audio/transcriptions");
+      expect(init.method).toBe("POST");
+      expect(init.body).toBeInstanceOf(FormData);
+      const form = init.body as FormData;
+      expect(form.get("model")).toBe("voxtral-mini-latest");
+      expect(form.get("file")).toBeInstanceOf(Blob);
+    });
+
+    it("returns an empty string for an empty transcription result without throwing", async () => {
+      globalThis.fetch = vi.fn().mockResolvedValue(
+        new Response(JSON.stringify({ text: "" }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" },
+        })
+      );
+
+      const provider = new MistralProvider("test-key", "https://api.mistral.ai/v1");
+      const text = await provider.transcribeAudio(new Blob([]), "silence.webm");
+
+      expect(text).toBe("");
+    });
+
+    it("throws MistralAuthenticationError when the API key is missing", async () => {
+      const provider = new MistralProvider("", "https://api.mistral.ai/v1");
+      await expect(provider.transcribeAudio(new Blob([]), "a.webm")).rejects.toThrow(
+        MistralAuthenticationError
+      );
+    });
+
+    it("throws MistralAuthenticationError on HTTP 401", async () => {
+      globalThis.fetch = vi.fn().mockResolvedValue(
+        new Response(JSON.stringify({ message: "Unauthorized" }), {
+          status: 401,
+          headers: { "Content-Type": "application/json" },
+        })
+      );
+
+      const provider = new MistralProvider("test-key", "https://api.mistral.ai/v1");
+      await expect(provider.transcribeAudio(new Blob([]), "a.webm")).rejects.toThrow(
+        MistralAuthenticationError
+      );
+    });
+
+    it("throws MistralRateLimitError on HTTP 429", async () => {
+      globalThis.fetch = vi.fn().mockResolvedValue(
+        new Response(JSON.stringify({ message: "Rate limited" }), {
+          status: 429,
+          headers: { "Content-Type": "application/json" },
+        })
+      );
+
+      const provider = new MistralProvider("test-key", "https://api.mistral.ai/v1");
+      await expect(provider.transcribeAudio(new Blob([]), "a.webm")).rejects.toThrow(
+        MistralRateLimitError
+      );
+    });
+
+    it("throws MistralTimeoutError on HTTP 504", async () => {
+      globalThis.fetch = vi.fn().mockResolvedValue(
+        new Response("Gateway Timeout", {
+          status: 504,
+          headers: { "Content-Type": "text/plain" },
+        })
+      );
+
+      const provider = new MistralProvider("test-key", "https://api.mistral.ai/v1");
+      await expect(provider.transcribeAudio(new Blob([]), "a.webm")).rejects.toThrow(
+        MistralTimeoutError
+      );
+    });
+
+    it("throws MistralTimeoutError when the request itself times out", async () => {
+      const timeoutError = new Error("The operation timed out");
+      timeoutError.name = "TimeoutError";
+      globalThis.fetch = vi.fn().mockRejectedValue(timeoutError);
+
+      const provider = new MistralProvider("test-key", "https://api.mistral.ai/v1");
+      await expect(provider.transcribeAudio(new Blob([]), "a.webm")).rejects.toThrow(
+        MistralTimeoutError
+      );
+    });
+
+    it("throws MistralAPIError on other non-2xx responses", async () => {
+      globalThis.fetch = vi.fn().mockResolvedValue(
+        new Response("Internal Server Error", {
+          status: 500,
+          headers: { "Content-Type": "text/plain" },
+        })
+      );
+
+      const provider = new MistralProvider("test-key", "https://api.mistral.ai/v1");
+      await expect(provider.transcribeAudio(new Blob([]), "a.webm")).rejects.toThrow(
+        MistralAPIError
+      );
+    });
+  });
 });

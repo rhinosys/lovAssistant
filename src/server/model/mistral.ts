@@ -125,6 +125,79 @@ export class MistralProvider implements ChatModelProvider {
     return health.installedModels.some((m) => m.toLowerCase() === target);
   }
 
+  async transcribeAudio(audio: Blob | Buffer, fileName: string): Promise<string> {
+    if (!this.apiKey) {
+      throw new MistralAuthenticationError("MISTRAL_API_KEY is not configured.");
+    }
+
+    const url = `${this.baseUrl}/audio/transcriptions`;
+    const form = new FormData();
+    const blob = audio instanceof Blob ? audio : new Blob([new Uint8Array(audio)]);
+    form.append("file", blob, fileName);
+    form.append("model", "voxtral-mini-latest");
+
+    logger.debug("Sending audio to Mistral for transcription", { url, fileName });
+
+    let response: Response;
+    try {
+      response = await fetch(url, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${this.apiKey}`,
+        },
+        body: form,
+        signal: AbortSignal.timeout(30000),
+      });
+    } catch (err: unknown) {
+      if (err instanceof Error && err.name === "TimeoutError") {
+        throw new MistralTimeoutError("Mistral transcription request timed out.");
+      }
+      logger.error("Failed to connect to Mistral transcription API", {
+        url,
+        error: String(err),
+      });
+      throw new MistralAPIError(`Failed to connect to Mistral API: ${String(err)}`, 503, err);
+    }
+
+    if (!response.ok) {
+      let errorBody = "";
+      try {
+        errorBody = await response.text();
+      } catch {
+        // ignore read error
+      }
+
+      logger.error("Mistral transcription API returned error status", {
+        status: response.status,
+        extra: { errorBody },
+      });
+
+      if (response.status === 401 || response.status === 403) {
+        throw new MistralAuthenticationError(
+          `Mistral API authentication failed: ${errorBody || response.statusText}`
+        );
+      }
+      if (response.status === 429) {
+        throw new MistralRateLimitError(
+          `Mistral API rate limit or quota reached: ${errorBody || response.statusText}`
+        );
+      }
+      if (response.status === 504 || response.status === 408) {
+        throw new MistralTimeoutError(
+          `Mistral API request timed out: ${errorBody || response.statusText}`
+        );
+      }
+
+      throw new MistralAPIError(
+        `Mistral API error (${response.status}): ${errorBody || response.statusText}`,
+        response.status
+      );
+    }
+
+    const data = (await response.json()) as { text?: string };
+    return (data.text || "").trim();
+  }
+
   async *streamChat(options: ChatOptions): AsyncIterable<ChatStreamChunk> {
     if (!this.apiKey) {
       throw new MistralAuthenticationError("MISTRAL_API_KEY is not configured.");

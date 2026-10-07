@@ -103,15 +103,22 @@ describe("FramateamBot", () => {
     await flush();
     expect(calls).toEqual(["login", "react:q1:eyes", "post:q1", "unreact:q1:eyes"]);
     expect(answer).toHaveBeenCalledWith({ question: "vitesse contreplaqué 3 mm ?", userHistory: [{ role: "user", content: "vitesse contreplaqué 3 mm ?" }] });
-    expect(api.createPost).toHaveBeenCalledWith({ channel_id: "c_laser", root_id: "q1", message: expect.stringContaining("Réponse sourcée") });
+    expect(api.createPost).toHaveBeenCalledWith({ channel_id: "c_laser", root_id: "q1", message: expect.stringContaining("Réponse sourcée"), props: { from_lov_assistant: true } });
   });
 
-  it("ignores untriggered posts, other channels, private channels, DMs and its own posts", async () => {
+  it("answers questions posted by the account itself (personal account), never its own replies", async () => {
+    socket().posted(post("mine", { channel_id: "c_laser", user_id: ME.id, message: "!lov quand est le prochain atelier ?" }));
+    await flush();
+    expect(answer).toHaveBeenCalledWith(expect.objectContaining({ question: "quand est le prochain atelier ?" }));
+    expect(api.createPost).toHaveBeenCalledWith(expect.objectContaining({ root_id: "mine", props: { from_lov_assistant: true } }));
+  });
+
+  it("ignores untriggered posts, other channels, private channels, DMs and its own replies", async () => {
     socket().posted(post("a", { channel_id: "c_laser", message: "bonjour à tous" }));
     socket().posted(post("b", { channel_id: "c_3d", message: "!lov question" }));
     socket().posted(post("c", { channel_id: "c_laser", message: "!lov question" }), "P");
     socket().posted(post("d", { channel_id: "c_laser", message: "!lov question" }), "D");
-    socket().posted(post("e", { channel_id: "c_laser", user_id: ME.id, message: "!lov question" }));
+    socket().posted(post("e", { channel_id: "c_laser", user_id: ME.id, props: { from_lov_assistant: true }, message: "!lov question" }));
     socket().posted(post("f", { channel_id: "c_laser", type: "system_join_channel", message: "!lov" }));
     await flush();
     expect(answer).not.toHaveBeenCalled();
@@ -121,7 +128,7 @@ describe("FramateamBot", () => {
   it("answers a follow-up in the existing thread with previous member questions only", async () => {
     api.getPostThread.mockResolvedValueOnce(postList([
       post("root", { channel_id: "c_laser", message: "!lov réglage laser pour le médium ?", create_at: 1 }),
-      post("botreply", { channel_id: "c_laser", root_id: "root", user_id: ME.id, message: "réponse précédente", create_at: 2 }),
+      post("botreply", { channel_id: "c_laser", root_id: "root", user_id: ME.id, props: { from_lov_assistant: true }, message: "réponse précédente", create_at: 2 }),
       post("q2", { channel_id: "c_laser", root_id: "root", message: "!lov et en 6 mm ?", create_at: 3 }),
     ]));
     socket().posted(post("q2", { channel_id: "c_laser", root_id: "root", message: "!lov et en 6 mm ?", create_at: 3 }));

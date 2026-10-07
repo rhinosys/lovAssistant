@@ -5,7 +5,7 @@ Lets LOV members ask the assistant directly in Framateam and get a sourced answe
 ## ADDED Requirements
 
 ### Requirement: Trigger conditions
-The bot SHALL answer a new post only when it is in a public channel enabled for listening, is not written by the assistant's account, and either starts with the configured trigger keyword or mentions the assistant's account when that account is dedicated to the assistant.
+The bot SHALL answer a new post only when it is in a public channel enabled for listening, is not a reply posted by the bot itself (bot replies carry a marker property), and either starts with the configured trigger keyword or mentions the assistant's account when that account is dedicated to the assistant.
 
 #### Scenario: Keyword in an enabled channel
 - **WHEN** a member posts "!lov quelle vitesse pour couper du CP 3 mm ?" in a listening-enabled public channel
@@ -15,9 +15,13 @@ The bot SHALL answer a new post only when it is in a public channel enabled for 
 - **WHEN** the same post is made in a channel not enabled for listening, a private channel or a direct message
 - **THEN** the bot does nothing
 
-#### Scenario: Own post
-- **WHEN** the post was written by the assistant's account
+#### Scenario: Bot's own reply
+- **WHEN** the post is a reply previously posted by the bot
 - **THEN** the bot ignores it
+
+#### Scenario: Personal account
+- **WHEN** the bot runs under a member's personal account and that member posts a triggered question
+- **THEN** the bot answers it
 
 ### Requirement: Processing feedback and in-thread answer
 The bot SHALL add a 👀 reaction to the triggering post while processing, SHALL post its answer as a reply in the post's thread, and SHALL remove the reaction once done.

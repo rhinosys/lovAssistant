@@ -1,6 +1,11 @@
 import crypto from "node:crypto";
 import { MattermostPost } from "./types";
 
+// Set on every reply posted by the bot, so its answers are never indexed nor re-read as questions,
+// even when it runs under a member's personal account.
+export const ASSISTANT_PROP = "from_lov_assistant";
+export const isAssistantPost = (post: Pick<MattermostPost, "props">): boolean => post.props?.[ASSISTANT_PROP] === true;
+
 export interface ThreadChunkText {
   index: number;
   content: string;
@@ -19,7 +24,6 @@ export interface ThreadDocument {
 
 export interface ThreadBuildOptions {
   channelName: string;
-  selfUserId: string | null;
   forgottenIds: Set<string>;
   permalink: (rootPostId: string) => string;
   // Minimum useful characters for a thread to be indexed.
@@ -85,7 +89,7 @@ export function buildThreadDocuments(posts: MattermostPost[], options: ThreadBui
       continue;
     }
     const kept = threadPosts
-      .filter((p) => p.delete_at === 0 && !p.type && p.user_id !== options.selfUserId && !options.forgottenIds.has(p.id))
+      .filter((p) => p.delete_at === 0 && !p.type && !isAssistantPost(p) && !options.forgottenIds.has(p.id))
       .sort((a, b) => a.create_at - b.create_at)
       .map((p) => ({ post: p, text: normalizeMessage(p.message) }))
       .filter(({ post, text }) => text && (post.id === rootId || isUseful(text)));

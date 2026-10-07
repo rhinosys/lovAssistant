@@ -122,7 +122,7 @@ export class FramateamClient {
     return this.call<MattermostPost>("GET", `/posts/${postId}`);
   }
 
-  createPost(post: { channel_id: string; message: string; root_id?: string }): Promise<MattermostPost> {
+  createPost(post: { channel_id: string; message: string; root_id?: string; props?: Record<string, unknown> }): Promise<MattermostPost> {
     return this.call<MattermostPost>("POST", "/posts", { body: post });
   }
 

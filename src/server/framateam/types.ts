@@ -32,6 +32,7 @@ export interface MattermostPost {
   update_at: number;
   edit_at?: number;
   delete_at: number;
+  props?: Record<string, unknown>;
 }
 
 export interface MattermostPostList {

@@ -48,9 +48,9 @@ The system SHALL build chunks per thread (root post and its replies in chronolog
 - **WHEN** a thread contains only short acknowledgements, emoji, system messages or text below the configured minimum length
 - **THEN** it is not indexed
 
-#### Scenario: Assistant's own posts
-- **WHEN** a thread contains posts written by the assistant's account
-- **THEN** those posts are excluded from indexed content
+#### Scenario: Assistant's replies
+- **WHEN** a thread contains replies posted by the bot (marked as such)
+- **THEN** those replies are excluded from indexed content, while other posts of the same account are kept
 
 #### Scenario: Long thread
 - **WHEN** a thread exceeds the chunk size

@@ -36,7 +36,7 @@ describe("GDPR controls", () => {
 
   const rebuild = async (rootPostId: string, channelId: string) => {
     const channel = (await store.getChannel(channelId))!;
-    await indexThreadPosts(deps, channel, "u_bot", Object.values((await server.getPostThread(rootPostId)).posts));
+    await indexThreadPosts(deps, channel, Object.values((await server.getPostThread(rootPostId)).posts));
   };
   const allText = async () => (await store.listChunks()).map((c) => c.content).join("\n");
 

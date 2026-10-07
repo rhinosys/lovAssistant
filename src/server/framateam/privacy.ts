@@ -85,8 +85,7 @@ export async function createThreadRebuilder(store: IFramateamStore = getFramatea
   return async (rootPostId, channelId) => {
     const channel = await store.getChannel(channelId);
     if (!channel?.indexEnabled) return;
-    const me = client.currentUser ?? (await client.login());
     const thread = await client.getPostThread(rootPostId);
-    await indexThreadPosts({ store, client, embeddings, settings }, channel, me.id, Object.values(thread.posts));
+    await indexThreadPosts({ store, client, embeddings, settings }, channel, Object.values(thread.posts));
   };
 }

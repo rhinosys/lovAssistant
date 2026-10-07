@@ -4,7 +4,6 @@ import { post } from "./__fixtures__/api";
 
 const options = {
   channelName: "laser",
-  selfUserId: "u_bot",
   forgottenIds: new Set<string>(),
   permalink: (id: string) => `https://framateam.org/lov/pl/${id}`,
 };
@@ -34,13 +33,15 @@ describe("thread chunker", () => {
       question, answer,
       post("sys", { root_id: "root", type: "system_join_channel", message: "alice a rejoint le canal" }),
       post("del", { root_id: "root", delete_at: 1, message: "message supprimé confidentiel" }),
-      post("bot", { root_id: "root", user_id: "u_bot", message: "Réponse générée par l'assistant à ne pas réindexer" }),
+      post("bot", { root_id: "root", user_id: "u_alice", props: { from_lov_assistant: true }, message: "Réponse générée par l'assistant à ne pas réindexer" }),
+      post("own", { root_id: "root", user_id: "u_bot", message: "Le compte de l'assistant est aussi un membre : ce message reste indexé" }),
       post("forg", { root_id: "root", message: "message retiré à la demande de son auteur" }),
       post("thx", { root_id: "root", message: "Merci ! :+1:" }),
     ];
     const { documents } = buildThreadDocuments(posts, { ...options, forgottenIds: new Set(["forg"]) });
     const text = documents[0].chunks[0].content;
-    for (const hidden of ["rejoint", "confidentiel", "assistant", "retiré", "Merci"]) expect(text).not.toContain(hidden);
+    for (const hidden of ["rejoint", "confidentiel", "Réponse générée", "retiré", "Merci"]) expect(text).not.toContain(hidden);
+    expect(text).toContain("ce message reste indexé");
   });
 
   it("discards short threads, deleted or forgotten roots and threads without their root", () => {

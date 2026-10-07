@@ -56,7 +56,7 @@ class ChannelSync {
   private readonly seen = new Set<string>();
   private maxUpdate: number;
 
-  constructor(private readonly deps: SyncDeps, private readonly channel: FramateamChannelRecord, private readonly selfUserId: string) {
+  constructor(private readonly deps: SyncDeps, private readonly channel: FramateamChannelRecord) {
     this.maxUpdate = channel.lastSyncMs;
   }
 
@@ -139,7 +139,7 @@ class ChannelSync {
   }
 
   private async indexThread(posts: MattermostPost[]): Promise<void> {
-    const result = await indexThreadPosts(this.deps, this.channel, this.selfUserId, posts);
+    const result = await indexThreadPosts(this.deps, this.channel, posts);
     this.indexed += result.indexed;
     this.removed += result.removed;
   }
@@ -149,7 +149,6 @@ class ChannelSync {
 export async function indexThreadPosts(
   deps: Pick<SyncDeps, "store" | "client" | "embeddings" | "settings">,
   channel: Pick<FramateamChannelRecord, "channelId" | "name">,
-  selfUserId: string,
   posts: MattermostPost[]
 ): Promise<{ indexed: number; removed: number }> {
   const { store, client, embeddings, settings } = deps;
@@ -158,7 +157,6 @@ export async function indexThreadPosts(
   const forgottenIds = await store.getForgottenIds(posts.map((p) => p.id));
   const { documents, discardedRoots } = buildThreadDocuments(posts, {
     channelName: channel.name,
-    selfUserId,
     forgottenIds,
     permalink: (rootId) => client.permalink(settings.teamName, rootId),
   });
@@ -191,7 +189,7 @@ export async function syncFramateam(deps: SyncDeps, options: { channelIds?: stri
   if (!isConfigured(settings)) throw new FramateamNotConfiguredError();
   return store.withSyncLock(async () => {
     const startedAt = new Date().toISOString();
-    const me = client.currentUser ?? (await client.login());
+    if (!client.currentUser) await client.login();
     const team = await client.getTeamByName(settings.teamName);
     const apiChannels = await client.listPublicChannels(team.id);
     const vanished = await store.syncChannelList(apiChannels.map((c) => ({
@@ -225,7 +223,7 @@ export async function syncFramateam(deps: SyncDeps, options: { channelIds?: stri
         continue;
       }
       if (options.channelIds && !options.channelIds.includes(channel.channelId)) continue;
-      const sync = new ChannelSync(deps, channel, me.id);
+      const sync = new ChannelSync(deps, channel);
       try {
         await sync.run();
         reports.push({ channelId: channel.channelId, name: channel.name, postsRead: sync.postsRead, threadsIndexed: sync.indexed, threadsRemoved: sync.removed });

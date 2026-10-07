@@ -74,8 +74,8 @@ partagé entre l'admin, le CLI et le bot ; une seconde demande reçoit 409).
   modifications et suppressions), repli sur la pagination si la limite de 1000
   résultats est atteinte.
 - Un document par **fil** (message racine + réponses), dans l'ordre. Sont
-  exclus : messages système, supprimés, retirés (RGPD), écrits par le compte de
-  l'assistant, accusés de réception (« merci », « +1 »…), et fils trop courts.
+  exclus : messages système, supprimés, retirés (RGPD), réponses du bot
+  (marquées `from_lov_assistant`), accusés de réception (« merci », « +1 »…), et fils trop courts.
 - **Aucun nom d'auteur** n'est indexé ; les `@mentions` deviennent `@membre`.
   Le texte libre n'est pas analysé : un nom écrit en toutes lettres dans un
   message reste présent (utiliser le retrait RGPD si nécessaire).
@@ -100,7 +100,10 @@ Dans Framateam, un message commençant par le mot-clé dans un canal public où 
 bot est activé reçoit la réaction 👀, puis une réponse dans le fil (même
 pipeline que le chat web, avec les questions précédentes du fil comme contexte),
 puis la réaction est retirée. Les canaux privés et messages directs sont
-ignorés. Après une coupure, le bot se reconnecte (backoff 2 s → 5 min avec
+ignorés, ainsi que les réponses du bot lui-même ; avec un compte personnel, les
+questions de la personne titulaire du compte sont bien traitées. Le service
+doit tourner (`npm run framateam:bot` en local) et la case « Bot » du canal
+être cochée. Après une coupure, le bot se reconnecte (backoff 2 s → 5 min avec
 gigue) et traite les déclenchements manqués des 15 dernières minutes.
 
 ## RGPD

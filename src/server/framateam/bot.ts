@@ -4,6 +4,7 @@ import { FramateamAuthError, FramateamClient } from "./client";
 import { FramateamSettings, getFramateamSettings, isConfigured } from "./settings";
 import { getFramateamStore, IFramateamStore, SyncBusyError } from "./store";
 import { MattermostPost, MattermostUser } from "./types";
+import { ASSISTANT_PROP, isAssistantPost } from "./thread-chunker";
 
 export type BotApi = Pick<
   FramateamClient,
@@ -260,9 +261,11 @@ export class FramateamBot {
   private consider(post: MattermostPost, channelType: string) {
     const settings = this.settings;
     const me = this.me;
-    // Only public channels enabled by an admin; never DMs or private channels, never our own posts.
+    // Only public channels enabled by an admin; never DMs or private channels, never the bot's replies.
+    // Other posts of the account itself are accepted: with a member's personal account, the member's
+    // own questions come from that same account.
     if (!settings || !me || channelType !== "O" || !this.listenChannels.has(post.channel_id)) return;
-    if (post.user_id === me.id || post.type || post.delete_at || this.handled.has(post.id)) return;
+    if (isAssistantPost(post) || post.type || post.delete_at || this.handled.has(post.id)) return;
     const question = extractQuestion(post.message ?? "", settings, me);
     if (question === null) return;
     this.handled.add(post.id);
@@ -281,7 +284,7 @@ export class FramateamBot {
 
   private async reply(post: MattermostPost, message: string) {
     try {
-      await this.client!.createPost({ channel_id: post.channel_id, root_id: post.root_id || post.id, message: message.slice(0, MAX_MESSAGE_CHARS) });
+      await this.client!.createPost({ channel_id: post.channel_id, root_id: post.root_id || post.id, message: message.slice(0, MAX_MESSAGE_CHARS), props: { [ASSISTANT_PROP]: true } });
     } catch (error) {
       logger.warn("Framateam reply failed", { postId: post.id, error: error instanceof Error ? error.message : String(error) });
     }
@@ -292,7 +295,7 @@ export class FramateamBot {
     const thread = await this.client.getPostThread(post.root_id);
     // Member messages only: assistant replies are never evidence.
     return Object.values(thread.posts ?? {})
-      .filter((p) => p.id !== post.id && p.user_id !== this.me!.id && !p.type && !p.delete_at && p.create_at < post.create_at)
+      .filter((p) => p.id !== post.id && !isAssistantPost(p) && !p.type && !p.delete_at && p.create_at < post.create_at)
       .sort((a, b) => a.create_at - b.create_at)
       .slice(-HISTORY_POSTS)
       .map((p) => ({ role: "user" as const, content: (extractQuestion(p.message, this.settings!, this.me!) ?? p.message).slice(0, 1000) }));

@@ -93,6 +93,15 @@ npm run dev
 
 ---
 
+## 💬 Intégration Framateam
+
+Indexation des canaux publics Framateam choisis et réponses dans Framateam
+(`!lov <question>`), configurées depuis `/admin/framateam`. Variables :
+`APP_ENCRYPTION_KEY` (obligatoire pour enregistrer le mot de passe),
+`ADMIN_USERS` (dev), `TRUST_PROXY_ADMIN_HEADER` (YunoHost), `FRAMATEAM_*`
+(repli `.env`). Commandes : `npm run framateam:bot`, `npm run framateam:sync`,
+`npm run framateam:forget`. Détails : [docs/framateam.md](docs/framateam.md).
+
 ## 🩺 Sondes de Santé & Diagnostics
 
 - **Liveness probe** : `GET http://localhost:3000/api/health`

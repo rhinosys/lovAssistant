@@ -14,7 +14,10 @@
     "rag:crawl": "tsx scripts/crawl-old-wiki.ts",
     "rag:index": "tsx scripts/index-rag.ts",
     "rag:query": "tsx scripts/query-rag.ts",
-    "rag:refresh": "tsx scripts/refresh-rag.ts"
+    "rag:refresh": "tsx scripts/refresh-rag.ts",
+    "framateam:sync": "tsx scripts/framateam-sync.ts",
+    "framateam:bot": "tsx scripts/framateam-bot.ts",
+    "framateam:forget": "tsx scripts/framateam-forget.ts"
   },
   "dependencies": {
     "@assistant-ui/react": "^0.7.83",

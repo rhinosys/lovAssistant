@@ -12,6 +12,32 @@ interface SerializedVectorIndex {
   chunks: DocumentChunk[];
 }
 
+export const tokenizeQuery = (queryText: string): string[] =>
+  queryText
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .split(/\s+/)
+    .filter((w) => w.length > 2);
+
+export const computeKeywordScore = (queryWords: string[], content: string, title: string): number => {
+  const text = `${title} ${content}`.toLowerCase();
+  let score = 0;
+  for (const word of queryWords) {
+    if (!word || word.length < 2) continue;
+    const count = (text.match(new RegExp(`\\b${word}\\b`, "gi")) || []).length;
+    if (count > 0) {
+      score += 1 + Math.log(count);
+    } else if (text.includes(word)) {
+      score += 0.5;
+    }
+  }
+  return score;
+};
+
+// Hybrid weighting shared by every local index.
+export const hybridScore = (vectorScore: number, keywordScore: number): number =>
+  vectorScore * 0.7 + Math.min(keywordScore / 4, 1) * 0.3;
+
 export class LocalVectorStore implements VectorStore {
   private chunks: DocumentChunk[] = [];
   private indexPath: string;
@@ -29,23 +55,6 @@ export class LocalVectorStore implements VectorStore {
   async addChunks(chunks: DocumentChunk[]): Promise<void> {
     this.chunks.push(...chunks);
     this.pendingChanges = true;
-  }
-
-  private computeBM25Score(queryWords: string[], content: string, title: string): number {
-    const text = `${title} ${content}`.toLowerCase();
-    let score = 0;
-
-    for (const word of queryWords) {
-      if (!word || word.length < 2) continue;
-      const count = (text.match(new RegExp(`\\b${word}\\b`, "gi")) || []).length;
-      if (count > 0) {
-        score += 1 + Math.log(count);
-      } else if (text.includes(word)) {
-        score += 0.5;
-      }
-    }
-
-    return score;
   }
 
   async search(
@@ -68,11 +77,7 @@ export class LocalVectorStore implements VectorStore {
       return [];
     }
 
-    const queryWords = queryText
-      .toLowerCase()
-      .replace(/[^\w\s-]/g, "")
-      .split(/\s+/)
-      .filter((w) => w.length > 2);
+    const queryWords = tokenizeQuery(queryText);
 
     const scored: RAGSearchResult[] = [];
 
@@ -88,7 +93,7 @@ export class LocalVectorStore implements VectorStore {
 
       let keywordScore = 0;
       if (queryWords.length > 0) {
-        keywordScore = this.computeBM25Score(queryWords, chunk.content, chunk.documentTitle);
+        keywordScore = computeKeywordScore(queryWords, chunk.content, chunk.documentTitle);
       }
 
       let finalScore = 0;
@@ -102,8 +107,7 @@ export class LocalVectorStore implements VectorStore {
         matchType = "keyword";
       } else {
         // Hybrid mode (weighted)
-        const normalizedKeyword = Math.min(keywordScore / 4, 1);
-        finalScore = vectorScore * 0.7 + normalizedKeyword * 0.3;
+        finalScore = hybridScore(vectorScore, keywordScore);
         matchType = vectorScore > 0 && keywordScore > 0 ? "hybrid" : vectorScore > 0 ? "vector" : "keyword";
       }
 

@@ -23,6 +23,36 @@ export interface IAuthService {
   authenticateRequest(headers: Headers | Record<string, string | string[] | undefined>): Promise<SessionUser>;
 }
 
+const readHeader = (headers: Headers | Record<string, string | string[] | undefined>, name: string): string | null => {
+  if (headers instanceof Headers) return headers.get(name);
+  const val = headers[name.toLowerCase()] ?? headers[name];
+  if (Array.isArray(val)) return val[0] || null;
+  return typeof val === "string" ? val : null;
+};
+
+// Admin role sources:
+// - YunoHost: SSOwat only lets members of the `admin` permission reach /admin and /api/admin, where
+//   nginx sets X-Lov-Admin: 1 (and strips it everywhere else). Trusted only when the package says so.
+// - Development: ADMIN_USERS, never in production.
+const withAdminRole = (
+  user: SessionUser,
+  headers: Headers | Record<string, string | string[] | undefined>
+): SessionUser => {
+  const config = getConfig();
+  const fromProxy = config.TRUST_PROXY_ADMIN_HEADER && readHeader(headers, "x-lov-admin") === "1";
+  const fromDevList = config.NODE_ENV !== "production" && config.ADMIN_USERS.includes(user.username);
+  if ((fromProxy || fromDevList) && !user.roles.includes("admin")) {
+    return { ...user, roles: [...user.roles, "admin"] };
+  }
+  return user;
+};
+
+export const isAdmin = (user: SessionUser): boolean => user.roles.includes("admin");
+
+export function requireAdmin(user: SessionUser): void {
+  if (!isAdmin(user)) throw new AuthorizationError("Accès réservé aux administrateurs");
+}
+
 export class TokenAuthService implements IAuthService {
   private getSecret(): string {
     return getConfig().SESSION_SECRET;
@@ -73,6 +103,11 @@ export class TokenAuthService implements IAuthService {
   }
 
   async authenticateRequest(headers: Headers | Record<string, string | string[] | undefined>): Promise<SessionUser> {
+    const user = await this.resolveUser(headers);
+    return withAdminRole(user, headers);
+  }
+
+  private async resolveUser(headers: Headers | Record<string, string | string[] | undefined>): Promise<SessionUser> {
     const getHeader = (name: string): string | null => {
       if (headers instanceof Headers) {
         return headers.get(name);

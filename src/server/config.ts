@@ -54,7 +54,43 @@ const configSchema = z.object({
   DEFAULT_LLM_PROVIDER: z
     .enum(["ollama", "mistral"])
     .default("ollama"),
+  // Development only: comma-separated usernames granted the admin role.
+  ADMIN_USERS: z
+    .string()
+    .default("")
+    .transform((value) => value.split(",").map((name) => name.trim()).filter(Boolean)),
+  // Set by the YunoHost package, whose nginx sets X-Lov-Admin only behind the `admin` permission.
+  TRUST_PROXY_ADMIN_HEADER: z
+    .enum(["true", "false"])
+    .default("false")
+    .transform((value) => value === "true"),
+  // 32-byte key (base64 or hex) encrypting secrets stored in the database.
+  APP_ENCRYPTION_KEY: z
+    .string()
+    .optional()
+    .refine((value) => !value || decodeKey(value) !== null, "APP_ENCRYPTION_KEY must be 32 bytes in base64 or hex"),
+  FRAMATEAM_URL: z
+    .string()
+    .url("FRAMATEAM_URL must be a valid URL")
+    .default("https://framateam.org"),
+  FRAMATEAM_TEAM: z.string().optional(),
+  FRAMATEAM_LOGIN_ID: z.string().optional(),
+  FRAMATEAM_PASSWORD: z.string().optional(),
+  FRAMATEAM_TRIGGER: z.string().min(1).default("!lov"),
+  FRAMATEAM_ACCEPT_MENTIONS: z
+    .enum(["true", "false"])
+    .default("false")
+    .transform((value) => value === "true"),
+  FRAMATEAM_SYNC_INTERVAL_MIN: z.coerce.number().int().min(15).default(60),
+  FRAMATEAM_INDEX_CHANNELS: z.string().optional(),
+  FRAMATEAM_LISTEN_CHANNELS: z.string().optional(),
 });
+
+export function decodeKey(value: string): Buffer | null {
+  const trimmed = value.trim();
+  const buffer = /^[0-9a-fA-F]{64}$/.test(trimmed) ? Buffer.from(trimmed, "hex") : Buffer.from(trimmed, "base64");
+  return buffer.length === 32 ? buffer : null;
+}
 
 export type AppConfig = z.infer<typeof configSchema>;
 

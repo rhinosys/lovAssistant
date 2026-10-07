@@ -38,3 +38,9 @@ utiliser `rag:refresh` en exploitation.
 Tests : compteur distinct, index absent, exclusion concurrente, tâche
 interrompue, conservation de l'index en cas d'échec et publication réussie.
 `npm test`, `npx tsc --noEmit`, puis build sous Node 22.
+
+## Source Framateam
+
+Les canaux Framateam sont indexés séparément (tables PostgreSQL `framateam_*`,
+`npm run framateam:sync`) et n'utilisent pas ce verrou fichier. Voir
+[framateam.md](framateam.md) pour la configuration, l'ingestion et les retraits RGPD.

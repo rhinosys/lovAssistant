@@ -1,5 +1,6 @@
-import { describe, it, expect, beforeEach } from "vitest";
-import { TokenAuthService, AuthorizationError } from "./session";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
+import { TokenAuthService, AuthorizationError, requireAdmin } from "./session";
+import { resetConfigCache } from "../config";
 import { assertThreadOwnership, ThreadNotFoundError } from "../chat/ownership";
 import {
   setForceInMemoryRepositories,
@@ -113,6 +114,50 @@ describe("Authentication & User Isolation", () => {
         "x-username": "legacy-user",
       });
       expect(user.username).toBe("legacy-user");
+    });
+  });
+
+  describe("Admin role", () => {
+    afterEach(() => {
+      vi.unstubAllEnvs();
+      resetConfigCache();
+    });
+
+    const env = (vars: Record<string, string>) => {
+      for (const [key, value] of Object.entries(vars)) vi.stubEnv(key, value);
+      resetConfigCache();
+    };
+
+    it("grants admin from the proxy header when the package trusts it", async () => {
+      env({ TRUST_PROXY_ADMIN_HEADER: "true", NODE_ENV: "production" });
+      const user = await authService.authenticateRequest({ "remote-user": "nicolas", "x-lov-admin": "1" });
+      expect(user.roles).toContain("admin");
+      expect(() => requireAdmin(user)).not.toThrow();
+    });
+
+    it("denies admin without the proxy header", async () => {
+      env({ TRUST_PROXY_ADMIN_HEADER: "true", NODE_ENV: "production" });
+      const user = await authService.authenticateRequest({ "remote-user": "nicolas" });
+      expect(user.roles).not.toContain("admin");
+      expect(() => requireAdmin(user)).toThrow(AuthorizationError);
+    });
+
+    it("ignores a spoofed proxy header when the proxy is not trusted", async () => {
+      env({ NODE_ENV: "development" });
+      const user = await authService.authenticateRequest({ "x-username": "mallory", "x-lov-admin": "1" });
+      expect(user.roles).not.toContain("admin");
+    });
+
+    it("grants admin from ADMIN_USERS outside production", async () => {
+      env({ NODE_ENV: "development", ADMIN_USERS: "alice, nrineau" });
+      const user = await authService.authenticateRequest({ "x-username": "nrineau" });
+      expect(user.roles).toContain("admin");
+    });
+
+    it("ignores ADMIN_USERS in production, even with dev identity headers", async () => {
+      env({ NODE_ENV: "production", ADMIN_USERS: "nrineau" });
+      const user = await authService.authenticateRequest({ "x-username": "nrineau" });
+      expect(user.roles).not.toContain("admin");
     });
   });
 });

@@ -21,6 +21,7 @@ import {
   Mic,
 } from "lucide-react";
 import { RagStatus } from "./RagStatus";
+import { AdminLink } from "./AdminLink";
 import { MarkdownContent } from "./MarkdownContent";
 import { apiUrl } from "@/lib/api-url";
 
@@ -667,7 +668,10 @@ export default function ChatPage() {
               {selectedProvider === "mistral" ? "Mistral AI" : "Ollama Local"}
             </span>
           </div>
-          <span className="text-[11px] text-slate-500">v0.1</span>
+          <div className="flex items-center gap-2">
+            <AdminLink />
+            <span className="text-[11px] text-slate-500">v0.1</span>
+          </div>
         </div>
       </aside>
 

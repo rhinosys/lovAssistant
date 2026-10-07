@@ -1,6 +1,9 @@
 import { describe, expect, it, vi, afterEach } from "vitest";
-import { EvidenceSource, renderEvidence, NO_EVIDENCE, webFallbackQuery } from "./grounding";
+import { EvidenceSource, renderEvidence, NO_EVIDENCE, webFallbackQuery, collectEvidence, evidencePrompt } from "./grounding";
 import { YesWikiClient } from "../mcp/yeswiki-client";
+import * as ragService from "../rag/retrieval/rag-service";
+import { InMemoryFramateamStore, setFramateamStore } from "../framateam/store";
+import { resetFramateamSearchCache } from "../framateam/search";
 const sources: EvidenceSource[] = [{ id: "S1", title: "Bambu Lab P1S", url: "https://example.org/p1s", origin: "DokuWiki", content: "La Bambu Lab P1S utilise Bambu Studio. Vérifiez sa disponibilité auprès du référent." }];
 afterEach(() => vi.restoreAllMocks());
 describe("guided sourced answers", () => {
@@ -22,6 +25,26 @@ describe("guided sourced answers", () => {
     const invented = renderEvidence(JSON.stringify({ answer: "1. Allume la barre.\n![Photo](https://evil.example/fake.jpg)", sourceIds: ["S1"] }), withImage);
     expect(invented).not.toContain("evil.example");
     expect(invented).not.toBe(NO_EVIDENCE);
+  });
+  it("keeps links pointing exactly to a source and infers citations from them in plain Markdown", () => {
+    const threads: EvidenceSource[] = [
+      { id: "S20", title: "Discussion Framateam ~couture (2024-11-03)", url: "https://framateam.org/labolov/pl/abc", origin: "Framateam", content: "machine à coudre" },
+      { id: "S21", title: "Discussion Framateam ~couture (2024-05-01)", url: "https://framateam.org/labolov/pl/def", origin: "Framateam", content: "néoprène" },
+    ];
+    const plain = "Voici les discussions :\n- **2024-11-03** : aide machine ([lien](https://framateam.org/labolov/pl/abc)).\n- **2024-05-01** : astuce néoprène ([lien](<https://framateam.org/labolov/pl/def>)).";
+    const rendered = renderEvidence(plain, threads);
+    expect(rendered).toContain("([lien](<https://framateam.org/labolov/pl/abc>))");
+    expect(rendered).toContain("([lien](<https://framateam.org/labolov/pl/def>))");
+    expect(rendered).toContain("Sources : [Discussion Framateam ~couture (2024-11-03)](<https://framateam.org/labolov/pl/abc>) · [Discussion Framateam ~couture (2024-05-01)]");
+
+    const json = renderEvidence(JSON.stringify({ answer: "Voir [ce fil](https://framateam.org/labolov/pl/abc).", sourceIds: ["S20"] }), threads);
+    expect(json).toContain("[ce fil](<https://framateam.org/labolov/pl/abc>)");
+  });
+  it("still rejects any link to a URL that is not a source", () => {
+    const threads: EvidenceSource[] = [{ id: "S1", title: "Fil", url: "https://framateam.org/labolov/pl/abc", origin: "Framateam", content: "x" }];
+    expect(renderEvidence("Voir [fil](https://framateam.org/labolov/pl/abc) et [ici](https://evil.example)", threads)).toBe(NO_EVIDENCE);
+    expect(renderEvidence(JSON.stringify({ answer: "Voir [fil](https://framateam.org/labolov/pl/abc-forged)", sourceIds: ["S1"] }), threads)).toBe(NO_EVIDENCE);
+    expect(renderEvidence("Réponse sans aucune source vérifiée.", threads)).toBe(NO_EVIDENCE);
   });
   it("abstains on empty or malformed output", () => {
     expect(renderEvidence("Prusa", sources)).toBe(NO_EVIDENCE);
@@ -50,5 +73,53 @@ describe("web fallback decision", () => {
     expect(webFallbackQuery(JSON.stringify({ needsWeb: true, webQuery: "manuel officiel procédure" }))).toBe("manuel officiel procédure");
     expect(webFallbackQuery(JSON.stringify({ needsWeb: false, webQuery: "manuel" }))).toBeNull();
     expect(webFallbackQuery("invalid")).toBeNull();
+  });
+});
+
+describe("Framateam discussions as evidence", () => {
+  const stubWikiAndRag = () => {
+    vi.spyOn(YesWikiClient.prototype, "getPage").mockRejectedValue(new Error("offline"));
+    vi.spyOn(YesWikiClient.prototype, "getBazarEntries").mockResolvedValue([]);
+    const rag = { embedQuery: vi.fn().mockResolvedValue([1, 0]), search: vi.fn().mockResolvedValue([]) };
+    vi.spyOn(ragService, "getRAGService").mockReturnValue(rag as unknown as ragService.RAGRetrievalService);
+    return rag;
+  };
+  afterEach(() => { setFramateamStore(null); resetFramateamSearchCache(); });
+
+  it("adds matching threads cited by permalink and shares the query embedding", async () => {
+    const rag = stubWikiAndRag();
+    const store = new InMemoryFramateamStore();
+    await store.syncChannelList([{ channelId: "c", teamId: "t", name: "laser", displayName: "Laser" }]);
+    await store.updateChannel("c", { indexEnabled: true });
+    await store.replaceThreadChunks("root1", [{
+      id: "root1#0", rootPostId: "root1", channelId: "c", chunkIndex: 0,
+      content: "Discussion Framateam ~laser — 2024-03-05\n\n— contreplaqué 3 mm : 300 mm/min",
+      permalink: "https://framateam.org/lov/pl/root1", threadCreatedAt: new Date(0), threadUpdatedAt: new Date(0), contentHash: "h", postIds: ["root1"], embedding: [1, 0],
+    }]);
+    setFramateamStore(store);
+
+    const sources = await collectEvidence("vitesse contreplaqué");
+
+    expect(rag.embedQuery).toHaveBeenCalledTimes(1);
+    expect(rag.search).toHaveBeenCalledWith("vitesse contreplaqué", expect.objectContaining({ queryVector: [1, 0] }));
+    expect(sources).toEqual([expect.objectContaining({ origin: "Framateam", title: "Discussion Framateam ~laser (2024-03-05)", url: "https://framateam.org/lov/pl/root1" })]);
+    const rendered = renderEvidence(JSON.stringify({ answer: "D'après une discussion, 300 mm/min.", sourceIds: [sources[0].id] }), sources);
+    expect(rendered).toContain("(<https://framateam.org/lov/pl/root1>)");
+  });
+
+  it("keeps the other sources when the Framateam index is unavailable", async () => {
+    stubWikiAndRag();
+    vi.spyOn(YesWikiClient.prototype, "getBazarEntries").mockResolvedValue([{ id: "k40", title: "K40", fields: { etat: "ok" }, canonicalUrl: "https://example.org/k40" }]);
+    const broken = new InMemoryFramateamStore();
+    broken.getChunksVersion = async () => { throw new Error("db down"); };
+    setFramateamStore(broken);
+    const sources = await collectEvidence("laser");
+    expect(sources.map((s) => s.origin)).toEqual(["YesWiki"]);
+  });
+
+  it("tells the model that discussions rank below the wiki, especially for safety", () => {
+    const prompt = evidencePrompt([]);
+    expect(prompt).toContain("jamais des consignes officielles");
+    expect(prompt).toContain("règle de sécurité");
   });
 });

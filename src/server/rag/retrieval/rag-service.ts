@@ -20,19 +20,25 @@ export class RAGRetrievalService {
     return this.embeddingsProvider;
   }
 
-  async search(query: string, options: RAGSearchOptions = {}): Promise<RAGSearchResult[]> {
+  // Empty vector when embeddings are unavailable: searches then fall back to keywords.
+  async embedQuery(query: string): Promise<number[]> {
     const trimmed = query.trim();
     if (!trimmed) return [];
-
-    let queryVector: number[] = [];
     try {
-      const provider = this.getEmbeddingsProvider();
-      queryVector = await provider.embedQuery(trimmed);
+      return await this.getEmbeddingsProvider().embedQuery(trimmed);
     } catch (err) {
       logger.warn("Vector embedding failed, falling back to keyword search", { error: String(err) });
+      return [];
     }
+  }
 
-    return this.vectorStore.search(queryVector, trimmed, options);
+  // Pass a precomputed queryVector to share one embedding between several indexes.
+  async search(query: string, options: RAGSearchOptions & { queryVector?: number[] } = {}): Promise<RAGSearchResult[]> {
+    const trimmed = query.trim();
+    if (!trimmed) return [];
+    const { queryVector, ...searchOptions } = options;
+    const vector = queryVector ?? (await this.embedQuery(trimmed));
+    return this.vectorStore.search(vector, trimmed, searchOptions);
   }
 
   async getAugmentedContext(query: string, topK = 4): Promise<string> {

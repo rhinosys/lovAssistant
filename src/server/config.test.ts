@@ -73,4 +73,27 @@ describe("Server Configuration Loader", () => {
       })
     ).toThrow(ConfigurationError);
   });
+
+  it("parses admin and Framateam settings with safe defaults", () => {
+    const config = loadConfig({});
+    expect(config.ADMIN_USERS).toEqual([]);
+    expect(config.TRUST_PROXY_ADMIN_HEADER).toBe(false);
+    expect(config.FRAMATEAM_URL).toBe("https://framateam.org");
+    expect(config.FRAMATEAM_TRIGGER).toBe("!lov");
+    expect(config.FRAMATEAM_ACCEPT_MENTIONS).toBe(false);
+    expect(config.FRAMATEAM_SYNC_INTERVAL_MIN).toBe(60);
+
+    const custom = loadConfig({ ADMIN_USERS: "a, b,,", TRUST_PROXY_ADMIN_HEADER: "true", FRAMATEAM_SYNC_INTERVAL_MIN: "30" });
+    expect(custom.ADMIN_USERS).toEqual(["a", "b"]);
+    expect(custom.TRUST_PROXY_ADMIN_HEADER).toBe(true);
+    expect(custom.FRAMATEAM_SYNC_INTERVAL_MIN).toBe(30);
+  });
+
+  it("rejects a sync interval below 15 minutes and malformed encryption keys", () => {
+    expect(() => loadConfig({ FRAMATEAM_SYNC_INTERVAL_MIN: "5" })).toThrow(ConfigurationError);
+    expect(() => loadConfig({ APP_ENCRYPTION_KEY: "too-short" })).toThrow(ConfigurationError);
+    expect(loadConfig({ APP_ENCRYPTION_KEY: "a".repeat(64) }).APP_ENCRYPTION_KEY).toBe("a".repeat(64));
+    expect(loadConfig({ APP_ENCRYPTION_KEY: Buffer.alloc(32, 7).toString("base64") }).APP_ENCRYPTION_KEY).toBeDefined();
+  });
 });
+
